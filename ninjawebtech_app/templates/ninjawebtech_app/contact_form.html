@@ -1,0 +1,58 @@
+{% load static %}
+
+<!--== Contact Start ==-->
+<section class="white-bg" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 centerize-col text-center">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h1 class="raleway-font"><span class="font-100">Contact</span> Us</h1>
+          <hr class="center_line dark-bg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mt-70">
+      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
+        <form name="contact-form" id="contact-form" action="php/contact.php" method="POST" class="contact-form-style-01">
+          <div class="messages"></div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" name="name" class="md-input" id="name" required data-error="Your Name is Required">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" name="email" class="md-input" id="email" required data-error="Please Enter Valid Email">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea name="message" class="md-textarea" id="message" rows="7" required data-error="Please, Leave us a message"></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="text-left">
+                <button type="submit" name="submit" class="btn btn-primary btn-md btn-square btn-animate remove-margin btn-zoom"><span>Send <i class="ion-android-arrow-forward"></i></span></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
+        <div id="myMap" class="wide"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--== Contact End ==-->

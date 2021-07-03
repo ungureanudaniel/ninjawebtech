@@ -1,0 +1,16 @@
+# Python
+*.pyc
+*~
+__pycache__
+
+# Env
+.env
+ninjawebtech_main/.env
+myvenv/
+venv/
+
+# Database
+
+
+# Static folder at project root
+reset_password.py
