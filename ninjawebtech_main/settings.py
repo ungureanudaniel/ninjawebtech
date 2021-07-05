@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['https://www.ninjaweb.tech', 'ninjaweb.tech', 'www.ninjaweb.tech']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://www.ninjaweb.tech', 'ninjaweb.tech', 'www.ninjaweb.tech']
 
 
 # Application definition
