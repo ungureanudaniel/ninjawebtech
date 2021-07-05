@@ -1,0 +1,268 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>NINJA WEBTECH - STUNNING WEB DEVELOPMENT</title>
+<link rel="shortcut icon" href="{% static 'images/favicon.ico">
+
+<!-- Core Style Sheets -->
+<link rel="stylesheet" href="{% static 'css/master.css' %}">
+<!-- Responsive Style Sheets -->
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<!-- Revolution Style Sheets -->
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+
+</head>
+<body>
+
+<!--== Loader Start ==-->
+<!-- <div id="loader-overlay">
+  <div class="loader">
+    <div class="spinner-double-dot-in"></div>
+  </div>
+</div> -->
+<!--== Loader End ==-->
+
+<!--== Wrapper Start ==-->
+<div class="wrapper">
+
+  <!--== Header Start ==-->
+  <nav class="navbar navbar-default navbar-fixed navbar-transparent dark bootsnav on no-full no-border corporate">
+  	<!--== Start Top Search ==-->
+    <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="icofont icofont-close"></i></a>
+      <div id="fullscreen-search-wrapper">
+        <form method="get" id="fullscreen-searchform">
+          <input type="text" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class="search-bar-top">
+          <i class="fullscreen-search-icon icofont icofont-search">
+          <input value="" type="submit">
+          </i>
+        </form>
+      </div>
+    </div>
+    <!--== End Top Search ==-->
+    <div class="container">
+      <!--== Start Atribute Navigation ==-->
+      <div class="attr-nav hidden-xs sm-display-none">
+        <ul>
+          <li class="side-menu"><a href="#"><i class="icofont icofont-navigation-menu"></i></a></li>
+          <li class="search"><a href="#" id="search-button"><i class="icofont icofont-search"></i></a></li>
+        </ul>
+      </div>
+      <!--== End Atribute Navigation ==-->
+
+      <!--== Start Header Navigation ==-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
+        <div class="logo"> <a href="{% url 'home' %}"><img class="logo logo-display" src="{% static 'logo/logo_black.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'images/logo-corporate-white.png' %}" alt=""> Ninja WebTECH</a>
+        </div>
+        <div class="logo_name"></div>
+      </div>
+      <!--== End Header Navigation ==-->
+
+      <!--== Collect the nav links, forms, and other content for toggling ==-->
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
+          <li class="#"><a href="{% url 'home' %}" class="dropdown-toggle page-scroll" data-toggle="dropdown">Home</a></li>
+          <li><a class="page-scroll" href="#about">About</a></li>
+          <li><a class="page-scroll" href="#work">Works</a></li>
+          <li><a class="page-scroll" href="#service">Services</a></li>
+          <li><a class="page-scroll" href="#team">Team</a></li>
+          <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+          <li><a class="page-scroll" href="#blog">Blog</a></li>
+          <li><a class="page-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!--== /.navbar-collapse ==-->
+    </div>
+
+    <!-- Start Side Menu -->
+    <div class="side corporate dark-bg">
+    		<a href="index.html" class="logo-side"><img src="{% static 'logo/logo.png' %}" alt="side-logo"/></a>
+            <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
+            <div class="widget mt-120">
+              <ul class="link">
+                <li class="link-item"><a class="page-scroll" href="#home">Home</a></li>
+                <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
+                <li class="link-item"><a class="page-scroll" href="#work">Works</a></li>
+                <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
+                <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
+                <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
+                <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
+                <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <ul class="social-media">
+              <li><a href="#" class="icofont icofont-facebook"></a></li>
+              <li><a href="#" class="icofont icofont-twitter"></a></li>
+              <li><a href="#" class="icofont icofont-behance"></a></li>
+              <li><a href="#" class="icofont icofont-social-dribble"></a></li>
+              <li><a href="#" class="icofont icofont-linkedin"></a></li>
+            </ul>
+     </div>
+     <!-- End Side Menu -->
+
+  </nav>
+  <!--== Header End ==-->
+</div>
+<!--== Wrapper End ==-->
+
+  <!--== Contact Start ==-->
+  <section class="white-bg" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 centerize-col text-center">
+          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="raleway-font"><span class="font-100">Write </span> Us<span class="font-100"> a review below</span></h1>
+            <hr class="center_line dark-bg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-70">
+        <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
+          <h1>Success!</h1>
+          <p>Your email {{ sub_email }} has been succesfully subscribed to our newsletter.</p>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 " data-wow-delay="0.1s">
+          <img src="{% static 'images/thank_you.jpg' %}" alt="side-logo"/>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
+          <div id="myMap" class="wide"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!--== Review End ==-->
+  {% include 'ninjawebtech_app/footer.html' %}
+  <!--== Go to Top  ==-->
+  <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>
+  <!--== Go to Top End ==-->
+
+
+
+
+<!--== Javascript Plugins ==-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/smoothscroll.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/master.js' %}"></script>
+
+<!-- Paricle Add-On Files -->
+<link rel='stylesheet' href="{% static 'revolution/css/revolution.addon.particles.css' %}"/>
+<script src="{% static 'revolution/js/revolution.addon.particles.min.js' %}"></script>
+
+<script>
+        var tpj=jQuery;
+
+  var revapi4;
+  tpj(document).ready(function() {
+    if(tpj("#rev_slider_4_1").revolution == undefined){
+      revslider_showDoubleJqueryError("#rev_slider_4_1");
+    }else{
+      revapi4 = tpj("#rev_slider_4_1").show().revolution({
+        sliderType:"standard",
+        jsFileLocation:"{% static 'js/",
+        sliderLayout:"fullscreen",
+        dottedOverlay:"none",
+        delay:9000,
+        particles: {startSlide: "first", endSlide: "last", zIndex: "1",
+          particles: {
+            number: {value: 80}, color: {value: "#000000"},
+            shape: {
+              type: "circle", stroke: {width: 0, color: "#ffffff", opacity: 1},
+              image: {src: ""}
+            },
+            opacity: {value: 0.3, random: false, min: 0.25, anim: {enable: false, speed: 3, opacity_min: 0, sync: false}},
+            size: {value: 10, random: true, min: 1, anim: {enable: false, speed: 40, size_min: 1, sync: false}},
+            line_linked: {enable: true, distance: 200, color: "#000000", opacity: 0.2, width: 1},
+            move: {enable: true, speed: 3, direction: "none", random: true, min_speed: 3, straight: false, out_mode: "out"}},
+          interactivity: {
+            events: {onhover: {enable: true, mode: "bubble"}, onclick: {enable: false, mode: "repulse"}},
+            modes: {grab: {distance: 400, line_linked: {opacity: 0.5}}, bubble: {distance: 400, size: 150, opacity: 1}, repulse: {distance: 200}}
+          }
+        },
+        navigation: {
+          keyboardNavigation:"off",
+          keyboard_direction: "horizontal",
+          mouseScrollNavigation:"off",
+          mouseScrollReverse:"default",
+          onHoverStop:"off",
+          arrows: {
+            style:"gyges",
+            enable:true,
+            hide_onmobile:false,
+            hide_onleave:false,
+            tmp:'',
+            left: {
+              h_align:"center",
+              v_align:"bottom",
+              h_offset:-20,
+              v_offset:0
+            },
+            right: {
+              h_align:"center",
+              v_align:"bottom",
+              h_offset:20,
+              v_offset:0
+            }
+          }
+        },
+        responsiveLevels:[1240,1024,778,480],
+        visibilityLevels:[1240,1024,778,480],
+        gridwidth:[1240,1024,778,480],
+        gridheight:[868,768,960,720],
+        lazyType:"none",
+        shadow:0,
+        spinner:"off",
+        stopLoop:"on",
+        stopAfterLoops:0,
+        stopAtSlide:1,
+        shuffle:"off",
+        autoHeight:"off",
+        fullScreenAutoWidth:"off",
+        fullScreenAlignForce:"off",
+        fullScreenOffsetContainer: "",
+        fullScreenOffset: "60px",
+        disableProgressBar:"on",
+        hideThumbsOnMobile:"off",
+        hideSliderAtLimit:0,
+        hideCaptionAtLimit:0,
+        hideAllCaptionAtLilmit:0,
+        debugMode:false,
+        fallbacks: {
+          simplifyAll:"off",
+          nextSlideOnWindowFocus:"off",
+          disableFocusListener:false,
+        }
+      });
+    }
+
+            RsParticlesAddOn(revapi4);
+  });	/*ready*/
+  </script>
+  <!-- Revolution js Files -->
+  <script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+  <script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.actions.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.carousel.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.kenburn.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.layeranimation.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.migration.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.navigation.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.parallax.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.slideanims.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.video.min.js' %}"></script>
+  <!--== Javascript Plugins End ==-->
+
+  </body>
+</html>

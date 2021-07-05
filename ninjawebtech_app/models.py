@@ -6,6 +6,16 @@ import datetime
 from taggit.managers import TaggableManager
 from django.template.defaultfilters import truncatechars
 
+
+class NewsletterUser(models.Model):
+    email = models.CharField(max_length=40)
+    conf_number = models.CharField(max_length=15)
+    confirmed = models.BooleanField(default=False)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{}'.format(self.email)
+
 class ProjectCategory(models.Model):
     title = models.CharField(max_length=30)
 

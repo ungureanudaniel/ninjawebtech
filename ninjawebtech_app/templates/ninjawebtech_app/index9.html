@@ -644,12 +644,20 @@
                 And receive interesting news from the technology world.
               </h3>
               <div class="text-dark">
+                {% if messages %}
+                  {% for message in messages %}
+                  <div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{ message.message }}
+                  </div>
+                  {% endfor %}
+                {% endif %}
+
                 <form method="POST" action="#newsletter_form">
                   {% csrf_token %}
 
-                  <input type="text" value="" style="color: black;" placeholder="Enter your email address..." class="text-secondary">
+                  <input type="text" value="" name="sub_email" style="color: black;" placeholder="Enter your email address..." class="text-secondary">
 
-                  <a class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Send</a>
+                  <button class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Join</button>
                 </form>
               </div>
 

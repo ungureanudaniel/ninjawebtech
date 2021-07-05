@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Service, Portfolio, TeamMember, Logo, Email, ContactData, Review, Skill, ProjectCategory
+from .models import About, Service, Portfolio, TeamMember, Logo, Email, ContactData, Review, Skill, ProjectCategory, NewsletterUser
 
 class AboutAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'image', 'active']
@@ -25,10 +25,14 @@ class ReviewAdmin(admin.ModelAdmin):
 class LogoAdmin(admin.ModelAdmin):
      list_display =  ['text', 'photo']
 
+
+class NewsletterUserAdmin(admin.ModelAdmin):
+     list_display =  ['email', 'conf_number', 'confirmed', 'timestamp']
+
 admin.site.register(About, AboutAdmin)
 admin.site.register(Service, ServiceAdmin)
 admin.site.register(Skill, SkillAdmin)
-
+admin.site.register(NewsletterUser, NewsletterUserAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Logo, LogoAdmin)
