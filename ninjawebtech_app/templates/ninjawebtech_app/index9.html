@@ -534,9 +534,9 @@
   <!--== Portfolio End ==-->
   <br><br>
   <!--== Counters Start ==-->
-  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/parallax-bg-2.jpg' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
     <div class="overlay-bg"></div>
-    <div class="container">
+    <!-- <div class="container">
       <div class="row row-flex flex-center">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="counter-wrap wow fadeInLeft white-color" data-wow-delay="0.1s">
@@ -567,7 +567,7 @@
             </div>
           </div>
         </div>
-    </div>
+    </div> -->
   </section>
   <!--== Counters End ==-->
 
@@ -585,40 +585,44 @@
 
       <div class="row mt-50">
         <div class="col-md-4">
-        	  <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.1s">
+
+            <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.1s">
               <i class="icofont icofont-test-tube-alt font-40px"></i>
-              <h3 class="mt-0 font-600">Fully Responsive</h3>
-              <p class="font-400">commitment.</p>
+              <h3 class="mt-0 font-600">Websites</h3>
+              <p class="font-400">Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients.</p>
             </div>
+
             <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.2s">
               <i class="icofont icofont-samsung-galaxy font-40px"></i>
-              <h3 class="mt-0 font-600">Modern Code</h3>
-              <p class="font-400">Nunc pharetra ullamcorper enim eget interdum. Morbi vitae pulvinar lacus. Suspendisse pulvinar tempus hendrerit. Suspendisse quam felis.</p>
+              <h3 class="mt-0 font-600">Modern Software</h3>
+              <p class="font-400">All our software is done in python, a modern, versatile and very powerful programming language, that is becoming increasingly popular amongst programmers.</p>
             </div>
             <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.3s">
               <i class="icofont icofont-ui-head-phone font-40px"></i>
-              <h3 class="mt-0 font-600">Creative Concept</h3>
-              <p class="font-400">Nunc pharetra ullamcorper enim eget interdum. Morbi vitae pulvinar lacus. Suspendisse pulvinar tempus hendrerit. Suspendisse quam felis.</p>
+              <h3 class="mt-0 font-600">Creative concepts</h3>
+              <p class="font-400">Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true.</p>
             </div>
         </div>
         <div class="col-md-4 xs-mt-80 sm-mt-80 wow zoomIn" data-wow-delay="0.4s">
-   	    	<img class="img-responsive pt-20" src="{% static 'images/iphone-4.png' %}" alt="">
+   	    	<img class="img-responsive pt-20" src="{% static 'images/iphone-5.png' %}" alt="">
    	    </div>
         <div class="col-md-4">
+<!-- {% static 'images/happy-client1.png' %} -->
         	  <div class="feature-box corporate text-left mb-50 wow fadeInLeft" data-wow-delay="0.5s">
               <i class="icofont icofont-space-shuttle font-40px"></i>
               <h3 class="mt-0">Awesome Friendly</h3>
-              <p class="font-300">Nunc pharetra ullamcorper enim eget interdum. Morbi vitae pulvinar lacus. Suspendisse pulvinar tempus hendrerit. Suspendisse quam felis.</p>
+              <p class="font-300">Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs.</p>
             </div>
+
             <div class="feature-box corporate text-left mb-50 wow fadeInLeft" data-wow-delay="0.6s">
               <i class="icofont icofont-interface font-40px"></i>
-              <h3 class="mt-0">Revolution Slider</h3>
-              <p class="font-300">Nunc pharetra ullamcorper enim eget interdum. Morbi vitae pulvinar lacus. Suspendisse pulvinar tempus hendrerit. Suspendisse quam felis.</p>
+              <h3 class="mt-0">SEO & Online Marketing</h3>
+              <p class="font-300">We are commited to make you succesful online, thus make you as present as possible using various programming and google embedded techniques.</p>
             </div>
             <div class="feature-box corporate text-left mb-50 wow fadeInLeft" data-wow-delay="0.7s">
               <i class="icofont icofont-ui-video-play font-40px"></i>
-              <h3 class="mt-0">Quick Response</h3>
-              <p class="font-300">Nunc pharetra ullamcorper enim eget interdum. Morbi vitae pulvinar lacus. Suspendisse pulvinar tempus hendrerit. Suspendisse quam felis.</p>
+              <h3 class="mt-0">Custom Graphics</h3>
+              <p class="font-300">We can draw digital graphics according to your needs, create cartoons and caricatures or anything you can think of to make your online presence more effective.</p>
             </div>
         </div>
       </div>
@@ -627,21 +631,30 @@
   <!--== Services End ==-->
 
   <!--== Video Start ==-->
-  <section class="relative">
+  <section class="relative" id="newsletter_form">
     <div class="overlay-bg"></div>
     <div class="container">
       <div class="row">
         <div class="display-table col-md-8 col-md-offset-2">
           <div class="v-align-middle text-center">
             <div class="white-color text-center">
-              <h1 class="font-700 font-60px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 wow fadeInUp" data-wow-delay="0.1s">Join <span class="font-100">Up for</span> Free</h1>
+              <h1 class="font-700 font-60px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 wow fadeInUp" data-wow-delay="0.1s">Join <span class="font-100">our Newsletter </span> Now</h1>
               <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
               <h3 class="font-400 line-height-40 wow fadeInUp" data-wow-delay="0.3s">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper ex ac velit varius semper. Mauris at dolor nec ante ultricies aliquam ac vitae diam.
+                And receive interesting news from the technology world.
               </h3>
-              <p class="mt-40">
-                <a class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Get Started</a>
-              </p>
+              <div class="text-dark">
+                <form method="POST" action="#newsletter_form">
+                  {% csrf_token %}
+
+                  <input type="text" value="" style="color: black;" placeholder="Enter your email address..." class="text-secondary">
+
+                  <a class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Send</a>
+                </form>
+              </div>
+
+
+
             </div>
           </div>
         </div>

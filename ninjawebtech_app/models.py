@@ -32,7 +32,7 @@ class About(models.Model):
 class Service(models.Model):
     title = models.CharField(max_length=30)
     text = RichTextField(blank=True, null=True)
-    thumbnail = models.ImageField(upload_to='services')
+    thumbnail = models.ImageField(upload_to='services', blank=True)
 
     def __str__(self):
         return '{}'.format(self.title)
@@ -51,22 +51,6 @@ class WhyChooseUs(models.Model):
 
     def __str__(self):
         return '{}'.format(self.reason)
-# class Latestprojects(models.Model):
-#     title = models.CharField(max_length=30)
-#     description = RichTextField(blank=True, null=True)
-#     date = models.DateTimeField(default=datetime.datetime.now)
-#     author = models.CharField(max_length=30)
-#     image1 = models.ImageField(upload_to='latest_proj')
-#     image2 = models.ImageField(upload_to='latest_proj')
-#     image3 = models.ImageField(upload_to='latest_proj')
-#     image4 = models.ImageField(upload_to='latest_proj')
-#     tags = TaggableManager()
-#
-#     class Meta:
-#         ordering = ["-created_date"]
-#
-#     def __str__(self):
-#         return '{}'.format(self.title)
 
 class Portfolio(models.Model):
     title = models.CharField(max_length=30)

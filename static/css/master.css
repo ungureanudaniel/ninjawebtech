@@ -47,6 +47,10 @@
 */
 
 /* Theme Reset Start */
+/* variables*/
+
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Raleway:200,300,400,500,700,800');
 @import url("../css/bootstrap.min.css");
@@ -984,7 +988,7 @@ box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.08), 0px 6px 18px 0px rgba(0, 0, 0,
 .icon {margin-left:6px;}
 .feature-box, .feature-box-right {float:left;}
 .feature-box p {margin-bottom: 0;}
-.feature-box i {margin-bottom:20px;display: inline-block;color:#0072ff;-o-transition: .3s;-ms-transition: .3s;-moz-transition: .3s;-webkit-transition: .3s;transition: .3s;}
+.feature-box i {margin-bottom:20px;display: inline-block;color:#40E0D0;-o-transition: .3s;-ms-transition: .3s;-moz-transition: .3s;-webkit-transition: .3s;transition: .3s;}
 .feature-box:hover i {color:#1d2124;}
 .dark.feature-box:hover i {color:#fff;}
 .box-icon {margin-top:25px;margin-bottom:25px;position:relative;background-color:#fff;padding:40px 30px;-webkit-box-shadow: 0 7px 20px -10px rgba(171, 171, 171, 0.7);-moz-box-shadow: 0 7px 20px -10px rgba(171, 171, 171, 0.7);
@@ -1977,9 +1981,9 @@ section.big-block .client-logo {padding:10%;}
 .skillbar-style-01 .skillbar-bar {height:4px;width:0px;display:inline-block;margin-bottom: 0;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-ms-border-radius: 4px;position: absolute;top: 0;}
 .skillbar-style-01 .skill-bar-percent {position:absolute;right:-40px;top:-8px;}
 
-.skillbar-style-02 .skillbar {position:relative;display:inline-block;margin:80px 0 10px;width:100%;height:7px;width:100%;background-color: #d9d9d9;}
+.skillbar-style-02 .skillbar {position:relative;display:inline-block;margin:80px 0 10px;width:100%;height:7px;width:100%;background-color: (#d9d9d9);}
 .skillbar-style-02 .skillbar-title {position:absolute;top:-35px;left:0;font-weight: 600;font-family: 'Raleway', sans-serif;font-size: 16px; }
-.skillbar-style-02 .skillbar-bar {height:7px;width:0px;display:inline-block;background: #0072ff;}
+.skillbar-style-02 .skillbar-bar {height:7px;width:0px;display:inline-block;background: #40E0D0;}
 .skillbar-style-02 .skill-bar-percent {position:absolute;right:0px;top:-35px;color: #fff;background: #1d2124;border-radius: 2px;padding: 3px 10px 3px;}
 .skillbar-style-02 .skill-bar-percent::after{content: "";position: absolute;width: 0;height: 0;border-width: 4px;border-style: solid;border-color: #1d2124 transparent transparent;top: 21px;left: 18px;}
 

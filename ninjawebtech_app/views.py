@@ -23,9 +23,14 @@ def homeview(request):
     portfolio_category = ProjectCategory.objects.all()
     #------------------------------------------------------------------PORTFOLIO
     portfolio = Portfolio.objects.all()
-
-
+    #------------------------------------------------------------------PORTFOLIO
+    first_three_services = Service.objects.all()[:3]
+    last_three_services = Service.objects.all()[3:]
+    if request.method == "POST":
+        newsletter_email = "X"
     context = {
+        "first_three_services": first_three_services,
+        "last_three_services": last_three_services,
         "portfolio_category": portfolio_category,
         "portfolio": portfolio,
         'about_us': about_us,
