@@ -437,7 +437,7 @@
           <div class="skillbar-wrap skillbar-style-02">
             {% for skill in skills %}
               <div class="skillbar dark-color" data-percent="{{ skill.percent }}">
-                  <span class="skillbar-title">{{ skill.title|title }}</span>
+                  <span class="skillbar-title">{{ skill.title|upper }}</span>
                   <p class="skillbar-bar corporate"></p>
                   <span class="skill-bar-percent"></span>
               </div>
