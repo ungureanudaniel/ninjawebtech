@@ -59,7 +59,7 @@
       <!--== Start Header Navigation ==-->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="{% url 'home' %}"><img class="logo logo-display" src="{% static 'logo/logo_black.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'images/logo-corporate-white.png' %}" alt=""> Ninja WebTECH</a>
+        <div class="logo"> <a href="{% url 'home' %}"><img class="logo logo-display" src="{% static 'logo/logo_black.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'logo/logo.png' %}" alt=""> Ninja WebTECH</a>
         </div>
         <div class="logo_name"></div>
       </div>
@@ -87,7 +87,7 @@
             <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
             <div class="widget mt-120">
               <ul class="link">
-                <li class="link-item"><a class="page-scroll" href="#home">Home</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}">Home</a></li>
                 <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
                 <li class="link-item"><a class="page-scroll" href="#work">Works</a></li>
                 <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
@@ -244,7 +244,7 @@
 					data-paddingleft="[0,0,0,0]"
 					data-blendmode="screen"
 
-					style="z-index: 5;"><img src="{% static 'images/office1.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+					style="z-index: 5;"><img src="{% static 'images/background/office1.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
 				<!-- LAYER NR. 6 -->
 				<div class="tp-caption   tp-resizeme"
@@ -341,7 +341,7 @@
 					data-blendmode="screen"
 					data-autoplay="on"
 
-					style="z-index: 5;"><img src="{% static 'images/header_tablet.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+					style="z-index: 5;"><img src="{% static 'images/background/header_tablet.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
 				<!-- LAYER NR. 10 -->
 				<div class="tp-caption   tp-resizeme"
@@ -437,7 +437,7 @@
           <div class="skillbar-wrap skillbar-style-02">
             {% for skill in skills %}
               <div class="skillbar dark-color" data-percent="{{ skill.percent }}">
-                  <span class="skillbar-title">{{ skill.title}}</span>
+                  <span class="skillbar-title">{{ skill.title|title }}</span>
                   <p class="skillbar-bar corporate"></p>
                   <span class="skill-bar-percent"></span>
               </div>
@@ -655,7 +655,7 @@
                 <form method="POST" action="#newsletter_form">
                   {% csrf_token %}
 
-                  <input type="text" value="" name="sub_email" style="color: black;" placeholder="Enter your email address..." class="text-secondary">
+                  <input type="text" value="" name="sub_email" style="color: black;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp">
 
                   <button class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Join</button>
                 </form>
@@ -676,7 +676,7 @@
   <!--== Video End ==-->
 
   <!--== Team Start ==-->
-  <section class="white-bg" id="team">
+  <!-- <section class="white-bg" id="team">
     <div class="container">
       <div class="row">
         <div class="col-md-8 centerize-col text-center">
@@ -706,89 +706,25 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
           <!--== Member End ==-->
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="team-member">
-              <div class="team-thumb">
-                <div class="thumb-overlay"></div>
-                <img src="{% static 'images/team/team-02.jpg' %}" alt="">
-                <div class="member-info text-center white-bg">
-                  <h3>Evelyn Cruz</h3>
-                  <span class="title primary-color">Marketing Head</span>
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--== Member End ==-->
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="team-member">
-              <div class="team-thumb">
-                <div class="thumb-overlay"></div>
-                <img src="{% static 'images/team/team-03.jpg' %}" alt="">
-                <div class="member-info text-center white-bg">
-                  <h3>John Santos</h3>
-                  <span class="title primary-color">Photographer</span>
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--== Member End ==-->
-
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="team-member">
-              <div class="team-thumb">
-                <div class="thumb-overlay"></div>
-                <img src="{% static 'images/team/team-04.jpg' %}" alt="">
-                <div class="member-info text-center white-bg">
-                  <h3>Heather Ward</h3>
-                  <span class="title primary-color">Marketing Head</span>
-                  <div class="social-icons-style-02">
-                    <ul class="sm-icon mt-20 mb-0">
-                      <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                      <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                      <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                      <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--== Member End ==-->
-
+<!--
       </div>
     </div>
 
-  </section>
+  </section> -->
   <!--== Team End ==-->
 
   <!--== Call to Actions Start ==-->
-  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/parallax-bg-4.jpg' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
     <div class="overlay-bg"></div>
     <div class="container">
     	  <div class="row">
             <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-              <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">No Coding Required</span> For Build<br /> Your Page. <span class="font-100">Project</span></h5>
+              <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-100"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
               <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
               <h5 class="mb-30 font-30px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
-              <a class="btn btn-md btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Purchase This template</a>
+              <a href="#contact" class="btn btn-md btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Contact Us Now</a>
             </div>
         </div>
     </div>
@@ -974,7 +910,7 @@
   <!--== About Company Start ==-->
   <div class="grey-bg pt-0 pb-0 about-section">
     <div class="col-md-6 col-sm-6 bg-flex bg-flex-left">
-      <div class="bg-flex-holder bg-flex-cover" style="background-image: url({% static 'images/bg-left-img-2.jpg' %});">
+      <div class="bg-flex-holder bg-flex-cover" style="background-image: url({% static 'images/background/bg-left-img-2.jpg' %});">
         <div class="video-box_overlay">
           <div class="center-layout">
           <div class="v-align-middle"> <a class="popup-youtube" href="https://www.youtube.com/watch?v=sU3FkzUKHXU">
@@ -998,7 +934,7 @@
             </p>
             <p class="mt-30">
               <a class="btn btn-lg btn-dark-outline btn-square btn-zoom"><i class="icofont icofont-briefcase-2 mr-10"></i> Our Work</a>
-              <a class="btn btn-lg btn-primary btn-square btn-zoom"><i class="icofont icofont-ui-message mr-10"></i> Contact Us</a>
+              <a class="btn btn-lg contactus_button btn-square btn-zoom"><i class="icofont icofont-ui-message mr-10"></i> Contact Us</a>
             </p>
           </div>
           </div>
@@ -1008,9 +944,9 @@
   <!--== About Company End ==-->
 
   <!--== Who We Are Start ==-->
-  <div class="primary-bg pt-0 pb-0 about-section">
+  <!-- <div class="primary-bg pt-0 pb-0 about-section">
     <div class="col-md-6 col-sm-6 bg-flex bg-flex-right">
-      <div class="bg-flex-holder bg-flex-cover" style="background-image: url({% static 'images/bg-left-img.jpg' %});"></div>
+      <div class="bg-flex-holder bg-flex-cover" style="background-image: url({% static 'images/background/bg-left-img.jpg' %});"></div>
     </div>
     <div class="container-fluid">
       <div class="col-md-6 col-sm-6">
@@ -1032,7 +968,7 @@
           </div>
         </div>
       </div>
-  </div>
+  </div> -->
   <!--== Who We Are End ==-->
 
   {% include 'ninjawebtech_app/contact_form.html' %}
