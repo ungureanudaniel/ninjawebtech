@@ -47,11 +47,23 @@ class Service(models.Model):
     def __str__(self):
         return '{}'.format(self.title)
 
+class PricingFeatures(models.Model):
+    feature = models.CharField(max_length=30)
+
+    def __str__(self):
+        return '{}'.format(self.feature)
+
 class Pricing(models.Model):
+    # features = PricingFeatures.objects.all().values_list('feature', 'feature')
+    # features_list = []
+    #
+    # for item in features:
+    #     features_list.append(item)
+
     category = models.CharField(max_length=30)
     price = models.CharField(max_length=10)
-    features = models.CharField(max_length=30)
-    best = models.BooleanField(default=False)
+    features = models.ManyToManyField(PricingFeatures, blank=True, max_length=30)
+    highlighted = models.BooleanField(default=False)
 
     def __str__(self):
         return '{}'.format(self.category)
@@ -159,3 +171,42 @@ class ContactData(models.Model):
 
     def __str__(self):
         return '{}'.format(self.email)
+
+
+#----------------------------------THE POST MODEL----------------------------
+class Post(models.Model):
+    STATUS_CHOICES = (
+        ('Published', 'Published'),
+        ('Draft', 'Draft'),
+    )
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255)
+    image = models.FileField(upload_to='blog_image', blank=True)
+    text = RichTextField(blank=True, null=True)
+    # category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='postcategory')
+    comment_count = models.IntegerField(default=0)
+    views_count = models.IntegerField(default=0)
+    featured = models.BooleanField()
+    slug = models.SlugField(max_length=255, unique=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=10, default='Draft', choices=STATUS_CHOICES)
+    previous_post = models.ForeignKey('self', related_name='previous', on_delete=models.SET_NULL, blank=True, null=True)
+    next_post = models.ForeignKey('self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
+
+    class Meta:
+        ordering = ["-created_date"]
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('post_detail', kwargs={'pk': self.pk})
+        #return reverse('home')
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super(Post, self).save(*args, **kwargs)
+
+    @property
+    def get_comments(self):
+        return self.comments.all().order_by('-timestamp')

@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
@@ -492,7 +492,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class=" row">
         <div class="col-md-12">
           <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter corporate text-sm-center mt-50">
               <div data-filter="*" class="cbp-filter-item-active cbp-filter-item dark">
@@ -723,8 +723,8 @@
             <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
               <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-100"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
               <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
-              <h5 class="mb-30 font-30px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
-              <a href="#contact" class="btn btn-md btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Contact Us Now</a>
+              <h5 class="mb-3 font-30px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
+              <a href="#contact" class="btn btn-outline btn-md btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Contact Us Now</a>
             </div>
         </div>
     </div>
@@ -733,7 +733,7 @@
 
   <!--== Pricing Table Start ==-->
   <section class="white-bg" id="pricing">
-    <div class="container">
+    <div class="container pricing-container">
       <div class="row">
         <div class="col-md-8 centerize-col text-center">
           <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
@@ -743,28 +743,28 @@
         </div>
       </div>
         <div class="row mt-50">
+          {% for plan in price_plans %}
           <div class="col-md-4 pricing-table col-sm-4 xs-mb-30">
             <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
-              <div class="plan-name">
-                <h3>Basic</h3>
+              <div class="plan-name ">
+                <h3 class=" mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
               </div>
-              <div class="value">
-                <h3>10<span>$</span></h3>
-                <span class="per">Per Month</span>
+              <hr class="sep_lines">
+              <div class="value ">
+                <h3 class="{% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.price }}<span> Euro</span></h3>
+                <!-- <span class="per">Per Month</span> -->
               </div>
-              <ul>
-              	<li>Mobile-Optimized Website</li>
-                  <li>Powerful Website Metrics</li>
-                  <li>Free Custom Domain</li>
-                  <li>24/7 Customer Support</li>
-                  <li>Fully Integrated E-Commerce</li>
-                  <li>Sell Unlimited Products &amp; Accept Donations</li>
+              <hr class="sep_lines">
+              <ul class="mt-5">
+
+              	<li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li>
+
               </ul>
-              <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div>
+              <!-- <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div> -->
             </div>
           </div>
-
-          <div class="col-md-4 pricing-table col-sm-4 xs-mb-30">
+          {% endfor %}
+          <!-- <div class="col-md-4 pricing-table col-sm-4 xs-mb-30">
             <div class="pricing-box featured corporate pricing-box-bg text-center">
               <div class="plan-name">
                 <h3>Standard</h3>
@@ -783,9 +783,9 @@
               </ul>
               <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-md-4 pricing-table col-sm-4">
+          <!-- <div class="col-md-4 pricing-table col-sm-4">
             <div class="pricing-box pricing-box-bg text-center wow fadeInRight" data-wow-delay="0.2s">
               <div class="plan-name">
                 <h3>Premium</h3>
@@ -804,7 +804,7 @@
               </ul>
               <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div>
             </div>
-          </div>
+          </div> -->
         </div>
     </div>
   </section>

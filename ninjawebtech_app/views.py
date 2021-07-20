@@ -5,7 +5,7 @@ import datetime
 import random
 from django.utils.html import strip_tags
 from django.contrib import messages
-from .models import About, Service, Portfolio, TeamMember, Skill, Review, ProjectCategory, NewsletterUser
+from .models import About, Service, Portfolio, TeamMember, Skill, Review, ProjectCategory, NewsletterUser, Pricing, Post
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
@@ -32,6 +32,14 @@ def homeview(request):
     #------------------------------------------------------------------PORTFOLIO
     first_three_services = Service.objects.all()[:3]
     last_three_services = Service.objects.all()[3:]
+    #-------------------------------------------------------------------PRICING
+    price_plans = Pricing.objects.all()
+    feat = Pricing.objects.values_list('features', flat=True)
+
+    #-------------------------------------------------------------------blog
+    blog_posts = Post.objects.filter(featured=True)
+
+    print(feat)
     if request.method == "POST":
         newsletter_email = request.POST.get('sub_email')
         if newsletter_email:
@@ -48,6 +56,9 @@ def homeview(request):
                         'about_us': about_us,
                         "skills": skills,
                         "reviews": reviews,
+                        "price_plans": price_plans,
+                        "blog_posts": blog_posts,
+                        "feat": feat,
                         }
                     return render(request, template, context)
             except:
@@ -79,11 +90,28 @@ def homeview(request):
                     'about_us': about_us,
                     "skills": skills,
                     "reviews": reviews,
+                    "price_plans": price_plans,
+                    "blog_posts": blog_posts,
+                    "feat": feat,
                 }
                 return render(request, template, context)
         else:
 
             context = {
+                "first_three_services": first_three_services,
+                "last_three_services": last_three_services,
+                "portfolio_category": portfolio_category,
+                "portfolio": portfolio,
+                'about_us': about_us,
+                "skills": skills,
+                "reviews": reviews,
+                "price_plans": price_plans,
+                "blog_posts": blog_posts,
+                "feat": feat,
+            }
+            return HttpResponseRedirect("/")
+    else:
+        context = {
             "first_three_services": first_three_services,
             "last_three_services": last_three_services,
             "portfolio_category": portfolio_category,
@@ -91,17 +119,9 @@ def homeview(request):
             'about_us': about_us,
             "skills": skills,
             "reviews": reviews,
-            }
-            return HttpResponseRedirect("/")
-    else:
-        context = {
-        "first_three_services": first_three_services,
-        "last_three_services": last_three_services,
-        "portfolio_category": portfolio_category,
-        "portfolio": portfolio,
-        'about_us': about_us,
-        "skills": skills,
-        "reviews": reviews,
+            "price_plans": price_plans,
+            "blog_posts": blog_posts,
+            "feat": feat,
         }
     return render(request, template, context)
 #-------------------------------------------------------------------CONTACT VIEW
@@ -132,15 +152,15 @@ def reviewview(request):
     }
     return render(request, template, context)
 
-# #--------------------------------------------------------------------BLOG VIEW
-# def blogview(request):
-#     template = 'ninjawebtech_app/blog.html'
-#
-#     context = {
-#
-#     }
-#     return render(request, template, context)
-#
+#--------------------------------------------------------------------BLOG VIEW
+def bloglistview(request):
+    template = 'ninjawebtech_app/blog.html'
+
+    context = {
+
+    }
+    return render(request, template, context)
+
 # #------------------------------------------------------------------SERVICES VIEW
 # def servicesview(request):
 #     template = 'ninjawebtech_app/contact.html'
