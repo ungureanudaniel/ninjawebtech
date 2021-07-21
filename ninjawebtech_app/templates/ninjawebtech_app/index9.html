@@ -70,7 +70,7 @@
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
           <li class="#"><a href="{% url 'home' %}" class="">Home</a></li>
           <li><a class="page-scroll" href="#about">About</a></li>
-          <li><a class="page-scroll" href="#work">Works</a></li>
+          <li><a class="page-scroll" href="#work">Portfolio</a></li>
           <li><a class="page-scroll" href="#service">Services</a></li>
           <li><a class="page-scroll" href="#team">Team</a></li>
           <li><a class="page-scroll" href="#pricing">Pricing</a></li>
@@ -89,7 +89,7 @@
               <ul class="link">
                 <li class="link-item"><a class="page-scroll" href="{% url 'home' %}">Home</a></li>
                 <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
-                <li class="link-item"><a class="page-scroll" href="#work">Works</a></li>
+                <li class="link-item"><a class="page-scroll" href="#work">Portfolio</a></li>
                 <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
                 <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
                 <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
@@ -111,7 +111,7 @@
   <!--== Header End ==-->
 
   <!--== Particle Slider Start ==-->
-  <div class="remove-padding transition-none" id="home">
+  <div class="top-slides remove-padding transition-none" id="home">
     <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="particle-effect-one5" data-source="gallery" style="background:#eef0f1;padding:0px;">
 		<!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
 			<div id="rev_slider_4_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
@@ -146,7 +146,7 @@
 					style="z-index: 5;"><img src="{% static 'images/slides/home-bg-9.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
 				<!-- LAYER NR. 2 -->
-				<div class="tp-caption   tp-resizeme"
+				<div class="tp-caption  brand tp-resizeme"
 					 id="slide-10-layer-6"
 					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
@@ -165,7 +165,7 @@
 					data-paddingbottom="[0,0,0,0]"
 					data-paddingleft="[20,20,20,20]"
 
-					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 800; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;text-transform:uppercase;">Ninja WebTECH</div>
+					style="z-index: 6; white-space: nowrap; line-height: 80px; font-weight: 800; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;text-transform:uppercase;">Ninja WebTECH</div>
 
 				<!-- LAYER NR. 3 -->
 				<div class="tp-caption   tp-resizeme"
@@ -247,7 +247,7 @@
 					style="z-index: 5;"><img src="{% static 'images/background/office1.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
 				<!-- LAYER NR. 6 -->
-				<div class="tp-caption   tp-resizeme"
+				<div class="tp-caption brand tp-resizeme"
 					 id="slide-11-layer-10"
 					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
@@ -344,7 +344,7 @@
 					style="z-index: 5;"><img src="{% static 'images/background/header_tablet.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
 				<!-- LAYER NR. 10 -->
-				<div class="tp-caption   tp-resizeme"
+				<div class="tp-caption brand tp-resizeme"
 					 id="slide-12-layer-13"
 					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
@@ -423,13 +423,13 @@
           <div class="section-title">
             <h1 class="raleway-font"><span class="font-100">We Are a</span> Web Development Company</h1>
             <hr class="center_line dark-bg">
-            <p>
+            <p style="font-size:1.2rem;">
               We started in 2017, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table on each and every project.
             </p>
           </div>
         </div>
       </div>
-      <div class="row mt-50">
+      <div class="row mt-5">
         <div class="col-md-6 col-sm-6 xs-mb-50 wow fadeInRight" data-wow-delay="0.2s">
           <img class="img-responsive mt-60" alt="laptop" src="{% static 'images/laptop.png' %}">
         </div>
@@ -460,7 +460,7 @@
           		<!--== Slide ==-->
       				<div class="testimonial-item text-center">
       				  <div class="testimonial-content white-color">
-      				  	<h3 class="mt-20 line-height-40 font-200">{{ review.content|striptags }}</h3>
+      				  	<h3 class="mt-2 line-height-40 font-200">{{ review.content|striptags }}</h3>
                   <h5 class="font-600 mb-0 white-color text-uppercase letter-spacing-2">- {{ review.author }} -</h5>
       				  </div>
       				</div>
@@ -470,8 +470,8 @@
             <div class="col-xs-12">
       				<!--== Slide ==-->
       				<div class="testimonial-item text-center">
-                <p class="mt-40">
-                  <a href="{% url 'review' %}" class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Click HERE to leave a review. It would help us a lot!</a>
+                <p class="mt-4">
+                  <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Click HERE to leave a review. It would help us a lot!</a>
                 </p>
       				</div>
       			</div>
@@ -494,7 +494,7 @@
       </div>
       <div class=" row">
         <div class="col-md-12">
-          <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter corporate text-sm-center mt-50">
+          <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter corporate text-sm-center mt-5">
               <div data-filter="*" class="cbp-filter-item-active cbp-filter-item dark">
                   All
               </div>
@@ -509,7 +509,7 @@
       </div>
     </div>
     <div class="container-fluid remove-padding">
-      <div class="row mt-50">
+      <div class="row mt-5">
         <div class="col-md-12">
           <div id="portfolio-gallery" class="cbp">
             {% for item in portfolio %}
@@ -536,43 +536,11 @@
   <!--== Counters Start ==-->
   <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
     <div class="overlay-bg"></div>
-    <!-- <div class="container">
-      <div class="row row-flex flex-center">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="counter-wrap wow fadeInLeft white-color" data-wow-delay="0.1s">
-              <i class="icofont icofont-award font-40px"></i>
-              <h2><span class="counter font-600 open-font">3521</span></h2>
-              <h3 class="font-400 text-uppercase">Happy Clients</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="counter-wrap wow fadeInUp white-color" data-wow-delay="0.2s">
-              <i class="icofont icofont-coffee-mug font-40px"></i>
-              <h2><span class="counter font-600 open-font">974</span></h2>
-              <h3 class="font-400 text-uppercase">Cups of Coffee</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="counter-wrap wow fadeInDown white-color" data-wow-delay="0.3s">
-              <i class="icofont icofont-briefcase font-40px"></i>
-              <h2><span class="counter font-600 open-font">634</span></h2>
-              <h3 class="font-400 text-uppercase">Project Delivered</h3>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="counter-wrap wow fadeInRight white-color" data-wow-delay="0.4s">
-              <i class="icofont icofont-chart-line font-40px"></i>
-              <h2><span class="counter font-600 open-font">449</span></h2>
-              <h3 class="font-400 text-uppercase">Awards Won</h3>
-            </div>
-          </div>
-        </div>
-    </div> -->
   </section>
   <!--== Counters End ==-->
 
   <!--== Services Start ==-->
-  <section class="white-bg pb-70" id="service">
+  <section class="white-bg pb-5" id="service">
     <div class="container">
       <div class="row">
         <div class="col-md-8 centerize-col text-center">
@@ -583,43 +551,43 @@
         </div>
       </div>
 
-      <div class="row mt-50">
+      <div class="row mt-5">
         <div class="col-md-4">
 
-            <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.1s">
+            <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.1s">
               <i class="icofont icofont-test-tube-alt font-40px"></i>
               <h3 class="mt-0 font-600">Websites</h3>
               <p class="font-400">Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients.</p>
             </div>
 
-            <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.2s">
+            <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.2s">
               <i class="icofont icofont-samsung-galaxy font-40px"></i>
               <h3 class="mt-0 font-600">Modern Software</h3>
               <p class="font-400">All our software is done in python, a modern, versatile and very powerful programming language, that is becoming increasingly popular amongst programmers.</p>
             </div>
-            <div class="feature-box corporate text-right mb-50 wow fadeInRight" data-wow-delay="0.3s">
+            <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.3s">
               <i class="icofont icofont-ui-head-phone font-40px"></i>
               <h3 class="mt-0 font-600">Creative concepts</h3>
               <p class="font-400">Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true.</p>
             </div>
         </div>
         <div class="col-md-4 xs-mt-80 sm-mt-80 wow zoomIn" data-wow-delay="0.4s">
-   	    	<img class="img-responsive pt-20" src="{% static 'images/iphone-5.png' %}" alt="">
+   	    	<img class="img-responsive pt-2" src="{% static 'images/iphone-5.png' %}" alt="">
    	    </div>
         <div class="col-md-4">
 <!-- {% static 'images/happy-client1.png' %} -->
-        	  <div class="feature-box corporate text-left mb-50 wow fadeInLeft" data-wow-delay="0.5s">
+        	  <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.5s">
               <i class="icofont icofont-space-shuttle font-40px"></i>
               <h3 class="mt-0">Awesome Friendly</h3>
               <p class="font-300">Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs.</p>
             </div>
 
-            <div class="feature-box corporate text-left mb-50 wow fadeInLeft" data-wow-delay="0.6s">
+            <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.6s">
               <i class="icofont icofont-interface font-40px"></i>
               <h3 class="mt-0">SEO & Online Marketing</h3>
               <p class="font-300">We are commited to make you succesful online, thus make you as present as possible using various programming and google embedded techniques.</p>
             </div>
-            <div class="feature-box corporate text-left mb-50 wow fadeInLeft" data-wow-delay="0.7s">
+            <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.7s">
               <i class="icofont icofont-ui-video-play font-40px"></i>
               <h3 class="mt-0">Custom Graphics</h3>
               <p class="font-300">We can draw digital graphics according to your needs, create cartoons and caricatures or anything you can think of to make your online presence more effective.</p>
@@ -655,9 +623,9 @@
                 <form method="POST" action="#newsletter_form">
                   {% csrf_token %}
 
-                  <input type="text" value="" name="sub_email" style="color: black;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp">
+                  <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp">
 
-                  <button class="btn btn-lg btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Join</button>
+                  <button class="btn buttons white-buttons  btn-square btn-zoom wow fadeInUp mt-3" data-wow-delay="0.4s">Join</button>
                 </form>
               </div>
 
@@ -686,7 +654,7 @@
           </div>
         </div>
       </div>
-      <div class="row mt-50">
+      <div class="row mt-5">
           <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="team-member">
               <div class="team-thumb">
@@ -698,7 +666,7 @@
               <h3>Bobby Castro</h3>
               <span class="title primary-color">Project Manager</span>
               <div class="social-icons-style-02">
-                <ul class="sm-icon mt-20 mb-0">
+                <ul class="sm-icon mt-2 mb-0">
                   <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
                   <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
                   <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
@@ -724,7 +692,7 @@
               <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-100"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
               <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
               <h5 class="mb-3 font-30px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
-              <a href="#contact" class="btn btn-outline btn-md btn-light-outline btn-square btn-zoom wow fadeInUp" data-wow-delay="0.4s">Contact Us Now</a>
+              <a href="#contact" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Contact Us Now</a>
             </div>
         </div>
     </div>
@@ -742,9 +710,9 @@
           </div>
         </div>
       </div>
-        <div class="row mt-50">
+        <div class="row mt-5">
           {% for plan in price_plans %}
-          <div class="col-md-4 pricing-table col-sm-4 xs-mb-30">
+          <div class="col-md-4 pricing-table col-sm-4">
             <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
               <div class="plan-name ">
                 <h3 class=" mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
@@ -760,58 +728,16 @@
               	<li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li>
 
               </ul>
-              <!-- <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div> -->
             </div>
           </div>
           {% endfor %}
-          <!-- <div class="col-md-4 pricing-table col-sm-4 xs-mb-30">
-            <div class="pricing-box featured corporate pricing-box-bg text-center">
-              <div class="plan-name">
-                <h3>Standard</h3>
-              </div>
-              <div class="value">
-                <h3>10<span>$</span></h3>
-                <span class="per">Per Month</span>
-              </div>
-              <ul>
-              	<li>Mobile-Optimized Website</li>
-                  <li>Powerful Website Metrics</li>
-                  <li>Free Custom Domain</li>
-                  <li>24/7 Customer Support</li>
-                  <li>Fully Integrated E-Commerce</li>
-                  <li>Sell Unlimited Products &amp; Accept Donations</li>
-              </ul>
-              <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div>
-            </div>
-          </div> -->
-
-          <!-- <div class="col-md-4 pricing-table col-sm-4">
-            <div class="pricing-box pricing-box-bg text-center wow fadeInRight" data-wow-delay="0.2s">
-              <div class="plan-name">
-                <h3>Premium</h3>
-              </div>
-              <div class="value">
-                <h3>10<span>$</span></h3>
-                <span class="per">Per Month</span>
-              </div>
-              <ul>
-              	<li>Mobile-Optimized Website</li>
-                  <li>Powerful Website Metrics</li>
-                  <li>Free Custom Domain</li>
-                  <li>24/7 Customer Support</li>
-                  <li>Fully Integrated E-Commerce</li>
-                  <li>Sell Unlimited Products &amp; Accept Donations</li>
-              </ul>
-              <div class="pricing-box-bottom"> <a class="btn btn-dark btn-md btn-default btn-square btn-zoom">Get Started</a> </div>
-            </div>
-          </div> -->
         </div>
     </div>
   </section>
   <!--== Pricing Table End ==-->
 
   <!--== Clients Start ==-->
-  <div class="dark-bg pt-60 pb-60">
+  <div class="dark-bg pt-5 pb-5">
     <div class="container">
       <div class="row">
         <div class="client-slider slick">
@@ -839,32 +765,34 @@
       <div class="row">
         <div class="col-md-8 centerize-col text-center">
           <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="raleway-font"><span class="font-100">Our</span> Blogs</h1>
+            <h1 class="raleway-font"><span class="font-100">Our</span> Blog Posts</h1>
             <hr class="center_line dark-bg">
           </div>
         </div>
       </div>
-      <div class="row mt-50">
+      <div class="row mt-5">
+        {% for post in blog_posts %}
         <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
           <div class="post-wrap">
             <div class="post-img">
               <div class="date-box dark-bg">
-                <span class="day">20</span>
-                <span class="month">JAN</span>
+                <span class="day">{{ post.created_date.day }}</span>
+                <span class="month">{{ post.created_date|date:'F' }}</span>
               </div>
               <div class="item"><img class="img-responsive" src="{% static 'images/post/post-01.jpg' %}" alt=""/></div>
             </div>
 
             <div class="post-text">
-              <h3><a href="blog.html">Best WordPress Themes</a></h3>
+              <h3><a href="{% url 'blog' %}">{{ post.title }}</a></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {{ post.text|striptags|truncatechars:50 }}
               </p>
               <a href="#" class="btn-text">Read More</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 blog-list wow fadeInDown" data-wow-delay="0.2s">
+        {% endfor %}
+        <!-- <div class="col-md-4 blog-list wow fadeInDown" data-wow-delay="0.2s">
           <div class="post-wrap">
             <div class="post-img">
               <div class="date-box dark-bg">
@@ -902,7 +830,7 @@
               <a href="#" class="btn-text">Read More</a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -921,7 +849,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="col-md-6 col-sm-6 col-md-offset-6 col-sm-offset-6">
           <div class="col-inner spacer text-left wow fadeInLeft" data-wow-delay="0.1s">
             <div class="mission-section">
@@ -934,8 +862,8 @@
               Nam suscipit, enim eu semper porta, est magna facilisis lorem, sagittis sollicitudin ipsum ipsum at tortor. Proin diam massa, fermentum eget nisl consequat, viverra accumsan turpis. Maecenas non nunc quis odio dignissim efficitur eget eu leo. Donec ut accumsan metus, sit amet efficitur diam.
             </p>
             <p class="mt-30">
-              <a class="btn btn-lg btn-dark-outline btn-square btn-zoom"><i class="icofont icofont-briefcase-2 mr-10"></i> Our Work</a>
-              <a class="btn btn-lg contactus_button btn-square btn-zoom"><i class="icofont icofont-ui-message mr-10"></i> Contact Us</a>
+              <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-10"></i> Our Work</a>
+              <a class="btn buttons contactus_button btn-zoom"><i class="icofont icofont-ui-message mr-10"></i> Contact Us</a>
             </p>
           </div>
           </div>

@@ -3,11 +3,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
 from django.views.generic.base import TemplateView
-from .views import homeview, reviewview
+from .views import homeview, reviewview, bloglistview
 
 urlpatterns = [
     path('', homeview, name='home'),
     path('review/', reviewview, name='review'),
+    path('blog/', bloglistview, name='blog'),
+
+
 
 
 

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +9,13 @@
 <link rel="shortcut icon" href="assets/images/favicon.ico">
 
 <!-- Core Style Sheets -->
-<link rel="stylesheet" href="assets/css/master.css">
+<link rel="stylesheet" href="{% static 'css/master.css' %}">
 <!-- Responsive Style Sheets -->
-<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 <!-- Revolution Style Sheets -->
-<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
-<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
-<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -58,54 +59,21 @@
       <!--== Start Header Navigation ==-->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="index.html"><img class="logo logo-display" src="assets/images/logo-studio-white.png" alt=""> <img class="logo logo-scrolled" src="assets/images/logo-studio-black.png" alt=""> </a> </div>
+        <div class="logo"> <a href="index.html"><img class="logo logo-display" src="assets/images/logo-studio-white.png" alt=""> <img class="logo logo-scrolled" src="{% static 'logo/logo_black.png' %}" alt=""> </a> </div>
       </div>
       <!--== End Header Navigation ==-->
 
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-          <li class="dropdown"><a href="#home" class="dropdown-toggle page-scroll" data-toggle="dropdown">Home</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="index.html">Classic</a>
-              </li>
-              <li>
-                <a href="index2.html">Corporate</a>
-              </li>
-              <li>
-                <a href="index3.html">Hero Video</a>
-              </li>
-              <li>
-                <a href="index4.html">Agency</a>
-              </li>
-              <li>
-                <a href="index5.html">Studio</a>
-              </li>
-              <li>
-                <a href="index6.html">Parallax</a>
-              </li>
-              <li>
-                <a href="index7.html">Business</a>
-              </li>
-              <li>
-                <a href="index8.html">Creative</a>
-              </li>
-              <li>
-                <a href="index9.html">Digital</a>
-              </li>
-              <li>
-                <a href="index10.html">Crypto</a>
-              </li>
-            </ul>
-          </li>
-          <li><a class="page-scroll" href="index.html#about">About</a></li>
-          <li><a class="page-scroll" href="index.html#work">Works</a></li>
-          <li><a class="page-scroll" href="index.html#service">Services</a></li>
-          <li><a class="page-scroll" href="index.html#team">Team</a></li>
-          <li><a class="page-scroll" href="index.html#pricing">Pricing</a></li>
-          <li><a class="page-scroll" href="index.html#blog">Blog</a></li>
-          <li><a class="page-scroll" href="index.html#contact">Contact</a></li>
+          <li class="#"><a href="{% url 'home' %}" class="">Home</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#about">About</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#work">Works</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#service">Services</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#team">Team</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#pricing">Pricing</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#blog">Blog</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#contact">Contact</a></li>
         </ul>
       </div>
       <!--== /.navbar-collapse ==-->
@@ -122,9 +90,9 @@
             <div class="col-md-12">
               <div class="page-title text-center white-color">
                 <h1 class="raleway-font font-300">Blog Posts</h1>
-                <div class="breadcrumb mt-20">
+                <div class="breadcrumb col-md-12 text-centermt-2">
                     <!-- Breadcrumb Start -->
-                        <ul>
+                        <ul class="breadcrumb-item text-white">
                           <li><a href="index.html">Home</a></li>
                           <li>Blog Details</li>
                         </ul>
@@ -452,23 +420,23 @@
 <!--== Wrapper End ==-->
 
 <!--== Javascript Plugins ==-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/smoothscroll.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/master.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/smoothscroll.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/master.js' %}"></script>
 
 <!-- Revolution js Files -->
-<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="revolution/js/revolution.extension.actions.min.js"></script>
-<script src="revolution/js/revolution.extension.carousel.min.js"></script>
-<script src="revolution/js/revolution.extension.kenburn.min.js"></script>
-<script src="revolution/js/revolution.extension.layeranimation.min.js"></script>
-<script src="revolution/js/revolution.extension.migration.min.js"></script>
-<script src="revolution/js/revolution.extension.navigation.min.js"></script>
-<script src="revolution/js/revolution.extension.parallax.min.js"></script>
-<script src="revolution/js/revolution.extension.slideanims.min.js"></script>
-<script src="revolution/js/revolution.extension.video.min.js"></script>
+<script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'revolution/js/revolution.extension.video.min.js' %}"></script>
 <!--== Javascript Plugins End ==-->
 
 </body>
