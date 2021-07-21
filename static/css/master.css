@@ -321,6 +321,15 @@ nav.navbar.bootsnav ul.nav > li > a.nav-btn-default {padding: 10px 15px;margin-t
 
 /* Menu Overlay */
 
+.whoweare .container .skillrow .skill-image {
+  margin-top:9rem;
+}
+
+@media screen and (max-width:768px) {
+  .whoweare .container .skillrow .skill-image {
+    margin-top:2rem;
+  }
+}
 body.overflow{overflow: hidden;}
 .menu-overlay {position: fixed;top: 0;z-index: 998;display: none;overflow: hidden;width: 100%;height: 100%;background: #060606;left: 0;right: 0;}
 .menu-overlay .menu-wrap {width: 100%;display: table;height: 100vh;}
