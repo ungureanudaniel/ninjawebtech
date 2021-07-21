@@ -779,7 +779,7 @@
                 <span class="day">{{ post.created_date.day }}</span>
                 <span class="month">{{ post.created_date|date:'F' }}</span>
               </div>
-              <div class="item"><img class="img-responsive" src="{% static 'images/post/post-01.jpg' %}" alt=""/></div>
+              <div class="item"><img class="img-responsive" src="{{ post.image.url }}" alt=""/></div>
             </div>
 
             <div class="post-text">

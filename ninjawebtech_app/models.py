@@ -181,7 +181,7 @@ class Post(models.Model):
     )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    image = models.FileField(upload_to='blog_image', blank=True)
+    image = models.ImageField(upload_to='blog_image', blank=True)
     text = RichTextField(blank=True, null=True)
     # category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='postcategory')
     comment_count = models.IntegerField(default=0)
