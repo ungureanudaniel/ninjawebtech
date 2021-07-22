@@ -471,7 +471,7 @@
       				<!--== Slide ==-->
       				<div class="testimonial-item text-center">
                 <p class="mt-4">
-                  <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Click HERE to leave a review. It would help us a lot!</a>
+                  <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Review here!</a>
                 </p>
       				</div>
       			</div>
@@ -700,7 +700,7 @@
   <!--== Call to Actions End ==-->
 
   <!--== Pricing Table Start ==-->
-  <section class="white-bg" id="pricing">
+  <section class="pricing white-bg" id="pricing">
     <div class="container pricing-container">
       <div class="row">
         <div class="col-md-8 centerize-col text-center">
@@ -713,6 +713,7 @@
         <div class="row mt-5">
           {% for plan in price_plans %}
           <div class="col-md-4 pricing-table col-sm-4">
+
             <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
               <div class="plan-name ">
                 <h3 class=" mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
@@ -729,6 +730,7 @@
 
               </ul>
             </div>
+
           </div>
           {% endfor %}
         </div>
