@@ -450,13 +450,13 @@
   <!--== Who We Are End ==-->
 
   <!--== Testimonials Start ==-->
-  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/parallax-bg-3.jpg' %}" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial">
+  <section class="parallax-bg fixed-bg" data-parallax-bg-image="{% static 'images/background/parallax-bg-3.jpg' %}" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial">
     <div class="dark-overlay-bg"></div>
     <div class="container">
       <div class="row">
-          <div class="testimonial-style-6">
+          <div class="col-xs-12 col-lg-12 testimonial-style-6">
             {% for review in reviews %}
-          	<div class="col-xs-12">
+          	<div class="col-lg-12 text-center">
           		<!--== Slide ==-->
       				<div class="testimonial-item text-center">
       				  <div class="testimonial-content white-color">
@@ -469,9 +469,9 @@
 
             <div class="col-xs-12">
       				<!--== Slide ==-->
-      				<div class="testimonial-item text-center">
+      				<div class="testimonial-item col-md-12 text-center">
                 <p class="mt-4">
-                  <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Review here!</a>
+                  <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp text-center" data-wow-delay="0.4s">Review here!</a>
                 </p>
       				</div>
       			</div>
