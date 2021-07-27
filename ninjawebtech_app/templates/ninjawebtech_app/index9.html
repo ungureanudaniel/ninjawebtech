@@ -598,7 +598,7 @@
   </section>
   <!--== Services End ==-->
 
-  <!--== Video Start ==-->
+  <!--== Newsletter Start ==-->
   <section class="relative" id="newsletter_form">
     <div class="overlay-bg"></div>
     <div class="container">
@@ -623,9 +623,9 @@
                 <form method="POST" action="#newsletter_form">
                   {% csrf_token %}
 
-                  <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp">
+                  <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp mt-5">
 
-                  <button class="btn buttons white-buttons  btn-square btn-zoom wow fadeInUp mt-3" data-wow-delay="0.4s">Join</button>
+                  <button class="btn buttons white-buttons  btn-square btn-zoom wow fadeInUp mt-5" data-wow-delay="0.4s">Join</button>
                 </form>
               </div>
 
@@ -637,11 +637,11 @@
       </div>
     </div>
      <video autoplay="" muted="" loop="" controls="" class="html5-video">
-      <source src="{% static 'videos/html5-video.mp4' %}" type="video/mp4">
-      <source src="{% static 'videos/html5-video.webm' %}" type="video/webm">
+      <source src="{% static 'videos/tech-world.mp4' %}" type="video/mp4">
+      <!-- <source src="{% static 'videos/keyboard_bg.mp4' %}" type="video/mp4"> -->
     </video>
   </section>
-  <!--== Video End ==-->
+  <!--== Newsletter End ==-->
 
   <!--== Team Start ==-->
   <!-- <section class="white-bg" id="team">
@@ -692,7 +692,7 @@
               <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-100"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
               <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
               <h5 class="mb-3 font-30px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
-              <a href="#contact" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Contact Us Now</a>
+              <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">Contact Us Now</a>
             </div>
         </div>
     </div>
@@ -798,9 +798,9 @@
   <!--== Blogs End ==-->
 
   <!--== About Company Start ==-->
-  <div class="grey-bg pt-0 pb-0 about-section">
-    <div class="col-md-6 col-sm-6 bg-flex bg-flex-left">
-      <div class="bg-flex-holder bg-flex-cover" style="background-image: url({% static 'images/background/bg-left-img-2.jpg' %});">
+  <div class="grey-bg about-section mt-5">
+    <div class="col-md-6 col-sm-6 bg-flex bg-flex-left p-0">
+      <div class="d-flex">
         <div class="about-box_overlay">
           <div class="center-layout">
           <div class="v-align-middle"> <img class="popup-youtube" src="{% static 'images/background/laptop4.png' %}">
@@ -810,11 +810,11 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="col-md-6 col-sm-6 col-md-offset-6 col-sm-offset-6">
-          <div class="col-inner spacer text-left wow fadeInLeft" data-wow-delay="0.1s">
+    <div class="container justify-content-center">
+      <div class="col-md-6 col-sm-12 col-md-offset-6 col-sm-offset-6">
+          <div class="col-inner spacer wow fadeInLeft" data-wow-delay="0.1s">
             <div class="mission-section">
-            <h2 class="raleway-font"><span class="font-100">About</span> <br>Our Company</h2>
+            <h2 class="raleway-font about-title"><span class="font-100">About</span> <br>Our Company</h2>
             <hr class="left-line dark-bg" />
             <p>
               Vivamus enim metus, varius et nunc quis, elementum pharetra turpis. Proin vel massa sed turpis auctor consectetur. Proin rhoncus eleifend pulvinar.
@@ -823,8 +823,8 @@
               Nam suscipit, enim eu semper porta, est magna facilisis lorem, sagittis sollicitudin ipsum ipsum at tortor. Proin diam massa, fermentum eget nisl consequat, viverra accumsan turpis. Maecenas non nunc quis odio dignissim efficitur eget eu leo. Donec ut accumsan metus, sit amet efficitur diam.
             </p>
             <p class="mt-3">
-              <a class="btn buttons btn-dark btn-zoom m-3"><i class="icofont icofont-briefcase-2 mr-1"></i> Our Work</a>
-              <a class="btn buttons contactus_button btn-zoom m-2"><i class="icofont icofont-ui-message mr-1"></i> Contact Us</a>
+              <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i> Our Work</a>
+              <a class="btn buttons contactus_button btn-zoom "><i class="icofont icofont-ui-message mr-1"></i> Contact Us</a>
             </p>
           </div>
           </div>
@@ -834,31 +834,7 @@
   <!--== About Company End ==-->
 
   <!--== Who We Are Start ==-->
-  <!-- <div class="primary-bg pt-0 pb-0 about-section">
-    <div class="col-md-6 col-sm-6 bg-flex bg-flex-right">
-      <div class="bg-flex-holder bg-flex-cover" style="background-image: url({% static 'images/background/bg-left-img.jpg' %});"></div>
-    </div>
-    <div class="container-fluid">
-      <div class="col-md-6 col-sm-6">
-          <div class="col-inner spacer text-left wow fadeInRight" data-wow-delay="0.2s">
-            <div class="mission-section">
-            <h2 class="raleway-font white-color"><span class="font-100">Our</span> <br>Awesome Features</h2>
-            <hr class="left-line white-bg" />
-            <p class="white-color">
-              Vivamus enim metus, varius et nunc quis, elementum pharetra turpis. Proin vel massa sed turpis auctor consectetur. Proin rhoncus eleifend pulvinar.
-            </p>
-            <p class="white-color">
-              Nam suscipit, enim eu semper porta, est magna facilisis lorem, sagittis sollicitudin ipsum ipsum at tortor. Proin diam massa, fermentum eget nisl consequat, viverra accumsan turpis. Maecenas non nunc quis odio dignissim efficitur eget eu leo. Donec ut accumsan metus, sit amet efficitur diam.
-            </p>
-            <p class="mt-30">
-              <a class="btn btn-lg btn-light-outline btn-square btn-zoom"><i class="icofont icofont-briefcase-2 mr-10"></i> Our Work</a>
-              <a class="btn btn-lg btn-light btn-square btn-zoom"><i class="icofont icofont-ui-cart mr-10"></i> Buy template</a>
-            </p>
-          </div>
-          </div>
-        </div>
-      </div>
-  </div> -->
+
   <!--== Who We Are End ==-->
 
   {% include 'ninjawebtech_app/contact_form.html' %}

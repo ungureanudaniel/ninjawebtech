@@ -18,6 +18,7 @@ class NewsletterUser(models.Model):
 
 class ProjectCategory(models.Model):
     title = models.CharField(max_length=30)
+    # slug = models.SlugField(max_length=255, unique=True)
 
     class Meta:
         verbose_name = "Project Category"
@@ -43,6 +44,7 @@ class Service(models.Model):
     title = models.CharField(max_length=30)
     text = RichTextField(blank=True, null=True)
     thumbnail = models.ImageField(upload_to='services', blank=True)
+    # slug = models.SlugField(default="-", max_length=255, unique=True)
 
     def __str__(self):
         return '{}'.format(self.title)
@@ -72,7 +74,7 @@ class Pricing(models.Model):
 class Skill(models.Model):
     title = models.CharField(max_length=30)
     percent = models.IntegerField(blank=True, null=True)
-
+    # slug = models.SlugField(default="", max_length=255, unique=True)
     def __str__(self):
         return '{}'.format(self.title)
 
@@ -99,6 +101,7 @@ class Portfolio(models.Model):
     image6 = models.ImageField(upload_to='portfolio', blank=True)
     image7 = models.ImageField(upload_to='portfolio', blank=True)
     tags = TaggableManager()
+    # slug = models.SlugField(default="", max_length=255, unique=True)
 
     @property
     def short_description(self):

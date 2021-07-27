@@ -5,15 +5,19 @@ class AboutAdmin(admin.ModelAdmin):
 
 class ServiceAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'thumbnail']
+     # prepopulated_fields = {'slug': ('title',), }
 
 class ProjectCategoryAdmin(admin.ModelAdmin):
      list_display =  ['title']
+     # prepopulated_fields = {'slug': ('title',), }
 
 class SkillAdmin(admin.ModelAdmin):
      list_display =  ['title', 'percent']
+     # prepopulated_fields = {'slug': ('title',), }
 
 class PortfolioAdmin(admin.ModelAdmin):
      list_display =  ['title', 'short_description', 'link', 'start_date', 'end_date', 'category', 'author', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image6', 'image7']
+     # prepopulated_fields = {'slug': ('title',), }
 
 class TeamMemberAdmin(admin.ModelAdmin):
      list_display =  ['first_name', 'last_name', 'job', 'email', 'phone', 'insta', 'twitter', 'linkedin', 'photo']
@@ -36,6 +40,7 @@ class PricingAdmin(admin.ModelAdmin):
 
 class PostAdmin(admin.ModelAdmin):
     list_display =  ['title', 'text', 'featured', 'status', 'created_date', 'slug']
+    prepopulated_fields = {'slug': ('title',), }
 
 
 admin.site.register(About, AboutAdmin)
