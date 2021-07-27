@@ -2,7 +2,7 @@
     .hero-text h1{font-size:74px;}
     .hero-text h2 {font-size: 55px;}
 	/* heights */
-	.md-height-1px {height: 1px}
+	/* .md-height-1px {height: 1px}
 	.md-height-2px {height: 2px}
 	.md-height-3px {height: 3px}
 	.md-height-4px {height: 4px}
@@ -27,28 +27,28 @@
 	.md-height-600px {height: 600px}
 	.md-height-650px {height: 650px}
 	.md-height-700px {height: 700px}
-	.md-height-800px {height: 800px}
+	.md-height-800px {height: 800px} */
 
 	/*floats*/
-	.md-float-left{float:left!important;}
+	/* .md-float-left{float:left!important;}
 	.md-float-right{float:right!important;}
-	.md-float-none{float:none!important;}
+	.md-float-none{float:none!important;} */
 
 	/*text-alignment*/
-	.md-text-left{text-align:left!important;}
+	/* .md-text-left{text-align:left!important;}
 	.md-text-center{text-align:center!important;}
-	.md-text-right{text-align:right!important;}
+	.md-text-right{text-align:right!important;} */
 
 	/* display */
-  .md-display-block {display:block !important}
-  .md-overflow-hidden {overflow:hidden !important}
-  .md-overflow-auto {overflow:auto !important}
-  .md-display-inline-block {display:inline-block !important}
+  /* .md-display-block {display:block !important} */
+  /* .md-overflow-hidden {overflow:hidden !important}
+  .md-overflow-auto {overflow:auto !important} */
+  /* .md-display-inline-block {display:inline-block !important}
   .md-display-inline {display:inline !important}
   .md-display-none {display:none !important;}
   .md-display-inherit {display:inherit !important}
   .md-display-table {display:table !important}
-  .md-display-table-cell {display:table-cell !important}
+  .md-display-table-cell {display:table-cell !important} */
 
 	/*sm margins*/
 	/* .md-remove-margin{margin:0;}
