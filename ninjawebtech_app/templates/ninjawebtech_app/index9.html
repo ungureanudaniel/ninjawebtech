@@ -83,7 +83,7 @@
 
     <!-- Start Side Menu -->
     <div class="side corporate dark-bg">
-    		<a href="index.html" class="logo-side"><img src="{% static 'logo/logo.png' %}" alt="side-logo"/></a>
+    		<a href="{% url 'home' %}" class="logo-side"><img src="{% static 'logo/logo.png' %}" alt="side-logo"/></a>
             <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
             <div class="widget mt-120">
               <ul class="link">
@@ -168,7 +168,7 @@
 					style="z-index: 6; white-space: nowrap; font-size:6rem; line-height: 80px; font-weight: 800; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;text-transform:uppercase;">Ninja WebTECH</div>
 
 				<!-- LAYER NR. 3 -->
-				<div class="tp-caption   tp-resizeme"
+				<div class="tp-caption advertising tp-resizeme"
 					 id="slide-10-layer-8"
 					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 					 data-y="['middle','middle','middle','middle']" data-voffset="['0','-30','-20','-20']"
@@ -187,7 +187,7 @@
 					data-paddingbottom="[0,0,0,0]"
 					data-paddingleft="[0,0,0,0]"
 
-					style="z-index: 7; white-space: nowrap; font-size: 1.5rem; line-height: 25px; font-weight: 400; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Top notch, sharp and stunning websites</span> </div>
+					style="z-index: 7; margin-top: 3rem; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Top notch, sharp and stunning websites</span> </div>
 
 				<!-- LAYER NR. 4 -->
 				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-10-layer-10"
@@ -270,7 +270,7 @@
 					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 800; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;text-transform:uppercase;">NINJA WEBTECH</div>
 
 				<!-- LAYER NR. 7 -->
-				<div class="tp-caption tp-resizeme" id="slide-11-layer-11"
+				<div class="tp-caption advertising tp-resizeme" id="slide-11-layer-11"
 					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 					 data-y="['middle','middle','middle','middle']" data-voffset="['1','-30','-20','-20']"
 					data-width="['none','none','361','330']"
@@ -321,7 +321,7 @@
 				<!-- LAYERS -->
 
 				<!-- LAYER NR. 9 -->
-				<div class="tp-caption   fullscreenvideo  disabled_lc tp-videolayer"
+				<div class="tp-caption disabled_lc tp-videolayer"
 					 id="slide-12-layer-12"
 					 data-x="0"
 					 data-y="0"
@@ -367,7 +367,7 @@
 					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 700; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;">NINJA WEBTECH</div>
 
 				<!-- LAYER NR. 11 -->
-				<div class="tp-caption tp-resizeme" id="slide-12-layer-14"
+				<div class="tp-caption advertising tp-resizeme" id="slide-12-layer-14"
 					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
 					 data-y="['middle','middle','middle','middle']" data-voffset="['1','-30','-20','-20']"
 					data-width="['none','none','361','330']"
@@ -421,7 +421,7 @@
       <div class="row">
         <div class="col-md-8 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
           <div class="section-title">
-            <h1 class="raleway-font"><span class="font-100 font-50px">We Are a</span> Web Development Company</h1>
+            <h1 class="raleway-font font-40px"><span class="font-100 font-40px">We Are a</span> Web Development Company</h1>
             <hr class="center_line dark-bg">
             <p style="font-size:1.2rem;">
               We started in 2017, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table on each and every project.
@@ -430,10 +430,10 @@
         </div>
       </div>
       <div class="skillrow row ">
-        <div class="skill-image col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
+        <div class="skill-image col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
           <img class="img-responsive" alt="laptop" src="{% static 'images/laptop.png' %}">
         </div>
-        <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.3s">
+        <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
           <div class="skillbar-wrap skillbar-style-02">
             {% for skill in skills %}
               <div class="skillbar dark-color" data-percent="{{ skill.percent }}">
@@ -571,7 +571,7 @@
               <p class="font-400">Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true.</p>
             </div>
         </div>
-        <div class="col-md-4 xs-mt-80 sm-mt-80 wow zoomIn" data-wow-delay="0.4s">
+        <div class="col-md-4 xs-mt-80 phone wow zoomIn" data-wow-delay="0.4s">
    	    	<img class="img-responsive pt-2" src="{% static 'images/iphone-5.png' %}" alt="">
    	    </div>
         <div class="col-md-4">
@@ -602,11 +602,11 @@
   <section class="relative" id="newsletter_form">
     <div class="overlay-bg"></div>
     <div class="container">
-      <div class="row">
-        <div class="display-table col-md-8 col-md-offset-2">
+      <div class="row justify-content-center">
+        <div class="display-table col-sm-12 col-md-8">
           <div class="v-align-middle text-center">
             <div class="white-color text-center">
-              <h1 class="font-700 font-60px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 wow fadeInUp" data-wow-delay="0.1s">Join <span class="font-100">our Newsletter </span> Now</h1>
+              <h1 class="font-700 font-40px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 wow fadeInUp" data-wow-delay="0.1s">Join <span class="font-100">our Newsletter </span> Now</h1>
               <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
               <h3 class="font-400 line-height-40 wow fadeInUp" data-wow-delay="0.3s">
                 And receive interesting news from the technology world.
@@ -688,10 +688,11 @@
     <div class="overlay-bg"></div>
     <div class="container">
     	  <div class="row">
-            <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-              <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-100"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
-              <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
-              <h5 class="mb-3 font-30px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
+            <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
+              <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-200"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
+              <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
+              <div class="call-to-action-image d-flex justify-content-center"><img class="img-responsive" src="{% static 'images/icons/fist-svgrepo-com.png' %}" alt="02"/> </div>
+              <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
               <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">Contact Us Now</a>
             </div>
         </div>
@@ -716,7 +717,7 @@
 
             <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
               <div class="plan-name ">
-                <h3 class=" mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
+                <h3 class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
               </div>
               <hr class="sep_lines">
               <div class="value ">
