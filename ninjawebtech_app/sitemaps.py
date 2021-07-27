@@ -1,7 +1,7 @@
 from django.contrib.sitemaps import Sitemap
 from .models import ProjectCategory, Service, Skill, Portfolio, Post
 from django.urls import reverse
-from slugify import slugify
+
 
 class ProjectCategorySitemap(Sitemap):
     changefreq = "weekly"
@@ -58,7 +58,7 @@ class PortfolioSitemap(Sitemap):
 
     def location(self,obj):
         return '/%s' % (obj.title)
-        
+
 class StaticSitemap(Sitemap):
     changefreq = "yearly"
 
