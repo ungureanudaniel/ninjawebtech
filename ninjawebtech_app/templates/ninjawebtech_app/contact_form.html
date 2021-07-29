@@ -15,20 +15,28 @@
   <div class="container">
     <div class="row mt-7">
       <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
-        <form name="contact-form" id="contact-form" action="{% url 'home' %}" method="POST" class="contact-form-style-01">
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ message.message }}
+          </div>
+          {% endfor %}
+        {% endif %}
+        <form name="" id="contact-form" action="." method="POST" class="contact-form-style-01">
+          {% csrf_token %}
           <div class="messages"></div>
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <div class="form-group">
                 <label for="name">Name *</label>
-                <input type="text" name="name" class="md-input" id="name" required data-error="Your Name is Required">
+                <input type="text" name="message-name" class="md-input" id="name" required data-error="Your Name is Required">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
             <div class="col-md-12 col-sm-12">
               <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" name="email" class="md-input" id="email" required data-error="Please Enter Valid Email">
+                <input type="email" name="message-email" class="md-input" id="email" required data-error="Please Enter Valid Email">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -39,9 +47,20 @@
                 <div class="help-block with-errors"></div>
               </div>
             </div>
+            <div class="form-group captcha mb-5 ml-4">
+              <label class="text-warning">Please solve the captcha.</label>
+              <br>
+              {{ form.captcha }}
+            </div>
+            <!-- Note -->
+            <div class="form-group">
+              <p class="text-muted">
+                * All fields compulsory *
+              </p>
+            </div>
             <div class="col-md-12 col-sm-12">
               <div class="text-left">
-                <button type="submit" name="submit" class="btn btn-primary btn-md btn-square btn-animate remove-margin btn-zoom "><span>Send <i class="ion-android-arrow-forward"></i></span></button>
+                <button type="submit" name="submit" class="btn btn-primary btn-animate remove-margin btn-zoom "><span>Send <i class="ion-android-arrow-forward"></i></span></button>
               </div>
             </div>
           </div>

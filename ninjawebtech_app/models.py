@@ -163,17 +163,17 @@ class Email(models.Model):
 
 
 #----------------------CONTACT FORM MESSAGES---------------------------
-class ContactData(models.Model):
-    email = models.EmailField()
-    address = models.TextField(max_length=200, default='')
-    phone = models.CharField(max_length=200, default='')
-
-    class Meta:
-        verbose_name = "Contact Data"
-        verbose_name_plural = "Contact Data"
-
-    def __str__(self):
-        return '{}'.format(self.email)
+# class ContactData(models.Model):
+#     email = models.EmailField()
+#     address = models.TextField(max_length=200, default='')
+#     phone = models.CharField(max_length=200, default='')
+#
+#     class Meta:
+#         verbose_name = "Contact Data"
+#         verbose_name_plural = "Contact Data"
+#
+#     def __str__(self):
+#         return '{}'.format(self.email)
 
 
 #----------------------------------THE POST MODEL----------------------------

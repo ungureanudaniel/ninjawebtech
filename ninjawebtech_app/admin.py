@@ -1,7 +1,10 @@
 from django.contrib import admin
-from .models import About, Service, Portfolio, TeamMember, Logo, Email, ContactData, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Post
+from .models import About, Service, Portfolio, TeamMember, Logo, Email, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Post
 class AboutAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'image', 'active']
+
+class EmailAdmin(admin.ModelAdmin):
+     list_display =  ['contact_email', 'contact_subject', 'contact_message', 'contact_author', 'timestamp']
 
 class ServiceAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'thumbnail']
@@ -53,7 +56,6 @@ admin.site.register(Portfolio, PortfolioAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Logo, LogoAdmin)
 admin.site.register(Post, PostAdmin)
-admin.site.register(Email)
+admin.site.register(Email, EmailAdmin)
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)
-admin.site.register(ContactData)
 admin.site.register(Review, ReviewAdmin)

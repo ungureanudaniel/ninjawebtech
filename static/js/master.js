@@ -10,10 +10,10 @@
 			mainSlider();
 			ContentSlider();
 			testimonialSlider();
-			testimonialSliderTwo();
+			// testimonialSliderTwo();
 			clientSlider();
 			blogGridSlider();
-			teamSlider();
+			// teamSlider();
 			parallaxEffect();
 			parallaxBackground();
 
@@ -91,56 +91,6 @@
 		  }
 }
 		/* ===== PIE CHARTS  ===== */
-
-		$(function() {
-				$('.chart-01').easyPieChart({
-					easing: 'easeOutBounce',
-					barColor: '#212121',
-					trackColor: '#eeeeee',
-          scaleColor: false,
-					scaleLength: 2,
-					size: 150, //110
-					animate:{
-						duration:2000,
-						enabled:true
-					},
-					onStep: function(from, to, percent) {
-						$(this.el).find('.percent').text(Math.round(percent));
-					}
-				});
-
-				$('.chart-02').easyPieChart({
-					easing: 'easeOutCirc',
-					barColor: '#ffffff',
-					trackColor: '#212121',
-          scaleColor: false,
-					scaleLength: 2,
-					size: 120, //110
-					animate:{
-						duration:2000,
-						enabled:true
-					},
-					onStep: function(from, to, percent) {
-						$(this.el).find('.percent').text(Math.round(percent));
-					}
-				});
-
-				$('.chart-03').easyPieChart({
-					easing: 'easeInQuad',
-					barColor: '#BF0731',
-					trackColor: '#212121',
-          scaleColor: false,
-					scaleLength: 2,
-					size: 140, //110
-					animate:{
-						duration:2000,
-						enabled:true
-					},
-					onStep: function(from, to, percent) {
-						$(this.el).find('.percent').text(Math.round(percent));
-					}
-				});
-		});
 
 
 	/* ===== COUNTDOWN ===== */
@@ -238,26 +188,26 @@
 	}
 
 	/* ~~~ Testimonial Slider 2 ~~~ */
-	function testimonialSliderTwo(){
-	$(".testimonial-style-2").slick({
-        dots: true,
-        infinite: true,
-        centerMode: true,
-				autoplay: true,
-        autoplaySpeed: 7000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-				centerPadding: '0',
-				responsive: [
-		    	{
-				  breakpoint: 480,
-				  settings: {
-					arrows: false,
-				  }
-				}
-  		]
-      });
-	}
+	// function testimonialSliderTwo(){
+	// $(".testimonial-style-2").slick({
+  //       dots: true,
+  //       infinite: true,
+  //       centerMode: true,
+	// 			autoplay: true,
+  //       autoplaySpeed: 7000,
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1,
+	// 			centerPadding: '0',
+	// 			responsive: [
+	// 	    	{
+	// 			  breakpoint: 480,
+	// 			  settings: {
+	// 				arrows: false,
+	// 			  }
+	// 			}
+  // 		]
+  //     });
+	// }
 
 	/* ~~~ Client Slider ~~~ */
 	function clientSlider() {
@@ -297,42 +247,42 @@
 	}
 
 	/* ~~~ Team Slider ~~~ */
-	function teamSlider() {
-	$(".team-slider").slick({
-		slidesToShow: 3,
-        slidesToScroll: 1,
-		autoplay: true,
-        autoplaySpeed: 4000,
-		dots:false,
-		prevArrow: false,
-    	nextArrow: false,
-		responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-	});
-	}
-
+	// function teamSlider() {
+	// $(".team-slider").slick({
+	// 	slidesToShow: 3,
+  //       slidesToScroll: 1,
+	// 	autoplay: true,
+  //       autoplaySpeed: 4000,
+	// 	dots:false,
+	// 	prevArrow: false,
+  //   	nextArrow: false,
+	// 	responsive: [
+  //   {
+  //     breakpoint: 1024,
+  //     settings: {
+  //       slidesToShow: 3,
+  //       slidesToScroll: 3,
+  //       infinite: true,
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 600,
+  //     settings: {
+  //       slidesToShow: 2,
+  //       slidesToScroll: 2
+  //     }
+  //   },
+  //   {
+  //     breakpoint: 480,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1
+  //     }
+  //   }
+  // ]
+	// });
+	// }
+	//
 
 	/* ===== ONE PAGE SCROLLER ===== */
 
@@ -421,35 +371,6 @@
 
 
   /* ===== CONTACT FORM ===== */
-
-	$(function () {
-
-    $('#contact-form').validator();
-
-    $('#contact-form').on('submit', function (e) {
-
-        if (!e.isDefaultPrevented()) {
-            var url = "assets/php/contact.php";
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    var messageAlert = data.class;
-                    var messageText = data.message;
-
-                    var alertBox = '<div class="' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    	});
-	});
 
 
 	/* ===== REVOLUTION SLIDER MAIN ===== */
@@ -649,13 +570,13 @@
 
 	/* === MAGNIFIC POPUP === */
 
-		$('.magnific-lightbox').magnificPopup({
-			type: 'image',
-			mainClass: 'mfp-fade',
-			removalDelay: 160,
-			fixedContentPos: false
+		// $('.magnific-lightbox').magnificPopup({
+		// 	type: 'image',
+		// 	mainClass: 'mfp-fade',
+		// 	removalDelay: 160,
+		// 	fixedContentPos: false
 			// other options
-		});
+		// });
 
 		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 			disableOn: 700,

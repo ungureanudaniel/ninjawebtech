@@ -5,11 +5,11 @@ import datetime
 import random
 from django.utils.html import strip_tags
 from django.contrib import messages
-from .models import About, Service, Portfolio, TeamMember, Skill, Review, ProjectCategory, NewsletterUser, Pricing, Post
+from .models import About, Service, Portfolio, TeamMember, Skill, Review, ProjectCategory, NewsletterUser, Pricing, Post,Email
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
-
+from .forms import CaptchaForm
 
 #-----------------------GENERATE RANDOM SUBSCRIBER ID--------------------------
 def random_digits():
@@ -39,8 +39,13 @@ def homeview(request):
     #-------------------------------------------------------------------blog
     blog_posts = Post.objects.filter(featured=True)
 
-    print(feat)
+    form = CaptchaForm(request.POST)
     if request.method == "POST":
+        #----------------contact input- ------------------------------------
+        message_name = request.POST.get('message-name')
+        message_email = request.POST.get('message-email')
+        message = request.POST.get('message')
+        #------------newsletter input -------------------------------
         newsletter_email = request.POST.get('sub_email')
         if newsletter_email:
             try:
@@ -59,6 +64,7 @@ def homeview(request):
                         "price_plans": price_plans,
                         "blog_posts": blog_posts,
                         "feat": feat,
+                        "form": form,
                         }
                     return render(request, template, context)
             except:
@@ -93,10 +99,28 @@ def homeview(request):
                     "price_plans": price_plans,
                     "blog_posts": blog_posts,
                     "feat": feat,
+                    "form": form,
+
                 }
                 return render(request, template, context)
-        else:
 
+        elif message_email:
+
+            if form.is_valid():
+                try:
+                    #----------------create database entry with contact data----
+                    new_contact = Email(contact_email=message_email, contact_subject = 'New message', contact_author = message_name, contact_message = message, timestamp=datetime.datetime.now())
+                    #-------------------------save the contact data to databse--
+                    new_contact.save()
+                    #----------------send the email to destination-------------
+                    send_mail(message_name, message, message_email, ['danielungureanu531@gmail.com'])
+                    messages.success(request, "Thank you for writting me {}! I will answer ASAP.".format(message_name))
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+                return HttpResponseRedirect('/#contact')
+            else:
+                messages.warning(request, "Invalid captcha! Please try again.")
+                return HttpResponseRedirect('/#contact')
             context = {
                 "first_three_services": first_three_services,
                 "last_three_services": last_three_services,
@@ -108,8 +132,26 @@ def homeview(request):
                 "price_plans": price_plans,
                 "blog_posts": blog_posts,
                 "feat": feat,
+                "form": form,
+
             }
-            return HttpResponseRedirect("/")
+
+            return render(request, template, context)
+        else:
+            context = {
+                "first_three_services": first_three_services,
+                "last_three_services": last_three_services,
+                "portfolio_category": portfolio_category,
+                "portfolio": portfolio,
+                'about_us': about_us,
+                "skills": skills,
+                "reviews": reviews,
+                "price_plans": price_plans,
+                "blog_posts": blog_posts,
+                "feat": feat,
+                "form": form,
+            }
+            return render(request, template, context)
     else:
         context = {
             "first_three_services": first_three_services,
@@ -122,8 +164,63 @@ def homeview(request):
             "price_plans": price_plans,
             "blog_posts": blog_posts,
             "feat": feat,
+            "form": form,
         }
-    return render(request, template, context)
+        return render(request, template, context)
+    #         if message and message_name and message_email:
+    #             if form.is_valid():
+    #                 try:
+    #                     #----------------create database entry with contact data-------
+    #                     new_contact = Email(contact_email=message_email, contact_subject = ' ', contact_author = message_name, contact_message = message, timestamp=datetime.datetime.now())
+    #                     #-------------------------save the contact data to databse--
+    #                     new_contact.save()
+    #                     #----------------send the email to destination-------------
+    #                     send_mail(
+    #                     message_name,
+    #                     message,
+    #                     message_email,
+    #                     ['danielungureanu531@gmail.com']
+    #                     )
+    #                     messages.success(request, "Thank you for writting me {}! I will answer ASAP.".format(message_name))
+    #                 except BadHeaderError:
+    #                     return HttpResponse('Invalid header found.')
+    #                 return HttpResponseRedirect('/#contact/')
+    #             else:
+    #                 messages.warning(request, "Invalid captcha! Please try again.")
+    #                 return HttpResponseRedirect('/#contact')
+    #         else:
+    #             context = {
+    #                 "first_three_services": first_three_services,
+    #                 "last_three_services": last_three_services,
+    #                 "portfolio_category": portfolio_category,
+    #                 "portfolio": portfolio,
+    #                 'about_us': about_us,
+    #                 "skills": skills,
+    #                 "reviews": reviews,
+    #                 "price_plans": price_plans,
+    #                 "blog_posts": blog_posts,
+    #                 "feat": feat,
+    #                 "form": form,
+    #
+    #             }
+    #
+    #             return render(request, template, context)
+    # else:
+    #     context = {
+    #         "first_three_services": first_three_services,
+    #         "last_three_services": last_three_services,
+    #         "portfolio_category": portfolio_category,
+    #         "portfolio": portfolio,
+    #         'about_us': about_us,
+    #         "skills": skills,
+    #         "reviews": reviews,
+    #         "price_plans": price_plans,
+    #         "blog_posts": blog_posts,
+    #         "feat": feat,
+    #         "form": form,
+    #     }
+    #     return render(request, template, context)
+
 #-------------------------------------------------------------------CONTACT VIEW
 
 # def contactview(request):
@@ -161,20 +258,37 @@ def bloglistview(request):
     }
     return render(request, template, context)
 
-# #------------------------------------------------------------------SERVICES VIEW
-# def servicesview(request):
-#     template = 'ninjawebtech_app/contact.html'
-#
-#     context = {
-#
-#     }
-#     return render(request, template, context)
-#
-# #-----------------------------------------------------------------PORTFOLIO VIEW
-# def portfolioview(request):
-#     template = 'ninjawebtech_app/content-portfolio-masonry-fullwidth.html'
-#
-#     context = {
-#
-#     }
-#     return render(request, template, context)
+def ContactView(request):
+    template_name = 'blogapp/contact.html'
+    categories = Category.objects.all()
+    #--------------logo------------------------------
+    logos = Logo.objects.filter(status='active')
+    form = CaptchaForm(request.POST)
+    if request.method == "POST":
+        message_name = request.POST.get('message-name')
+        message_email = request.POST.get('message-email')
+        message = request.POST.get('message')
+        #send email
+        if message and message_name and message_email:
+            if form.is_valid():
+                try:
+                    send_mail(
+                    message_name,
+                    message,
+                    message_email,
+                    ['danielungureanu531@gmail.com']
+                    )
+                    messages.success(request, "Thank you for writting me {}! I will answer ASAP.".format(message_name))
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+                return HttpResponseRedirect('/contact/')
+            else:
+
+                messages.warning(request, "Failed! Please fill in the captcha field again!")
+                return HttpResponseRedirect('/contact/')
+        else:
+            return HttpResponse('Make sure all fields are entered and valid.')
+
+        render(request, template_name, {'message_name': message_name, 'categories': categories, 'logos': logos, 'form': form,})
+    else:
+        return render(request, template_name, {'categories': categories, 'logos': logos, 'form': form})
