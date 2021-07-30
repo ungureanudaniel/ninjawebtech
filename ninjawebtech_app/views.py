@@ -20,7 +20,7 @@ def random_digits():
 def homeview(request):
     template = 'ninjawebtech_app/index9.html'
     #--------------------------------------------------------------------ABOUT
-    about_us = About.objects.filter(active=True)
+
     #--------------------------------------------------------------------SKILLS
     skills = Skill.objects.all()
     #-------------------------------------------------------------------REVIEWS
@@ -58,7 +58,6 @@ def homeview(request):
                         "last_three_services": last_three_services,
                         "portfolio_category": portfolio_category,
                         "portfolio": portfolio,
-                        'about_us': about_us,
                         "skills": skills,
                         "reviews": reviews,
                         "price_plans": price_plans,
@@ -93,7 +92,6 @@ def homeview(request):
                     "last_three_services": last_three_services,
                     "portfolio_category": portfolio_category,
                     "portfolio": portfolio,
-                    'about_us': about_us,
                     "skills": skills,
                     "reviews": reviews,
                     "price_plans": price_plans,
@@ -126,7 +124,6 @@ def homeview(request):
                 "last_three_services": last_three_services,
                 "portfolio_category": portfolio_category,
                 "portfolio": portfolio,
-                'about_us': about_us,
                 "skills": skills,
                 "reviews": reviews,
                 "price_plans": price_plans,
@@ -143,7 +140,6 @@ def homeview(request):
                 "last_three_services": last_three_services,
                 "portfolio_category": portfolio_category,
                 "portfolio": portfolio,
-                'about_us': about_us,
                 "skills": skills,
                 "reviews": reviews,
                 "price_plans": price_plans,
@@ -158,7 +154,6 @@ def homeview(request):
             "last_three_services": last_three_services,
             "portfolio_category": portfolio_category,
             "portfolio": portfolio,
-            'about_us': about_us,
             "skills": skills,
             "reviews": reviews,
             "price_plans": price_plans,
