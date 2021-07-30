@@ -257,7 +257,7 @@ def ContactView(request):
     template_name = 'blogapp/contact.html'
     categories = Category.objects.all()
     #--------------logo------------------------------
-    logos = Logo.objects.filter(status='active')
+    # logos = Logo.objects.filter(status='active')
     form = CaptchaForm(request.POST)
     if request.method == "POST":
         message_name = request.POST.get('message-name')
@@ -284,6 +284,6 @@ def ContactView(request):
         else:
             return HttpResponse('Make sure all fields are entered and valid.')
 
-        render(request, template_name, {'message_name': message_name, 'categories': categories, 'logos': logos, 'form': form,})
+        render(request, template_name, {'message_name': message_name, 'categories': categories, 'form': form,})
     else:
-        return render(request, template_name, {'categories': categories, 'logos': logos, 'form': form})
+        return render(request, template_name, {'categories': categories, 'form': form})
