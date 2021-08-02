@@ -293,7 +293,7 @@ def subscription_conf_view(request):
 
     try:
         sub = NewsletterUser.objects.get(email=request.GET['email'])
-        if sub.conf_num == request.GET['conf_number']:
+        if sub.conf_number == request.GET['conf_number']:
             try:
                 sub.confirmed = True
                 sub.save()
