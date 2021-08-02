@@ -287,3 +287,21 @@ def ContactView(request):
         render(request, template_name, {'message_name': message_name, 'categories': categories, 'form': form,})
     else:
         return render(request, template_name, {'categories': categories, 'form': form})
+
+def subscription_conf_view(request):
+    templates = 'ninjawebtech_app/subscription_conf.html'
+
+    try:
+        sub = NewsletterUser.objects.get(email=request.GET['email'])
+        if sub.conf_num == request.GET['conf_num']:
+            try:
+                sub.confirmed = True
+                sub.save()
+            except:
+                messages.warning(request, "Error! Your email cannot be registered. Please contact us at +40757484560")
+            return render(request, template, {'email': sub.email, 'action': 'confirmed'})
+        else:
+            return render(request, template, {'email': sub.email, 'action': 'denied'})
+    except:
+        messages.warning(request, "This email already exists in our database!")
+        return render(request, template, {})
