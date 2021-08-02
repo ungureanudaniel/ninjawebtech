@@ -289,11 +289,11 @@ def ContactView(request):
         return render(request, template_name, {'categories': categories, 'form': form})
 
 def subscription_conf_view(request):
-    templates = 'ninjawebtech_app/subscription_conf.html'
+    template = 'ninjawebtech_app/subscription_conf.html'
 
     try:
         sub = NewsletterUser.objects.get(email=request.GET['email'])
-        if sub.conf_num == request.GET['conf_num']:
+        if sub.conf_num == request.GET['conf_number']:
             try:
                 sub.confirmed = True
                 sub.save()
