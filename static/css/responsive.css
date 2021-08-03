@@ -235,8 +235,9 @@
   }
   /* == SKILL BARS == */
   .skillbar-style-02 .skill-bar-percent {
-    font-size: 1em;
+    font-size: 1.2em;
     position: relative;
+    right: 3em;
   }
 	/*floats*/
 	/* .sm-float-left{float:left!important;}
