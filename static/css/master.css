@@ -887,12 +887,12 @@ li.post-comment{list-style:none;}
 /* Sliders */
 .default-slider, .home-fullslide{position:relative;height:768px;overflow:hidden;}
 .default-slider .container{padding-top:60px;}
-.default-slider.slick-dotted.slick-slider, .blog-grid-slider.slick-dotted.slick-slider{margin-bottom:0;}
+/* .default-slider.slick-dotted.slick-slider, .blog-grid-slider.slick-dotted.slick-slider{margin-bottom:0;} */
 .home-slider{height:100vh;padding:0;}
 .home-slider .default-slider, .home-slider .slick-list, .home-slider .slide-img, .home-slider .hero-text-wrap{height:100vh;width:100%;}
-.default-slider .slide{position:relative;height:768px;}
+/* .default-slider .slide{position:relative;height:768px;}
 .default-slider .slick-dots, .service-slider-2 .slick-dots{bottom:40px;}
-.default-slider .slick-dots li button, .portfolio-slider .slick-dots li button{font-size:0;width:40px;height:3px;padding:0px;cursor:pointer;border:0;outline:none;background:rgba(195, 195, 195, 0.5);}
+.default-slider .slick-dots li button, .portfolio-slider .slick-dots li button{font-size:0;width:40px;height:3px;padding:0px;cursor:pointer;border:0;outline:none;background:rgba(195, 195, 195, 0.5);} */
 section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33, 33, 0.5);}
 .slide-img, .parallax-img{position:absolute;top:0;left:0;width:100%;height:100%;}
 .full-screen-bg{height:100vh;min-height:100vh;}
@@ -972,38 +972,67 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
 
 /* Testimonials Style 01 */
 
-.testimonial-item:focus {outline: none;}
-.testimonial-item .testimonial-content {padding: 0px 40px;margin: 50px auto;border-radius: 4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;-ms-border-radius: 4px;}
-.testimonial-item .testimonial-content img{width: 70px;margin-left: auto;margin-right: auto;}
-.testimonial .slick-prev{left: -80px;}
-.testimonial .slick-next{right: -80px;}
+.testimonial .slide {
+	cursor: pointer;
+  
+}
 
-.testimonial-transparent .testimonial-item .testimonial-content{background-color: transparent;}
+.testimonial .slide h3 {
+	margin: 10px 10px 0;
+	background: grey;
+	padding: 60px;
+	position: relative;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.25em;
+  font-family: 'Raleway', sans-serif;
+	color: white;
+}
 
-/* Testimonials Style 02 */
+.testimonial h5 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  background: transparent;
+  font-family: 'Raleway', sans-serif;
+	color: white;
+  left:5px;
+}
 
+.testimonial h3:before,h3:after {
+	content: "\201C";
+	position: absolute;
+	font-size: 80px;
+	padding: 20px;
+	line-height: 1;
+	color: white;
+}
 
+.testimonial h3:before {
+	top: 0;
+	left: 0px;
+}
+.testimonial h3:after {
+	content: "\201D";
+	right: 0px;
+	bottom: -0.5em;
+}
+
+.slide .pointing {
+	width: 0;
+	height: 0;
+	border-left: 0 solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid grey;
+	margin: 0 0 0 60px;
+	margin-bottom: 10px;
+}
 /* Arrows -- gotta keep this to make arrows on review container ==*/
 
-.slick-prev, .slick-next{font-size: 0;line-height: 0;position: absolute;top: 50%;display: block;width: 20px;height: 20px;padding: 0;-webkit-transform: translate(0, -50%);-ms-transform: translate(0, -50%);transform: translate(0, -50%);cursor: pointer;
-color: transparent;border: none;outline: none;background: transparent;z-index:10;}
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{color: #fff;outline: none;background: transparent;}
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before{opacity: 1;}
-.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{opacity: .25;}
-.testimonial .slick-prev:before, .testimonial .slick-next:before{font-family:"Ionicons";font-size: 35px;line-height: 1;opacity: 0.5;color: #1d2124;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
-.testimonial .slick-prev:hover:before, .testimonial .slick-prev:focus:before, .testimonial .slick-next:hover:before, .testimonial .slick-next:focus:before{opacity: 1;}
-.slick-prev{left:25px;}
-.testimonial .slick-prev:before{content:'\f2ca';}
-.slick-next{right:25px;}
-.testimonial .slick-next:before{content:'\f30f';}
-
 /* Dots */
-
-
-/*	Simple Slider   */
 
 /*	Template Social Icons   */
 
@@ -1117,12 +1146,25 @@ section.big-block .client-logo {padding:10%;}
 
 /* Skills Bar */
 
-.skillbar-style-02 .skillbar {position:relative;display:inline-block;margin:80px 0 10px;width:100%;height:7px;width:100%;background-color: (#d9d9d9);}
+.skillbar-style-02 .skillbar {position:relative;display:inline-block;margin:80px 0 10px;width:100%;height:7px;width:100%;background-color: #DCDCDC;}
 .skillbar-style-02 .skillbar-title {position:absolute;top:-35px;left:0;font-weight: 600;font-family: 'Raleway', sans-serif;font-size: 16px; }
-.skillbar-style-02 .skillbar-bar {height:7px;width:0px;display:inline-block;background: #40E0D0;}
-.skillbar-style-02 .skill-bar-percent {font-size:2em; position:relative;right:0px;top:-35px;color: #fff;background: #1d2124;border-radius: 2px;padding: 3px 10px 3px;right:3em;}
+.skillbar-style-02 p.skillbar-bar.corporate{height:7px;width:0px;display:inline-block;background: #40E0D0;top:1rem;}
+.skillbar-style-02 .skill-bar-percent {
+  display: inline-block;
+  float:right !important;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  position:absolute;
+  background: #1d2124;
+  color: white;
+  padding: 2px 10px 2px 10px;
+  width: 3.5em;
+  bottom: 1em;
+  right: 0px;
 
-.skillbar-style-02 .skill-bar-percent::after{content: "";position: absolute;width: 0;height: 0;border-width: 4px;border-style: solid;border-color: #1d2124 transparent transparent;top: 1.4em;left: 1em;}
+}
+.skillbar-style-02 .skill-bar-percent::after{content: "";position: absolute;width: 0;height: 0;border-width: 4px;border-style: solid;border-color: #1d2124 transparent transparent;top: 1.8em;right:1.4em;}
 
 /* Pie Charts */
 

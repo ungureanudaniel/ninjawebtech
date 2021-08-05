@@ -2,982 +2,974 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>NINJA WEBTECH - STUNNING WEB DEVELOPMENT</title>
-<link rel="shortcut icon" href="{% static 'images/favicon.ico">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NINJA WEBTECH - STUNNING WEB DEVELOPMENT</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico">
 
-<meta name="description" property="og:description" content="A software and web development company, based in Brasov.">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="keywords" content="web development, software, website, programming, SEO, online marketing, support">
-<meta name="author" content="Ninja WebTech">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://wwww.ninjaweb.tech/">
-<meta property="og:site_name" content="Ninja WebTech">
-<meta property="og:title" content="Ninja WebTech | Stunning, sharp websites and more" />
-<meta property="og:description" content="A software and web development company, based in Brasov.">
-<meta property="og:image" content="https://www.ninjaweb.tech/static/images/background/laptop4.png">
-<meta property="og:image:alt" content="https://www.ninjaweb.tech/static/images/background/laptop4.png">
+    <meta name="description" property="og:description" content="A software and web development company, based in Brasov.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="keywords" content="web development, software, website, programming, SEO, online marketing, support">
+    <meta name="author" content="Ninja WebTech">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wwww.ninjaweb.tech/">
+    <meta property="og:site_name" content="Ninja WebTech">
+    <meta property="og:title" content="Ninja WebTech | Stunning, sharp websites and more" />
+    <meta property="og:description" content="A software and web development company, based in Brasov.">
+    <meta property="og:image" content="https://www.ninjaweb.tech/static/images/background/laptop4.png">
+    <meta property="og:image:alt" content="https://www.ninjaweb.tech/static/images/background/laptop4.png">
 
-<link rel="canonical" href="https://wwww.ninjaweb.tech/">
+    <link rel="canonical" href="https://wwww.ninjaweb.tech/">
 
-<!-- Core Style Sheets -->
-<link rel="stylesheet" href="{% static 'css/master.css' %}">
-<!-- Responsive Style Sheets -->
-<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-<!-- Revolution Style Sheets -->
-<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
+    <!-- Core Style Sheets -->
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <!-- Responsive Style Sheets -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Revolution Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+    .no-fouc {
+    	display: none;
+    }
+    </style>
+  </head>
+  <body>
 
-<!--== Loader Start ==-->
-<div id="loader-overlay">
-  <div class="loader">
-    <div class="spinner-double-dot-in"></div>
+  <!--== Loader Start ==-->
+  <div id="loader-overlay">
+    <div class="loader">
+      <div class="spinner-double-dot-in"></div>
+    </div>
   </div>
-</div>
-<!--== Loader End ==-->
+  <!--== Loader End ==-->
 
-<!--== Wrapper Start ==-->
-<div class="wrapper">
+  <!--== Wrapper Start ==-->
+  <div class="wrapper">
 
-  <!--== Header Start ==-->
-  <nav class="navbar navbar-default navbar-fixed navbar-transparent dark bootsnav on no-full no-border corporate">
-  	<!--== Start Top Search ==-->
-    <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="icofont icofont-close"></i></a>
-      <div id="fullscreen-search-wrapper">
-        <form method="get" id="fullscreen-searchform">
-          <input type="text" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class="search-bar-top">
-          <i class="fullscreen-search-icon icofont icofont-search">
-          <input value="" type="submit">
-          </i>
-        </form>
-      </div>
-    </div>
-    <!--== End Top Search ==-->
-    <div class="container">
-      <!--== Start Atribute Navigation ==-->
-      <div class="attr-nav hidden-xs sm-display-none">
-        <ul>
-          <li class="side-menu"><a href="#"><i class="icofont icofont-navigation-menu"></i></a></li>
-          <li class="search"><a href="#" id="search-button"><i class="icofont icofont-search"></i></a></li>
-        </ul>
-      </div>
-      <!--== End Atribute Navigation ==-->
-
-      <!--== Start Header Navigation ==-->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="{% url 'home' %}"><img class="logo logo-display" src="{% static 'logo/logo_black.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'logo/logo.png' %}" alt=""> </a>
+    <!--== Header Start ==-->
+    <nav class="navbar navbar-default navbar-fixed navbar-transparent dark bootsnav on no-full no-border corporate">
+    	<!--== Start Top Search ==-->
+      <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="icofont icofont-close"></i></a>
+        <div id="fullscreen-search-wrapper">
+          <form method="get" id="fullscreen-searchform">
+            <input type="text" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class="search-bar-top">
+            <i class="fullscreen-search-icon icofont icofont-search">
+            <input value="" type="submit">
+            </i>
+          </form>
         </div>
-        <div class="logo_name"></div>
       </div>
-      <!--== End Header Navigation ==-->
+      <!--== End Top Search ==-->
+      <div class="container">
+        <!--== Start Atribute Navigation ==-->
+        <div class="attr-nav hidden-xs sm-display-none">
+          <ul>
+            <li class="side-menu"><a href="#"><i class="icofont icofont-navigation-menu"></i></a></li>
+            <li class="search"><a href="#" id="search-button"><i class="icofont icofont-search"></i></a></li>
+          </ul>
+        </div>
+        <!--== End Atribute Navigation ==-->
 
-      <!--== Collect the nav links, forms, and other content for toggling ==-->
-      <div class="collapse navbar-collapse" id="navbar-menu">
-        <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-          <li class="#"><a href="#home" class="page-scroll">Home</a></li>
-          <li><a class="page-scroll" href="#about">About</a></li>
-          <li><a class="page-scroll" href="#work">Portfolio</a></li>
-          <li><a class="page-scroll" href="#service">Services</a></li>
-          <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
-          <li><a class="page-scroll" href="#pricing">Pricing</a></li>
-          <li><a class="page-scroll" href="#blog">Blog</a></li>
-          <li><a class="page-scroll" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <!--== /.navbar-collapse ==-->
-    </div>
-
-    <!-- Start Side Menu -->
-    <div class="side corporate dark-bg">
-    		<a href="{% url 'home' %}" class="logo-side"><img src="{% static 'logo/logo.png' %}" alt="side-logo"/></a>
-            <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
-            <div class="widget mt-120">
-              <ul class="link">
-                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}">Home</a></li>
-                <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
-                <li class="link-item"><a class="page-scroll" href="#work">Portfolio</a></li>
-                <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
-                <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
-                <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
-                <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
-                <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <ul class="social-media">
-              <li><a href="#" class="icofont icofont-facebook"></a></li>
-              <li><a href="#" class="icofont icofont-twitter"></a></li>
-              <li><a href="#" class="icofont icofont-behance"></a></li>
-              <li><a href="#" class="icofont icofont-social-dribble"></a></li>
-              <li><a href="#" class="icofont icofont-linkedin"></a></li>
-            </ul>
-     </div>
-     <!-- End Side Menu -->
-
-  </nav>
-  <!--== Header End ==-->
-
-  <!--== Particle Slider Start ==-->
-  <div class="top-slides remove-padding transition-none" id="home">
-    <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="particle-effect-one5" data-source="gallery" style="background:#eef0f1;padding:0px;">
-		<!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
-			<div id="rev_slider_4_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
-		<ul>	<!-- SLIDE  -->
-			<li data-index="rs-10" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeOut" data-easeout="Power4.easeOut" data-masterspeed="default"  data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Example One" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-				<!-- MAIN IMAGE -->
-				<img src="{% static 'images/transparent.png' %}" data-bgcolor='#ffffff' style='background:#ffffff' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
-				<!-- LAYERS -->
-
-				<!-- LAYER NR. 1 -->
-				<div class="tp-caption"
-					 id="slide-10-layer-4"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-					data-width="full-proportional"
-					data-height="full-proportional"
-					data-whitespace="nowrap"
-
-					data-type="image"
-					data-basealign="slide"
-					data-responsive_offset="off"
-					data-wrapper_class="tp-nopointer"
-					data-responsive="off"
-					data-frames='[{"delay":600,"speed":1500,"frame":"0","from":"sX:1;sY:1;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[0,0,0,0]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[0,0,0,0]"
-					data-blendmode="screen"
-
-					style="z-index: 5;"><img src="{% static 'images/slides/home-bg-9.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
-
-				<!-- LAYER NR. 2 -->
-				<div class="tp-caption  brand tp-resizeme"
-					 id="slide-10-layer-6"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
-					data-width="none"
-					data-height="none"
-					data-whitespace="nowrap"
-
-					data-type="text"
-					data-responsive_offset="on"
-					data-wrapper_class="tp-nopointer"
-
-					data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];sX:1;sY:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[20,20,20,20]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[20,20,20,20]"
-
-					style="z-index: 6; white-space: nowrap; font-size:6rem; line-height: 80px; font-weight: 800; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;text-transform:uppercase;">Ninja WebTECH</div>
-
-				<!-- LAYER NR. 3 -->
-				<div class="tp-caption advertising tp-resizeme"
-					 id="slide-10-layer-8"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['0','-30','-20','-20']"
-					data-width="['none','none','361','330']"
-					data-height="none"
-					data-whitespace="['nowrap','nowrap','normal','normal']"
-
-					data-type="text"
-					data-responsive_offset="on"
-					data-wrapper_class="tp-nopointer"
-
-					data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:-20px;sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-					data-textAlign="['inherit','inherit','center','center']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[0,0,0,0]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[0,0,0,0]"
-
-					style="z-index: 7; margin-top: 3rem; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Top notch, sharp and stunning websites</span> </div>
-
-				<!-- LAYER NR. 4 -->
-				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-10-layer-10"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['70','40','60','60']"
-					data-width="none"
-					data-height="none"
-					data-whitespace="nowrap"
-
-					data-type="button"
-					data-actions=''
-					data-responsive_offset="on"
-
-					data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgba(45,48,50,1);bs:solid;bw:0 0 0 0;"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[35,35,35,35]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[35,35,35,35]"
-
-          style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 50px; font-weight: 800; color: rgba(255,255,255,1);font-family: 'Raleway', sans-serif;background-color:#50C9C3;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"></a>
-
-
-			</li>
-			<!-- SLIDE  -->
-			<li data-index="rs-11" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeOut" data-easeout="Power4.easeOut" data-masterspeed="default"  data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Example One" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-
-
-				<!-- MAIN IMAGE -->
-				<img src="{% static 'images/transparent.png' %}" data-bgcolor='#ffffff' style='background:#ffffff' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
-
-
-				<!-- LAYERS -->
-
-				<!-- LAYER NR. 5 -->
-				<div class="tp-caption  "
-					 id="slide-11-layer-9"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-					data-width="full-proportional"
-					data-height="full-proportional"
-					data-whitespace="nowrap"
-
-					data-type="image"
-					data-basealign="slide"
-					data-responsive_offset="off"
-					data-wrapper_class="tp-nopointer"
-					data-responsive="off"
-					data-frames='[{"delay":600,"speed":1500,"frame":"0","from":"sX:1;sY:1;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[0,0,0,0]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[0,0,0,0]"
-					data-blendmode="screen"
-
-					style="z-index: 5;"><img src="{% static 'images/background/office1.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
-
-				<!-- LAYER NR. 6 -->
-				<div class="tp-caption brand tp-resizeme"
-					 id="slide-11-layer-10"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
-					data-width="none"
-					data-height="none"
-					data-whitespace="nowrap"
-
-					data-type="text"
-					data-responsive_offset="on"
-					data-wrapper_class="tp-nopointer"
-
-					data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];sX:1;sY:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[20,20,20,20]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[20,20,20,20]"
-					data-blendmode="exclusion"
-
-					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 800; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;text-transform:uppercase;">NINJA WEBTECH</div>
-
-				<!-- LAYER NR. 7 -->
-				<div class="tp-caption advertising tp-resizeme" id="slide-11-layer-11"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['1','-30','-20','-20']"
-					data-width="['none','none','361','330']"
-					data-height="none"
-					data-whitespace="['nowrap','nowrap','normal','normal']"
-
-					data-type="text"
-					data-responsive_offset="on"
-					data-wrapper_class="tp-nopointer"
-
-					data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:-20px;sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-					data-textAlign="['inherit','inherit','center','center']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[0,0,0,0]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[0,0,0,0]"
-					data-blendmode="exclusion"
-
-					style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 25px; font-weight: 400; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Fast and friendly support, fully customisable design</span></div>
-
-				<!-- LAYER NR. 8 -->
-				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-11-layer-12"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['70','40','60','60']"
-					data-width="none"
-					data-height="none"
-					data-whitespace="nowrap"
-
-					data-type="button"
-					data-actions=''
-					data-responsive_offset="on"
-
-					data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgba(0,0,0,1);bs:solid;bw:0 0 0 0;"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[35,35,35,35]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[35,35,35,35]"
-					data-blendmode="exclusion"
-
-					style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 50px; font-weight: 700; color: rgba(0,0,0,1);font-family: 'Raleway', sans-serif;background-color:rgba(255,255,255,0.85);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"></a>
-			</li>
-			<!-- SLIDE  -->
-			<li data-index="rs-12" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeOut" data-easeout="Power4.easeOut" data-masterspeed="default"  data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Example Three" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-				<!-- MAIN IMAGE -->
-				<img src="{% static 'images/transparent.png' %}" data-bgcolor='#ffffff' style='background:#ffffff' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
-
-				<!-- LAYERS -->
-
-				<!-- LAYER NR. 9 -->
-				<div class="tp-caption disabled_lc tp-videolayer"
-					 id="slide-12-layer-12"
-					 data-x="0"
-					 data-y="0"
-					data-whitespace="nowrap"
-
-					data-type="video"
-					data-basealign="slide"
-					data-responsive_offset="off"
-					data-wrapper_class="tp-nopointer"
-					data-responsive="off"
-					data-frames='[{"delay":600,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
-					data-videocontrols="none" data-videowidth="100%" data-videoheight="100%" data-videoposter="#" data-videomp4="#" data-noposteronmobile="off" data-videopreload="auto" data-videoloop="loop" data-forceCover="1" data-aspectratio="16:9"			data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[0,0,0,0]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[0,0,0,0]"
-					data-blendmode="screen"
-					data-autoplay="on"
-
-					style="z-index: 5;"><img src="{% static 'images/background/header_tablet.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
-
-				<!-- LAYER NR. 10 -->
-				<div class="tp-caption brand tp-resizeme"
-					 id="slide-12-layer-13"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
-					data-width="none"
-					data-height="none"
-					data-whitespace="nowrap"
-
-					data-type="text"
-					data-responsive_offset="on"
-					data-wrapper_class="tp-nopointer"
-
-					data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];sX:1;sY:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[20,20,20,20]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[20,20,20,20]"
-					data-blendmode="exclusion"
-
-					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 700; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;">NINJA WEBTECH</div>
-
-				<!-- LAYER NR. 11 -->
-				<div class="tp-caption advertising tp-resizeme" id="slide-12-layer-14"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['1','-30','-20','-20']"
-					data-width="['none','none','361','330']"
-					data-height="none"
-					data-whitespace="['nowrap','nowrap','normal','normal']"
-
-					data-type="text"
-					data-responsive_offset="on"
-					data-wrapper_class="tp-nopointer"
-
-					data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:-20px;sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
-					data-textAlign="['inherit','inherit','center','center']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[0,0,0,0]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[0,0,0,0]"
-					data-blendmode="exclusion"
-
-					style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 25px; font-weight: 300; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Light engine, fully responsive and intuitive navigation</span> </div>
-
-				<!-- LAYER NR. 12 -->
-				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-12-layer-15"
-					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-					 data-y="['middle','middle','middle','middle']" data-voffset="['70','40','60','60']"
-					data-width="none"
-					data-height="none"
-					data-whitespace="nowrap"
-
-					data-type="button"
-					data-actions=''
-					data-responsive_offset="on"
-
-					data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgba(45,48,50,1);bs:solid;bw:0 0 0 0;"}]'
-					data-textAlign="['inherit','inherit','inherit','inherit']"
-					data-paddingtop="[0,0,0,0]"
-					data-paddingright="[35,35,35,35]"
-					data-paddingbottom="[0,0,0,0]"
-					data-paddingleft="[35,35,35,35]"
-
-					style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 50px; font-weight: 700; color: rgba(255,255,255,1);font-family: 'Raleway', sans-serif;background-color:rgba(79,172,254,1);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"></a>
-			</li>
-		</ul>
-		<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
-		</div>
-  </div>
-  <!--== Particle Slider End ==-->
-
-  <!--== Who We Are Start ==-->
-  <section class="whoweare white-bg" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
-          <div class="section-title">
-            <h1 class="raleway-font font-40px"><span class="font-100 font-40px">We Are a</span> Web Development Company</h1>
-            <hr class="center_line dark-bg">
-            <p style="font-size:1.2rem;">
-              We started in 2017, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table on each and every project.
-            </p>
+        <!--== Start Header Navigation ==-->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
+          <div class="logo"> <a href="{% url 'home' %}"><img class="logo logo-display" src="{% static 'logo/logo_black.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'logo/logo.png' %}" alt=""> </a>
           </div>
+          <div class="logo_name"></div>
         </div>
-      </div>
-      <div class="skillrow row ">
-        <div class="skill-image col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
-          <img class="img-responsive" alt="laptop" src="{% static 'images/laptop5.png' %}">
-        </div>
-        <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
-          <div class="skillbar-wrap skillbar-style-02">
-            {% for skill in skills %}
-              <div class="skillbar dark-color" data-percent="{{ skill.percent }}">
-                  <span class="skillbar-title">{{ skill.title|upper }}</span>
-                  <p class="skillbar-bar corporate"></p>
-                  <span class="skill-bar-percent"></span>
-              </div>
-            {% endfor %}
-              <!-- End Skill Bar -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--== Who We Are End ==-->
+        <!--== End Header Navigation ==-->
 
-  <!--== Testimonials Start ==-->
-  <section class="parallax-bg fixed-bg" data-parallax-bg-image="{% static 'images/background/parallax-bg-3.jpg' %}" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial">
-    <div class="dark-overlay-bg"></div>
-    <div class="container">
-      <div class="row">
-          <div class="col-xs-12 col-lg-12 testimonial-style-6">
-            {% for review in reviews %}
-          	<div class="col-lg-12 text-center">
-          		<!--== Slide ==-->
-      				<div class="testimonial-item text-center">
-      				  <div class="testimonial-content white-color">
-      				  	<h3 class="mt-2 line-height-40 font-200">{{ review.content|striptags }}</h3>
-                  <h5 class="font-600 mb-0 white-color text-uppercase letter-spacing-2">- {{ review.author }} -</h5>
-      				  </div>
-      				</div>
-          	</div>
-            {% endfor %}
-
-            <div class="col-xs-12">
-      				<!--== Slide ==-->
-      				<div class="testimonial-item col-md-12 text-center">
-                <p class="mt-4">
-                  <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp text-center" data-wow-delay="0.4s">Review here!</a>
-                </p>
-      				</div>
-      			</div>
-  		    </div>
+        <!--== Collect the nav links, forms, and other content for toggling ==-->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
+            <li class="#"><a href="#home" class="page-scroll">Home</a></li>
+            <li><a class="page-scroll" href="#about">About</a></li>
+            <li><a class="page-scroll" href="#work">Portfolio</a></li>
+            <li><a class="page-scroll" href="#service">Services</a></li>
+            <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
+            <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+            <li><a class="page-scroll" href="#blog">Blog</a></li>
+            <li><a class="page-scroll" href="#contact">Contact</a></li>
+          </ul>
         </div>
-    </div>
-  </section>
-  <!--== Testimonials End ==-->
-
-  <!--== Portfolio Start ==-->
-  <section class="grey-bg pb-0" id="work">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 centerize-col text-center">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="raleway-font"><span class="font-100">Our</span> Work</h1>
-            <hr class="center_line dark-bg">
-          </div>
-        </div>
-      </div>
-      <div class=" row">
-        <div class="col-md-12">
-          <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter corporate text-sm-center mt-5">
-              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item dark">
-                  All
-              </div>
-              {% for cat in portfolio_category %}
-              <div data-filter=".{{ cat.title }}" class="cbp-filter-item">
-                  {{ cat.title }}
-              </div>
-              {% endfor %}
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid remove-padding">
-      <div class="row mt-5">
-        <div class="col-md-12">
-          <div id="portfolio-gallery" class="cbp">
-            {% for item in portfolio %}
-              <div class="cbp-item {{ item.category }} col-md-3 col-sm-3">
-                  <div class="portfolio gallery-image-hover text-center">
-                  	<div class="folio-overlay"></div>
-                  	<img src="{{ item.image1.url }}" alt="">
-                  	<div class="portfolio-wrap">
-               	  		  <div class="portfolio-description">
-    								      <h3 class="portfolio-title mt-0"><a class="" href="{{ item.link }}">{{ item.title }}</a></h3>
-    								      <h6 class="links">{{ item.category|title }}</h6>
-    							      </div>
-      						  </div>
-      					</div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-    </div>
-  </section>
-  <!--== Portfolio End ==-->
-  <br><br>
-  <!--== Counters Start ==-->
-  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
-    <div class="overlay-bg"></div>
-  </section>
-  <!--== Counters End ==-->
-
-  <!--== Services Start ==-->
-  <section class="white-bg pb-5" id="service">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 centerize-col text-center">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="raleway-font"><span class="font-100">Our</span> Services</h1>
-            <hr class="center_line dark-bg">
-          </div>
-        </div>
+        <!--== /.navbar-collapse ==-->
       </div>
 
-      <div class="row mt-5">
-        <div class="col-md-4">
-
-            <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.1s">
-              <i class="icofont icofont-test-tube-alt font-40px"></i>
-              <h3 class="mt-0 font-600">Websites</h3>
-              <p class="font-400">Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients.</p>
-            </div>
-
-            <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.2s">
-              <i class="icofont icofont-samsung-galaxy font-40px"></i>
-              <h3 class="mt-0 font-600">Modern Software</h3>
-              <p class="font-400">All our software is done in python, a modern, versatile and very powerful programming language, that is becoming increasingly popular amongst programmers.</p>
-            </div>
-            <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.3s">
-              <i class="icofont icofont-ui-head-phone font-40px"></i>
-              <h3 class="mt-0 font-600">Creative concepts</h3>
-              <p class="font-400">Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true.</p>
-            </div>
-        </div>
-        <div class="col-md-4 xs-mt-80 phone wow zoomIn" data-wow-delay="0.4s">
-   	    	<img class="img-responsive pt-2" src="{% static 'images/iphone-5.png' %}" alt="">
-   	    </div>
-        <div class="col-md-4">
-<!-- {% static 'images/happy-client1.png' %} -->
-        	  <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.5s">
-              <i class="icofont icofont-space-shuttle font-40px"></i>
-              <h3 class="mt-0">Awesome Friendly</h3>
-              <p class="font-300">Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs.</p>
-            </div>
-
-            <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.6s">
-              <i class="icofont icofont-interface font-40px"></i>
-              <h3 class="mt-0">SEO & Online Marketing</h3>
-              <p class="font-300">We are commited to make you succesful online, thus make you as present as possible using various programming and google embedded techniques.</p>
-            </div>
-            <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.7s">
-              <i class="icofont icofont-ui-video-play font-40px"></i>
-              <h3 class="mt-0">Custom Graphics</h3>
-              <p class="font-300">We can draw digital graphics according to your needs, create cartoons and caricatures or anything you can think of to make your online presence more effective.</p>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--== Services End ==-->
-
-  <!--== Newsletter Start ==-->
-  <section class="relative" id="newsletter_form">
-    <div class="overlay-bg"></div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="display-table col-sm-12 col-md-8">
-          <div class="v-align-middle text-center">
-            <div class="white-color text-center">
-              <h1 class="font-700 font-40px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 wow fadeInUp" data-wow-delay="0.1s">Join <span class="font-100">our Newsletter </span> Now</h1>
-              <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
-              <h3 class="font-400 line-height-40 wow fadeInUp" data-wow-delay="0.3s">
-                And receive interesting news from the technology world.
-              </h3>
-              <div class="text-dark">
-                {% if messages %}
-                  {% for message in messages %}
-                  <div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    {{ message.message }}
-                  </div>
-                  {% endfor %}
-                {% endif %}
-
-                <form method="POST" action="#newsletter_form">
-                  {% csrf_token %}
-
-                  <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp mt-5">
-
-                  <button class="btn buttons white-buttons  btn-square btn-zoom wow fadeInUp mt-5" data-wow-delay="0.4s">Join</button>
-                </form>
-              </div>
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-     <video autoplay="" muted="" loop="" controls="" class="html5-video">
-      <source src="{% static 'videos/tech-world.mp4' %}" type="video/mp4">
-      <!-- <source src="{% static 'videos/keyboard_bg.mp4' %}" type="video/mp4"> -->
-    </video>
-  </section>
-  <!--== Newsletter End ==-->
-
-  <!--== Team Start ==-->
-  <!-- <section class="white-bg" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 centerize-col text-center">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="raleway-font"><span class="font-100">Our Creative</span> Team</h1>
-            <hr class="center_line dark-bg">
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="team-member">
-              <div class="team-thumb">
-                <div class="thumb-overlay"></div>
-                <img src="{% static 'images/team/team-01.jpg' %}" alt="">
-              </div>
-            </div>
-            <div class="member-info text-center white-bg">
-              <h3>Bobby Castro</h3>
-              <span class="title primary-color">Project Manager</span>
-              <div class="social-icons-style-02">
-                <ul class="sm-icon mt-2 mb-0">
-                  <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                  <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                  <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                  <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
+      <!-- Start Side Menu -->
+      <div class="side corporate dark-bg">
+      		<a href="{% url 'home' %}" class="logo-side"><img src="{% static 'logo/logo.png' %}" alt="side-logo"/></a>
+              <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
+              <div class="widget mt-120">
+                <ul class="link">
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}">Home</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#work">Portfolio</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
+                  <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
                 </ul>
               </div>
-            </div>
-          </div> -->
-          <!--== Member End ==-->
-<!--
-      </div>
+              <ul class="social-media">
+                <li><a href="#" class="icofont icofont-facebook"></a></li>
+                <li><a href="#" class="icofont icofont-twitter"></a></li>
+                <li><a href="#" class="icofont icofont-behance"></a></li>
+                <li><a href="#" class="icofont icofont-social-dribble"></a></li>
+                <li><a href="#" class="icofont icofont-linkedin"></a></li>
+              </ul>
+       </div>
+       <!-- End Side Menu -->
+
+    </nav>
+    <!--== Header End ==-->
+
+    <!--== Particle Slider Start ==-->
+    <div class="top-slides remove-padding transition-none" id="home">
+      <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="particle-effect-one5" data-source="gallery" style="background:#eef0f1;padding:0px;">
+  		<!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
+  			<div id="rev_slider_4_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
+  		<ul>	<!-- SLIDE  -->
+  			<li data-index="rs-10" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeOut" data-easeout="Power4.easeOut" data-masterspeed="default"  data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Example One" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+  				<!-- MAIN IMAGE -->
+  				<img src="{% static 'images/transparent.png' %}" data-bgcolor='#ffffff' style='background:#ffffff' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+  				<!-- LAYERS -->
+
+  				<!-- LAYER NR. 1 -->
+  				<div class="tp-caption"
+  					 id="slide-10-layer-4"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+  					data-width="full-proportional"
+  					data-height="full-proportional"
+  					data-whitespace="nowrap"
+
+  					data-type="image"
+  					data-basealign="slide"
+  					data-responsive_offset="off"
+  					data-wrapper_class="tp-nopointer"
+  					data-responsive="off"
+  					data-frames='[{"delay":600,"speed":1500,"frame":"0","from":"sX:1;sY:1;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[0,0,0,0]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[0,0,0,0]"
+  					data-blendmode="screen"
+
+  					style="z-index: 5;"><img src="{% static 'images/slides/home-bg-9.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+
+  				<!-- LAYER NR. 2 -->
+  				<div class="tp-caption  brand tp-resizeme"
+  					 id="slide-10-layer-6"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
+  					data-width="none"
+  					data-height="none"
+  					data-whitespace="nowrap"
+
+  					data-type="text"
+  					data-responsive_offset="on"
+  					data-wrapper_class="tp-nopointer"
+
+  					data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];sX:1;sY:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[20,20,20,20]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[20,20,20,20]"
+
+  					style="z-index: 6; white-space: nowrap; font-size:6rem; line-height: 80px; font-weight: 800; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;text-transform:uppercase;">Ninja WebTECH</div>
+
+  				<!-- LAYER NR. 3 -->
+  				<div class="tp-caption advertising tp-resizeme"
+  					 id="slide-10-layer-8"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['0','-30','-20','-20']"
+  					data-width="['none','none','361','330']"
+  					data-height="none"
+  					data-whitespace="['nowrap','nowrap','normal','normal']"
+
+  					data-type="text"
+  					data-responsive_offset="on"
+  					data-wrapper_class="tp-nopointer"
+
+  					data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:-20px;sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+  					data-textAlign="['inherit','inherit','center','center']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[0,0,0,0]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[0,0,0,0]"
+
+  					style="z-index: 7; margin-top: 3rem; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Top notch, sharp and stunning websites</span> </div>
+
+  				<!-- LAYER NR. 4 -->
+  				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-10-layer-10"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['70','40','60','60']"
+  					data-width="none"
+  					data-height="none"
+  					data-whitespace="nowrap"
+
+  					data-type="button"
+  					data-actions=''
+  					data-responsive_offset="on"
+
+  					data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgba(45,48,50,1);bs:solid;bw:0 0 0 0;"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[35,35,35,35]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[35,35,35,35]"
+
+            style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 50px; font-weight: 800; color: rgba(255,255,255,1);font-family: 'Raleway', sans-serif;background-color:#50C9C3;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"></a>
+
+
+  			</li>
+  			<!-- SLIDE  -->
+  			<li data-index="rs-11" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeOut" data-easeout="Power4.easeOut" data-masterspeed="default"  data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Example One" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+
+
+  				<!-- MAIN IMAGE -->
+  				<img src="{% static 'images/transparent.png' %}" data-bgcolor='#ffffff' style='background:#ffffff' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+
+
+  				<!-- LAYERS -->
+
+  				<!-- LAYER NR. 5 -->
+  				<div class="tp-caption  "
+  					 id="slide-11-layer-9"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+  					data-width="full-proportional"
+  					data-height="full-proportional"
+  					data-whitespace="nowrap"
+
+  					data-type="image"
+  					data-basealign="slide"
+  					data-responsive_offset="off"
+  					data-wrapper_class="tp-nopointer"
+  					data-responsive="off"
+  					data-frames='[{"delay":600,"speed":1500,"frame":"0","from":"sX:1;sY:1;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[0,0,0,0]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[0,0,0,0]"
+  					data-blendmode="screen"
+
+  					style="z-index: 5;"><img src="{% static 'images/background/office1.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+
+  				<!-- LAYER NR. 6 -->
+  				<div class="tp-caption brand tp-resizeme"
+  					 id="slide-11-layer-10"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
+  					data-width="none"
+  					data-height="none"
+  					data-whitespace="nowrap"
+
+  					data-type="text"
+  					data-responsive_offset="on"
+  					data-wrapper_class="tp-nopointer"
+
+  					data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];sX:1;sY:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[20,20,20,20]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[20,20,20,20]"
+  					data-blendmode="exclusion"
+
+  					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 800; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;text-transform:uppercase;">NINJA WEBTECH</div>
+
+  				<!-- LAYER NR. 7 -->
+  				<div class="tp-caption advertising tp-resizeme" id="slide-11-layer-11"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['1','-30','-20','-20']"
+  					data-width="['none','none','361','330']"
+  					data-height="none"
+  					data-whitespace="['nowrap','nowrap','normal','normal']"
+
+  					data-type="text"
+  					data-responsive_offset="on"
+  					data-wrapper_class="tp-nopointer"
+
+  					data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:-20px;sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+  					data-textAlign="['inherit','inherit','center','center']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[0,0,0,0]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[0,0,0,0]"
+  					data-blendmode="exclusion"
+
+  					style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 25px; font-weight: 400; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Fast and friendly support, fully customisable design</span></div>
+
+  				<!-- LAYER NR. 8 -->
+  				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-11-layer-12"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['70','40','60','60']"
+  					data-width="none"
+  					data-height="none"
+  					data-whitespace="nowrap"
+
+  					data-type="button"
+  					data-actions=''
+  					data-responsive_offset="on"
+
+  					data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgba(0,0,0,1);bs:solid;bw:0 0 0 0;"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[35,35,35,35]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[35,35,35,35]"
+  					data-blendmode="exclusion"
+
+  					style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 50px; font-weight: 700; color: rgba(0,0,0,1);font-family: 'Raleway', sans-serif;background-color:rgba(255,255,255,0.85);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"></a>
+  			</li>
+  			<!-- SLIDE  -->
+  			<li data-index="rs-12" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeOut" data-easeout="Power4.easeOut" data-masterspeed="default"  data-thumb="http://works.themepunch.com/revolution_5_3/wp-content/"  data-rotate="0"  data-saveperformance="off"  data-title="Example Three" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+  				<!-- MAIN IMAGE -->
+  				<img src="{% static 'images/transparent.png' %}" data-bgcolor='#ffffff' style='background:#ffffff' alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+
+  				<!-- LAYERS -->
+
+  				<!-- LAYER NR. 9 -->
+  				<div class="tp-caption disabled_lc tp-videolayer"
+  					 id="slide-12-layer-12"
+  					 data-x="0"
+  					 data-y="0"
+  					data-whitespace="nowrap"
+
+  					data-type="video"
+  					data-basealign="slide"
+  					data-responsive_offset="off"
+  					data-wrapper_class="tp-nopointer"
+  					data-responsive="off"
+  					data-frames='[{"delay":600,"speed":1500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":1500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
+  					data-videocontrols="none" data-videowidth="100%" data-videoheight="100%" data-videoposter="#" data-videomp4="#" data-noposteronmobile="off" data-videopreload="auto" data-videoloop="loop" data-forceCover="1" data-aspectratio="16:9"			data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[0,0,0,0]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[0,0,0,0]"
+  					data-blendmode="screen"
+  					data-autoplay="on"
+
+  					style="z-index: 5;"><img src="{% static 'images/background/header_tablet.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+
+  				<!-- LAYER NR. 10 -->
+  				<div class="tp-caption brand tp-resizeme"
+  					 id="slide-12-layer-13"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['-70','-100','-100','-100']"
+  					data-width="none"
+  					data-height="none"
+  					data-whitespace="nowrap"
+
+  					data-type="text"
+  					data-responsive_offset="on"
+  					data-wrapper_class="tp-nopointer"
+
+  					data-frames='[{"delay":500,"split":"chars","splitdelay":0.1,"speed":300,"frame":"0","from":"y:[-100%];sX:1;sY:2;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[20,20,20,20]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[20,20,20,20]"
+  					data-blendmode="exclusion"
+
+  					style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 700; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;">NINJA WEBTECH</div>
+
+  				<!-- LAYER NR. 11 -->
+  				<div class="tp-caption advertising tp-resizeme" id="slide-12-layer-14"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['1','-30','-20','-20']"
+  					data-width="['none','none','361','330']"
+  					data-height="none"
+  					data-whitespace="['nowrap','nowrap','normal','normal']"
+
+  					data-type="text"
+  					data-responsive_offset="on"
+  					data-wrapper_class="tp-nopointer"
+
+  					data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:-20px;sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"}]'
+  					data-textAlign="['inherit','inherit','center','center']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[0,0,0,0]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[0,0,0,0]"
+  					data-blendmode="exclusion"
+
+  					style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 25px; font-weight: 300; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">Light engine, fully responsive and intuitive navigation</span> </div>
+
+  				<!-- LAYER NR. 12 -->
+  				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-12-layer-15"
+  					 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+  					 data-y="['middle','middle','middle','middle']" data-voffset="['70','40','60','60']"
+  					data-width="none"
+  					data-height="none"
+  					data-whitespace="nowrap"
+
+  					data-type="button"
+  					data-actions=''
+  					data-responsive_offset="on"
+
+  					data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":600,"frame":"999","to":"auto:auto;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgba(45,48,50,1);bs:solid;bw:0 0 0 0;"}]'
+  					data-textAlign="['inherit','inherit','inherit','inherit']"
+  					data-paddingtop="[0,0,0,0]"
+  					data-paddingright="[35,35,35,35]"
+  					data-paddingbottom="[0,0,0,0]"
+  					data-paddingleft="[35,35,35,35]"
+
+  					style="z-index: 8; white-space: nowrap; font-size: 15px; line-height: 50px; font-weight: 700; color: rgba(255,255,255,1);font-family: 'Raleway', sans-serif;background-color:rgba(79,172,254,1);border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"></a>
+  			</li>
+  		</ul>
+  		<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+  		</div>
     </div>
+    <!--== Particle Slider End ==-->
 
-  </section> -->
-  <!--== Team End ==-->
-
-  <!--== Call to Actions Start ==-->
-  <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
-    <div class="overlay-bg"></div>
-    <div class="container">
-    	  <div class="row">
-            <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-              <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-200"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
-              <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
-              <!-- <div class="call-to-action-image d-flex justify-content-center"><img class="img-responsive" src="{% static 'images/icons/fist-svgrepo-com.png' %}" alt="02"/> </div> -->
-              <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
-              <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">Contact Us Now</a>
+    <!--== Who We Are Start ==-->
+    <section class="whoweare white-bg" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
+            <div class="section-title">
+              <h1 class="raleway-font font-40px"><span class="font-100 font-40px">We Are a</span> Web Development Company</h1>
+              <hr class="center_line dark-bg">
+              <p style="font-size:1.2rem;">
+                We started in 2017, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table on each and every project.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-  </section>
-  <!--== Call to Actions End ==-->
+        <div class="skillrow row ">
+          <div class="skill-image col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
+            <img class="img-responsive" alt="laptop" src="{% static 'images/laptop5.png' %}">
+          </div>
+          <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+            <div class="skillbar-wrap skillbar-style-02">
+              {% for skill in skills %}
+                <div class="skillbar" data-percent="{{ skill.percent }}">
+                    <span class="skillbar-title">{{ skill.title|upper }}</span>
+                    <span class="skill-bar-percent"></span>
+                    <p class="skillbar-bar corporate"></p>
 
-  <!--== Pricing Table Start ==-->
-  <section class="pricing white-bg" id="pricing">
-    <div class="container pricing-container">
-      <div class="row">
-        <div class="col-md-8 centerize-col text-center">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="raleway-font"><span class="font-100">Our Pricing</span> Plans</h1>
-            <hr class="center_line dark-bg">
+                </div>
+              {% endfor %}
+                <!-- End Skill Bar -->
           </div>
         </div>
       </div>
-        <div class="row mt-5">
-          {% for plan in price_plans %}
-          <div class="col-md-4 pricing-table col-sm-4">
+    </section>
+    <!--== Who We Are End ==-->
 
-            <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
-              <div class="plan-name ">
-                <h3 class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
-              </div>
-              <hr class="sep_lines">
-              <div class="value ">
-                <h3 class="{% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.price }}<span> Euro</span></h3>
-                <!-- <span class="per">Per Month</span> -->
-              </div>
-              <hr class="sep_lines">
-              <ul class="mt-5">
+    <!--== Testimonials Start ==-->
+    <section class="testimonial parallax-bg fixed-bg text-white bg-dark" data-parallax-bg-image="#" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial">
 
-              	<li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li>
+      {% for review in reviews %}
+        <div class="slide col-xs-12 col-sm-6 col-md-4 text-center">
+          <h3 class="">{{ review.content|striptags }}</h3>
+          <div class="pointing"></div>
+          <div class="float-left">
+            <h5> {{ review.author }} </h5>
+          </div>
+        </div>
+      {% endfor %}
 
-              </ul>
+
+    </section>
+
+    <!--== Testimonials End ==-->
+
+    <!--== Portfolio Start ==-->
+    <section class="grey-bg pb-0" id="work">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="raleway-font"><span class="font-100">Our</span> Work</h1>
+              <hr class="center_line dark-bg">
             </div>
+          </div>
+        </div>
+        <div class=" row">
+          <div class="col-md-12">
+            <div id="portfolio-gallery-filter" class="cbp-l-filters-alignCenter corporate text-sm-center mt-5">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item dark">
+                    All
+                </div>
+                {% for cat in portfolio_category %}
+                <div data-filter=".{{ cat.title }}" class="cbp-filter-item">
+                    {{ cat.title }}
+                </div>
+                {% endfor %}
 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid remove-padding">
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div id="portfolio-gallery" class="cbp">
+              {% for item in portfolio %}
+                <div class="cbp-item {{ item.category }} col-md-3 col-sm-3">
+                    <div class="portfolio gallery-image-hover text-center">
+                    	<div class="folio-overlay"></div>
+                    	<img src="{{ item.image1.url }}" alt="">
+                    	<div class="portfolio-wrap">
+                 	  		  <div class="portfolio-description">
+      								      <h3 class="portfolio-title mt-0"><a class="" href="{{ item.link }}">{{ item.title }}</a></h3>
+      								      <h6 class="links">{{ item.category|title }}</h6>
+      							      </div>
+        						  </div>
+        					</div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!--== Portfolio End ==-->
+    <br><br>
+    <!--== Counters Start ==-->
+    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+      <div class="overlay-bg"></div>
+    </section>
+    <!--== Counters End ==-->
+
+    <!--== Services Start ==-->
+    <section class="white-bg pb-5" id="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="raleway-font"><span class="font-100">Our</span> Services</h1>
+              <hr class="center_line dark-bg">
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-4">
+
+              <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.1s">
+                <i class="icofont icofont-test-tube-alt font-40px"></i>
+                <h3 class="mt-0 font-600">Websites</h3>
+                <p class="font-400">Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients.</p>
+              </div>
+
+              <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.2s">
+                <i class="icofont icofont-samsung-galaxy font-40px"></i>
+                <h3 class="mt-0 font-600">Modern Software</h3>
+                <p class="font-400">All our software is done in python, a modern, versatile and very powerful programming language, that is becoming increasingly popular amongst programmers.</p>
+              </div>
+              <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.3s">
+                <i class="icofont icofont-ui-head-phone font-40px"></i>
+                <h3 class="mt-0 font-600">Creative concepts</h3>
+                <p class="font-400">Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true.</p>
+              </div>
+          </div>
+          <div class="col-md-4 xs-mt-80 phone wow zoomIn" data-wow-delay="0.4s">
+     	    	<img class="img-responsive pt-2" src="{% static 'images/iphone-5.png' %}" alt="">
+     	    </div>
+          <div class="col-md-4">
+  <!-- {% static 'images/happy-client1.png' %} -->
+          	  <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.5s">
+                <i class="icofont icofont-space-shuttle font-40px"></i>
+                <h3 class="mt-0">Awesome Friendly</h3>
+                <p class="font-300">Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs.</p>
+              </div>
+
+              <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.6s">
+                <i class="icofont icofont-interface font-40px"></i>
+                <h3 class="mt-0">SEO & Online Marketing</h3>
+                <p class="font-300">We are commited to make you succesful online, thus make you as present as possible using various programming and google embedded techniques.</p>
+              </div>
+              <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.7s">
+                <i class="icofont icofont-ui-video-play font-40px"></i>
+                <h3 class="mt-0">Custom Graphics</h3>
+                <p class="font-300">We can draw digital graphics according to your needs, create cartoons and caricatures or anything you can think of to make your online presence more effective.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--== Services End ==-->
+
+    <!--== Newsletter Start ==-->
+    <section class="relative" id="newsletter_form">
+      <div class="overlay-bg"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="display-table col-sm-12 col-md-8">
+            <div class="v-align-middle text-center">
+              <div class="white-color text-center">
+                <h1 class="font-700 font-40px line-height-60 xs-font-40px xs-line-height-50 sm-font-60px sm-line-height-70 wow fadeInUp" data-wow-delay="0.1s">Join <span class="font-100">our Newsletter </span> Now</h1>
+                <hr class="center_line primary-bg wow fadeInUp" data-wow-delay="0.2s">
+                <h3 class="font-400 line-height-40 wow fadeInUp" data-wow-delay="0.3s">
+                  And receive interesting news from the technology world.
+                </h3>
+                <div class="text-dark">
+                  {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                      {{ message.message }}
+                    </div>
+                    {% endfor %}
+                  {% endif %}
+
+                  <form method="POST" action="#newsletter_form">
+                    {% csrf_token %}
+
+                    <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp mt-5">
+
+                    <button class="btn buttons white-buttons  btn-square btn-zoom wow fadeInUp mt-5" data-wow-delay="0.4s">Join</button>
+                  </form>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <video autoplay="" muted="" loop="" controls="" class="html5-video">
+        <source src="{% static 'videos/tech-world.mp4' %}" type="video/mp4">
+        <!-- <source src="{% static 'videos/keyboard_bg.mp4' %}" type="video/mp4"> -->
+      </video>
+    </section>
+    <!--== Newsletter End ==-->
+
+    <!--== Team Start ==-->
+    <!-- <section class="white-bg" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="raleway-font"><span class="font-100">Our Creative</span> Team</h1>
+              <hr class="center_line dark-bg">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="team-member">
+                <div class="team-thumb">
+                  <div class="thumb-overlay"></div>
+                  <img src="{% static 'images/team/team-01.jpg' %}" alt="">
+                </div>
+              </div>
+              <div class="member-info text-center white-bg">
+                <h3>Bobby Castro</h3>
+                <span class="title primary-color">Project Manager</span>
+                <div class="social-icons-style-02">
+                  <ul class="sm-icon mt-2 mb-0">
+                    <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
+                    <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
+                    <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
+                    <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+            <!--== Member End ==-->
+  <!--
+        </div>
+      </div>
+
+    </section> -->
+    <!--== Team End ==-->
+
+    <!--== Call to Actions Start ==-->
+    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+      <div class="overlay-bg"></div>
+      <div class="container">
+      	  <div class="row">
+              <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
+                <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">Man your own </span> Online Battleship <span class="font-200"> with Us <br /> and </span> Conquer <span class="font-100"> </span>the Digital World!</h5>
+                <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
+                <!-- <div class="call-to-action-image d-flex justify-content-center"><img class="img-responsive" src="{% static 'images/icons/fist-svgrepo-com.png' %}" alt="02"/> </div> -->
+                <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">Code. Design. Development.</h5>
+                <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">Contact Us Now</a>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!--== Call to Actions End ==-->
+
+    <!--== Pricing Table Start ==-->
+    <section class="pricing white-bg" id="pricing">
+      <div class="container pricing-container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="raleway-font"><span class="font-100">Our Pricing</span> Plans</h1>
+              <hr class="center_line dark-bg">
+            </div>
+          </div>
+        </div>
+          <div class="row mt-5">
+            {% for plan in price_plans %}
+            <div class="col-md-4 pricing-table col-sm-4">
+
+              <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="plan-name ">
+                  <h3 class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
+                </div>
+                <hr class="sep_lines">
+                <div class="value ">
+                  <h3 class="{% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.price }}<span> Euro</span></h3>
+                  <!-- <span class="per">Per Month</span> -->
+                </div>
+                <hr class="sep_lines">
+                <ul class="mt-5">
+
+                	<li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li>
+
+                </ul>
+              </div>
+
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+    </section>
+    <!--== Pricing Table End ==-->
+
+    <!--== Clients Start ==-->
+    <div class="dark-bg pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="client-slider slick">
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/coding-programming-language-svgrepo-com-white.png' %}" alt="02"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/laptop-computer-programming-svgrepo-com-white.png' %}" alt="03"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/medal-winner-svgrepo-com-white.png' %}" alt="04"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/mysql-svg-white.png' %}" alt="05"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/programming-monitor-svgrepo-com-white.png' %}" alt="06"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/python-brands-white.png' %}" alt="07"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/seo-user-svgrepo-com-white.png' %}" alt="08"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/wheel-svgrepo-com-white.png' %}" alt="09"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/support-svgrepo-com-white.png' %}" alt="10"/> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--== Clients End ==-->
+
+
+    <!--== Blogs Start ==-->
+    <section id="blog" class="white-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 centerize-col text-center">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+              <h1 class="raleway-font"><span class="font-100">Our</span> Blog Posts</h1>
+              <hr class="center_line dark-bg">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          {% for post in blog_posts %}
+          <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
+            <div class="post-wrap">
+              <div class="post-img">
+                <div class="date-box dark-bg">
+                  <span class="day">{{ post.created_date.day }}</span>
+                  <span class="month">{{ post.created_date|date:'F' }}</span>
+                </div>
+                <div class="item"><img class="img-responsive" src="{{ post.image.url }}" alt=""/></div>
+              </div>
+
+              <div class="post-text">
+                <h3><a href="{% url 'blog' %}">{{ post.title }}</a></h3>
+                <p>
+                  {{ post.text|striptags|truncatechars:50 }}
+                </p>
+                <a href="#" class="btn-text">Read More</a>
+              </div>
+            </div>
           </div>
           {% endfor %}
         </div>
-    </div>
-  </section>
-  <!--== Pricing Table End ==-->
-
-  <!--== Clients Start ==-->
-  <div class="dark-bg pt-5 pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="client-slider slick">
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/coding-programming-language-svgrepo-com-white.png' %}" alt="02"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/laptop-computer-programming-svgrepo-com-white.png' %}" alt="03"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/medal-winner-svgrepo-com-white.png' %}" alt="04"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/mysql-svg-white.png' %}" alt="05"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/programming-monitor-svgrepo-com-white.png' %}" alt="06"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/python-brands-white.png' %}" alt="07"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/seo-user-svgrepo-com-white.png' %}" alt="08"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/wheel-svgrepo-com-white.png' %}" alt="09"/> </div>
-          <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/support-svgrepo-com-white.png' %}" alt="10"/> </div>
-        </div>
       </div>
-    </div>
-  </div>
-  <!--== Clients End ==-->
+    </section>
+    <!--== Blogs End ==-->
 
-
-  <!--== Blogs Start ==-->
-  <section id="blog" class="white-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 centerize-col text-center">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="raleway-font"><span class="font-100">Our</span> Blog Posts</h1>
-            <hr class="center_line dark-bg">
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        {% for post in blog_posts %}
-        <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
-          <div class="post-wrap">
-            <div class="post-img">
-              <div class="date-box dark-bg">
-                <span class="day">{{ post.created_date.day }}</span>
-                <span class="month">{{ post.created_date|date:'F' }}</span>
+    <!--== About Company Start ==-->
+    <div class="grey-bg about-section mt-5">
+      <div class="col-md-6 col-sm-6 bg-flex bg-flex-left p-0">
+        <div class="d-flex">
+          <div class="about-box_overlay">
+            <div class="center-layout">
+            <div class="v-align-middle"> <img class="popup-youtube" src="{% static 'images/background/laptop4.png' %}">
+              <!-- <div class="play-button"><i class="tr-icon ion-android-arrow-dropright"></i></div> -->
               </div>
-              <div class="item"><img class="img-responsive" src="{{ post.image.url }}" alt=""/></div>
             </div>
-
-            <div class="post-text">
-              <h3><a href="{% url 'blog' %}">{{ post.title }}</a></h3>
+          </div>
+        </div>
+      </div>
+      <div class="container justify-content-center">
+        <div class="col-md-6 col-sm-12 col-md-offset-6 col-sm-offset-6">
+            <div class="col-inner spacer wow fadeInLeft" data-wow-delay="0.1s">
+              <div class="mission-section">
+              <h2 class="raleway-font about-title"><span class="font-100">About</span> <br>Our Company</h2>
+              <hr class="left-line dark-bg" />
               <p>
-                {{ post.text|striptags|truncatechars:50 }}
+                Hi there!
               </p>
-              <a href="#" class="btn-text">Read More</a>
+              <p>
+                We are a small software development company, set on doing big things. We create modern, fully responsive websites, using python and django, 100% customisable. We are fast, always listening to feedback and to your needs, always commited to do the our best, with no compromises.
+              </p>
+              <p class="mt-3">
+                <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i> Our Work</a>
+                <a class="btn buttons contactus_button btn-zoom "><i class="icofont icofont-ui-message mr-1"></i> Contact Us</a>
+              </p>
+            </div>
             </div>
           </div>
         </div>
-        {% endfor %}
-      </div>
     </div>
-  </section>
-  <!--== Blogs End ==-->
+    <!--== About Company End ==-->
 
-  <!--== About Company Start ==-->
-  <div class="grey-bg about-section mt-5">
-    <div class="col-md-6 col-sm-6 bg-flex bg-flex-left p-0">
-      <div class="d-flex">
-        <div class="about-box_overlay">
-          <div class="center-layout">
-          <div class="v-align-middle"> <img class="popup-youtube" src="{% static 'images/background/laptop4.png' %}">
-            <!-- <div class="play-button"><i class="tr-icon ion-android-arrow-dropright"></i></div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container justify-content-center">
-      <div class="col-md-6 col-sm-12 col-md-offset-6 col-sm-offset-6">
-          <div class="col-inner spacer wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="mission-section">
-            <h2 class="raleway-font about-title"><span class="font-100">About</span> <br>Our Company</h2>
-            <hr class="left-line dark-bg" />
-            <p>
-              Hi there!
-            </p>
-            <p>
-              We are a small software development company, set on doing big things. We create modern, fully responsive websites, using python and django, 100% customisable. We are fast, always listening to feedback and to your needs, always commited to do the our best, with no compromises.
-            </p>
-            <p class="mt-3">
-              <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i> Our Work</a>
-              <a class="btn buttons contactus_button btn-zoom "><i class="icofont icofont-ui-message mr-1"></i> Contact Us</a>
-            </p>
-          </div>
-          </div>
-        </div>
-      </div>
+    <!--== Who We Are Start ==-->
+
+    <!--== Who We Are End ==-->
+
+    {% include 'ninjawebtech_app/contact_form.html' %}
+
+
+    {% include 'ninjawebtech_app/footer.html' %}
+
+    <!--== Go to Top  ==-->
+    <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>
+    <!--== Go to Top End ==-->
+
   </div>
-  <!--== About Company End ==-->
+  <!--== Wrapper End ==-->
 
-  <!--== Who We Are Start ==-->
+  <!--== Javascript Plugins ==-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/smoothscroll.js' %}"></script>
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/master.js' %}"></script>
 
-  <!--== Who We Are End ==-->
+  <!-- Paricle Add-On Files -->
+  <link rel='stylesheet' href="{% static 'revolution/css/revolution.addon.particles.css' %}"/>
+  <script src="{% static 'revolution/js/revolution.addon.particles.min.js' %}"></script>
 
-  {% include 'ninjawebtech_app/contact_form.html' %}
+  <script>
+          var tpj=jQuery;
 
-
-  {% include 'ninjawebtech_app/footer.html' %}
-
-  <!--== Go to Top  ==-->
-  <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>
-  <!--== Go to Top End ==-->
-
-</div>
-<!--== Wrapper End ==-->
-
-<!--== Javascript Plugins ==-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJNGOwO2hJpJ9kz8e0UUPjZhEbgDJTTXE"></script>
-<script src="{% static 'js/jquery.min.js' %}"></script>
-<script src="{% static 'js/smoothscroll.js' %}"></script>
-<script src="{% static 'js/plugins.js' %}"></script>
-<script src="{% static 'js/master.js' %}"></script>
-
-<!-- Paricle Add-On Files -->
-<link rel='stylesheet' href="{% static 'revolution/css/revolution.addon.particles.css' %}"/>
-<script src="{% static 'revolution/js/revolution.addon.particles.min.js' %}"></script>
-
-<script>
-        var tpj=jQuery;
-
-  var revapi4;
-  tpj(document).ready(function() {
-    if(tpj("#rev_slider_4_1").revolution == undefined){
-      revslider_showDoubleJqueryError("#rev_slider_4_1");
-    }else{
-      revapi4 = tpj("#rev_slider_4_1").show().revolution({
-        sliderType:"standard",
-        jsFileLocation:"{% static 'js/",
-        sliderLayout:"fullscreen",
-        dottedOverlay:"none",
-        delay:9000,
-        particles: {startSlide: "first", endSlide: "last", zIndex: "1",
-          particles: {
-            number: {value: 80}, color: {value: "#000000"},
-            shape: {
-              type: "circle", stroke: {width: 0, color: "#ffffff", opacity: 1},
-              image: {src: ""}
-            },
-            opacity: {value: 0.3, random: false, min: 0.25, anim: {enable: false, speed: 3, opacity_min: 0, sync: false}},
-            size: {value: 10, random: true, min: 1, anim: {enable: false, speed: 40, size_min: 1, sync: false}},
-            line_linked: {enable: true, distance: 200, color: "#000000", opacity: 0.2, width: 1},
-            move: {enable: true, speed: 3, direction: "none", random: true, min_speed: 3, straight: false, out_mode: "out"}},
-          interactivity: {
-            events: {onhover: {enable: true, mode: "bubble"}, onclick: {enable: false, mode: "repulse"}},
-            modes: {grab: {distance: 400, line_linked: {opacity: 0.5}}, bubble: {distance: 400, size: 150, opacity: 1}, repulse: {distance: 200}}
-          }
-        },
-        navigation: {
-          keyboardNavigation:"off",
-          keyboard_direction: "horizontal",
-          mouseScrollNavigation:"off",
-          mouseScrollReverse:"default",
-          onHoverStop:"off",
-          arrows: {
-            style:"gyges",
-            enable:true,
-            hide_onmobile:false,
-            hide_onleave:false,
-            tmp:'',
-            left: {
-              h_align:"center",
-              v_align:"bottom",
-              h_offset:-20,
-              v_offset:0
-            },
-            right: {
-              h_align:"center",
-              v_align:"bottom",
-              h_offset:20,
-              v_offset:0
+    var revapi4;
+    tpj(document).ready(function() {
+      if(tpj("#rev_slider_4_1").revolution == undefined){
+        revslider_showDoubleJqueryError("#rev_slider_4_1");
+      }else{
+        revapi4 = tpj("#rev_slider_4_1").show().revolution({
+          sliderType:"standard",
+          jsFileLocation:"{% static 'js/",
+          sliderLayout:"fullscreen",
+          dottedOverlay:"none",
+          delay:9000,
+          particles: {startSlide: "first", endSlide: "last", zIndex: "1",
+            particles: {
+              number: {value: 80}, color: {value: "#000000"},
+              shape: {
+                type: "circle", stroke: {width: 0, color: "#ffffff", opacity: 1},
+                image: {src: ""}
+              },
+              opacity: {value: 0.3, random: false, min: 0.25, anim: {enable: false, speed: 3, opacity_min: 0, sync: false}},
+              size: {value: 10, random: true, min: 1, anim: {enable: false, speed: 40, size_min: 1, sync: false}},
+              line_linked: {enable: true, distance: 200, color: "#000000", opacity: 0.2, width: 1},
+              move: {enable: true, speed: 3, direction: "none", random: true, min_speed: 3, straight: false, out_mode: "out"}},
+            interactivity: {
+              events: {onhover: {enable: true, mode: "bubble"}, onclick: {enable: false, mode: "repulse"}},
+              modes: {grab: {distance: 400, line_linked: {opacity: 0.5}}, bubble: {distance: 400, size: 150, opacity: 1}, repulse: {distance: 200}}
             }
+          },
+          navigation: {
+            keyboardNavigation:"off",
+            keyboard_direction: "horizontal",
+            mouseScrollNavigation:"off",
+            mouseScrollReverse:"default",
+            onHoverStop:"off",
+            arrows: {
+              style:"gyges",
+              enable:true,
+              hide_onmobile:false,
+              hide_onleave:false,
+              tmp:'',
+              left: {
+                h_align:"center",
+                v_align:"bottom",
+                h_offset:-20,
+                v_offset:0
+              },
+              right: {
+                h_align:"center",
+                v_align:"bottom",
+                h_offset:20,
+                v_offset:0
+              }
+            }
+          },
+          responsiveLevels:[1240,1024,778,480],
+          visibilityLevels:[1240,1024,778,480],
+          gridwidth:[1240,1024,778,480],
+          gridheight:[868,768,960,720],
+          lazyType:"none",
+          shadow:0,
+          spinner:"off",
+          stopLoop:"on",
+          stopAfterLoops:0,
+          stopAtSlide:1,
+          shuffle:"off",
+          autoHeight:"off",
+          fullScreenAutoWidth:"off",
+          fullScreenAlignForce:"off",
+          fullScreenOffsetContainer: "",
+          fullScreenOffset: "60px",
+          disableProgressBar:"on",
+          hideThumbsOnMobile:"off",
+          hideSliderAtLimit:0,
+          hideCaptionAtLimit:0,
+          hideAllCaptionAtLilmit:0,
+          debugMode:false,
+          fallbacks: {
+            simplifyAll:"off",
+            nextSlideOnWindowFocus:"off",
+            disableFocusListener:false,
           }
-        },
-        responsiveLevels:[1240,1024,778,480],
-        visibilityLevels:[1240,1024,778,480],
-        gridwidth:[1240,1024,778,480],
-        gridheight:[868,768,960,720],
-        lazyType:"none",
-        shadow:0,
-        spinner:"off",
-        stopLoop:"on",
-        stopAfterLoops:0,
-        stopAtSlide:1,
-        shuffle:"off",
-        autoHeight:"off",
-        fullScreenAutoWidth:"off",
-        fullScreenAlignForce:"off",
-        fullScreenOffsetContainer: "",
-        fullScreenOffset: "60px",
-        disableProgressBar:"on",
-        hideThumbsOnMobile:"off",
-        hideSliderAtLimit:0,
-        hideCaptionAtLimit:0,
-        hideAllCaptionAtLilmit:0,
-        debugMode:false,
-        fallbacks: {
-          simplifyAll:"off",
-          nextSlideOnWindowFocus:"off",
-          disableFocusListener:false,
-        }
-      });
-    }
+        });
+      }
 
-            RsParticlesAddOn(revapi4);
-  });	/*ready*/
-</script>
+              RsParticlesAddOn(revapi4);
+    });	/*ready*/
+  </script>
 
-<!-- Revolution js Files -->
-<script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
-<script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.actions.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.carousel.min.js' %}"></script>
-<!-- <script src="{% static 'revolution/js/revolution.extension.kenburn.min.js' %}"></script> -->
-<script src="{% static 'revolution/js/revolution.extension.layeranimation.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.migration.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.navigation.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.parallax.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.slideanims.min.js' %}"></script>
-<script src="{% static 'revolution/js/revolution.extension.video.min.js' %}"></script>
-<!--== Javascript Plugins End ==-->
+  <!-- Revolution js Files -->
+  <script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+  <script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.actions.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.carousel.min.js' %}"></script>
+  <!-- <script src="{% static 'revolution/js/revolution.extension.kenburn.min.js' %}"></script> -->
+  <script src="{% static 'revolution/js/revolution.extension.layeranimation.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.migration.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.navigation.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.parallax.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.slideanims.min.js' %}"></script>
+  <script src="{% static 'revolution/js/revolution.extension.video.min.js' %}"></script>
+  <!--== Javascript Plugins End ==-->
 
-</body>
+  </body>
 </html>
