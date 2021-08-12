@@ -470,7 +470,7 @@
     <!--== Who We Are End ==-->
 
     <!--== Testimonials Start ==-->
-    <section class="testimonial parallax-bg fixed-bg text-white bg-dark" data-parallax-bg-image="#" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial">
+    <section class="testimonial parallax-bg fixed-bg text-white bg-dark" data-parallax-bg-image="#" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial" style="height:25rem;">
 
       {% for review in reviews %}
         <div class="slide col-xs-12 col-sm-6 col-md-4 text-center">
@@ -482,10 +482,22 @@
         </div>
       {% endfor %}
 
-
     </section>
-
     <!--== Testimonials End ==-->
+
+    <!-- =====   Add Review button === -->
+    <section class="review text-white bg-dark" style="height:1em;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="justify-content-center" style="margin:auto;display: flex;">
+              <a href="{% url 'review' %}" class="btn buttons white-buttons wow fadeInUp" data-wow-delay="0.4s">Leave a review</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =====   Add Review button END === -->
 
     <!--== Portfolio Start ==-->
     <section class="grey-bg pb-0" id="work">
@@ -829,10 +841,10 @@
               <p>
                 We are a small software development company, set on doing big things. We create modern, fully responsive websites, using python and django, 100% customisable. We are fast, always listening to feedback and to your needs, always commited to do the our best, with no compromises.
               </p>
-              <p class="mt-3">
+              <div class="mt-3">
                 <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i> Our Work</a>
                 <a class="btn buttons contactus_button btn-zoom "><i class="icofont icofont-ui-message mr-1"></i> Contact Us</a>
-              </p>
+              </div>
             </div>
             </div>
           </div>

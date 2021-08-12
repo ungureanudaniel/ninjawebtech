@@ -113,8 +113,8 @@
 </div>
 <!--== Wrapper End ==-->
 
-  <!--== Contact Start ==-->
-  <section class="white-bg" id="contact">
+  <!--== Newsletter confirmation Start ==-->
+  <section class="white-bg newsletter-confirmation" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-md-8 centerize-col text-center">
@@ -134,14 +134,13 @@
         <div class="col-md-6 col-sm-6 col-xs-12 " data-wow-delay="0.1s">
           <img src="{% static 'images/background/thank_you.jpg' %}" alt="side-logo"/>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.2s">
-          <div id="myMap" class="wide"></div>
-        </div>
-
+        <a class="btn buttons btn-dark wow fadeInUp mt-5" href="{% url 'home' %}" data-wow-delay="0.4s">Back Home</a>
       </div>
+
     </div>
   </section>
-<!--== Review End ==-->
+<!--== newsletter confirmation End ==-->
+
   {% include 'ninjawebtech_app/footer.html' %}
   <!--== Go to Top  ==-->
   <a href="javascript:" id="return-to-top"><i class="icofont icofont-arrow-up"></i></a>

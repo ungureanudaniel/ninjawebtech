@@ -10,6 +10,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from .forms import CaptchaForm
+from django.views.decorators.csrf import csrf_protect
 
 #-----------------------GENERATE RANDOM SUBSCRIBER ID--------------------------
 def random_digits():
@@ -17,6 +18,7 @@ def random_digits():
 
 
 #---------------------------------------------------------------------HOME VIEW
+@csrf_protect
 def homeview(request):
     template = 'ninjawebtech_app/index9.html'
     #--------------------------------------------------------------------ABOUT
@@ -227,6 +229,7 @@ def homeview(request):
 #     return render(request, template, context)
 #
 #--------------------------------------------------------------------REVIEW VIEW
+@csrf_protect
 def reviewview(request):
     template = 'ninjawebtech_app/review.html'
 
@@ -245,6 +248,7 @@ def reviewview(request):
     return render(request, template, context)
 
 #--------------------------------------------------------------------BLOG VIEW
+@csrf_protect
 def bloglistview(request):
     template = 'ninjawebtech_app/blog.html'
 
@@ -252,7 +256,7 @@ def bloglistview(request):
 
     }
     return render(request, template, context)
-
+@csrf_protect
 def ContactView(request):
     template_name = 'blogapp/contact.html'
     categories = Category.objects.all()
@@ -287,7 +291,7 @@ def ContactView(request):
         render(request, template_name, {'message_name': message_name, 'categories': categories, 'form': form,})
     else:
         return render(request, template_name, {'categories': categories, 'form': form})
-
+@csrf_protect
 def subscription_conf_view(request):
     template = 'ninjawebtech_app/subscription_conf.html'
 

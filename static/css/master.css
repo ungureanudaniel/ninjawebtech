@@ -500,28 +500,50 @@ button:focus {outline: none !important;}
   transition-timing-function: ease-in-out;
 }
 .container .white-buttons {
+  outline-color: none;
   border: 1px solid white;
   color: white;
 }
 
-.container .white-buttons:hover .white-buttons.focus, .white-buttons:active {
+.container .white-buttons:hover, .white-buttons.focus, .white-buttons:active {
   color: #1d2124;
   border-color: #fff;
   background-color: #fff
 }
 
-.mission-section .btn-dark {
-  color: #fff;
+/* .review .buttons {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 13px 40px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 2px;
+  background-color: transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+} */
+/* .review .white-buttons {
+  border: 1px solid white;
+  color: white; */
+/* } */
+/* .review .white-buttons:hover, .white-buttons.focus, .white-buttons:active {
+  color: #1d2124;
+  border-color: #fff;
+  background-color: #fff
+} */
+
+.mission-section a.btn-dark, .newsletter-confirmation a.btn-dark {
+  color: #1d2124;
+  border-color: #1d2124;
+
+}
+
+.mission-section a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus, .newsletter-confirmation a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus {
+  color: white;
   border-color: #1d2124;
   background-color: #1d2124;
 }
-
-.mission-section .btn-dark:hover .btn-dark:active, .btn-dark:focus {
-  color: #fff;
-  border-color: #000;
-  background-color: #000;
-}
-
 
 .mission-section .contactus_button {
   margin-left: 0rem;
@@ -571,10 +593,10 @@ button:focus {outline: none !important;}
   }
 }
 
-.container .btn:hover, .btn:focus, .btn.focus, .btn:active, .btn.active {font-family: 'Raleway', sans-serif; border-color: transparent; color: black; background-color: white;}
+
 .container .btn:focus, .btn:focus:active {outline: none;}
 
-.container .btn:active, .btn.active {outline: 0;background-image: none;-webkit-box-shadow: none;box-shadow: none;}
+
 
 
 #contact-form .btn-primary {font-family: 'Raleway', sans-serif;font-weight:400;letter-spacing:1px; font-size: 1.7rem;color: #fff;background-color: #40E0D0;border:2px solid #40E0D0;padding: 0.8rem; width: 12em;}
@@ -889,6 +911,10 @@ li.post-comment{list-style:none;}
 .default-slider .container{padding-top:60px;}
 /* .default-slider.slick-dotted.slick-slider, .blog-grid-slider.slick-dotted.slick-slider{margin-bottom:0;} */
 .home-slider{height:100vh;padding:0;}
+.slick-arrow {
+  color: black;
+  background-color: black;
+}
 .home-slider .default-slider, .home-slider .slick-list, .home-slider .slide-img, .home-slider .hero-text-wrap{height:100vh;width:100%;}
 /* .default-slider .slide{position:relative;height:768px;}
 .default-slider .slick-dots, .service-slider-2 .slick-dots{bottom:40px;}
@@ -974,7 +1000,7 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
 
 .testimonial .slide {
 	cursor: pointer;
-  
+
 }
 
 .testimonial .slide h3 {
@@ -1002,7 +1028,7 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
   left:5px;
 }
 
-.testimonial h3:before,h3:after {
+.testimonial h3:before, .testimonial h3:after {
 	content: "\201C";
 	position: absolute;
 	font-size: 80px;

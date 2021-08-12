@@ -560,8 +560,10 @@
     opacity: 30%;
     border-top: 1px solid #808080;
   }
-  /*=== SKILL BARS ===*/
-
+  /*=== review button ===*/
+  .review .container .btn{
+    
+  }
 }
 
 
