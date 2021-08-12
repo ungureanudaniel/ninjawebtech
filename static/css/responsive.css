@@ -217,8 +217,14 @@
 	.widget-btns .btn.btn-lg, .btn.btn-group-lg{height: 46px;line-height:46px;}
 	.first-ico-box .feature-box{float:none;} */
 	.feature-box-right{width:100%;}
+
 }
 
+@media and (min-width:1024px) {
+  .mission-section .contactus_button {
+    margin-top: 0em;
+  }
+}
 @media (min-width:1301px){
   .testimonial .slide {
     margin-left: 30em;
@@ -529,6 +535,31 @@
     margin-left: 1em;
     margin-right: 1em;
   }
+  .about-section .mission-section .about-title {
+    text-align: center;
+    align-items: center;
+  }
+  .about-section .mission-section hr.left-line {
+    display: none;about-center-line
+  }
+  .about-section .mission-section hr.about-center-line {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 60px;
+  }
+  .about-section .col-inner .spacer {
+    padding: 5px;
+  }
+  .mission-section .contactus_button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #40E0D0;
+    color: white;
+  }
+  .mission-section .btn-dark {
+    width: 100%;
+  }
 	/* .testimonial-item .testimonial-content {padding: 100px 50px 50px;}
 	.testimonial-style-3 .testimonial-item .testimonial-content{padding: 0px 50px 0px;}
 	.testimonial-item{padding-left: 15px;padding-right: 15px;}
@@ -588,6 +619,9 @@
 	.countdown-container .countdown li {min-width: 110px;padding: 20px 10px;width: 110px;margin-right: 20px;}
 	.countdown li span {font-size: 30px;}
 	.countdown li p {font-size: 14px;margin-bottom: 0;}
+  .mission-section .contactus_button {
+    margin-top: 0.5em;
+  }
 	/* .error-cover-bg p, .coming-cover-bg p{font-size: 18px;line-height: 32px;} */
 	/* .col-about-right, .widget-list ul, ol {padding-left: 30px;} */
 	/* .right-col-rv{margin-top:50px;} */
