@@ -511,6 +511,9 @@ button:focus {outline: none !important;}
   background-color: #fff
 }
 
+section.review {
+  height:80px;
+}
 /* .review .buttons {
   font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
