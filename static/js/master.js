@@ -156,9 +156,9 @@
 		$('.testimonial').slick({
 			dots: true,
 	    infinite: true,
-	    centerMode: true,
-	    slidesToShow: 2,
-			slidesToScroll: 3,
+	    centerMode: false,
+	    slidesToShow: 1,
+			slidesToScroll: 1,
 			infinite: true,
 		  autoplay: true,
 		  autoplaySpeed: 6000,

@@ -512,6 +512,8 @@ button:focus {outline: none !important;}
 }
 
 section.review {
+  display: none;
+  position: relative;
   height:80px;
 }
 /* .review .buttons {
@@ -1002,6 +1004,9 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
 
 /* Testimonials Style 01 */
 
+.testimonial {
+  position: relative;
+}
 .testimonial .slide {
 	cursor: pointer;
 
@@ -1019,7 +1024,7 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
 	color: white;
 }
 
-.testimonial h5 {
+.review h5 {
   position: relative;
   text-transform: uppercase;
   font-size: 1.5em;
