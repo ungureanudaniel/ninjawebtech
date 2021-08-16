@@ -100,6 +100,12 @@
   .top-slides li div.brand {
     font-size: 4.5rem !important;
   }
+  .call-to-action h5 {
+    font-size: 3em;
+  }
+  .display-table h1 {
+    font-size: 3em;
+  }
   .testimonial .slide {
   	cursor: pointer;
     margin-left: 1em;
