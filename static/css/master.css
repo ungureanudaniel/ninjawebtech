@@ -512,7 +512,6 @@ button:focus {outline: none !important;}
 }
 
 section.review {
-  display: none;
   position: relative;
   height:80px;
 }
@@ -915,14 +914,14 @@ li.post-comment{list-style:none;}
 /* Sliders */
 .default-slider, .home-fullslide{position:relative;height:768px;overflow:hidden;}
 .default-slider .container{padding-top:60px;}
-/* .default-slider.slick-dotted.slick-slider, .blog-grid-slider.slick-dotted.slick-slider{margin-bottom:0;} */
+.default-slider.slick-dotted.slick-slider, .blog-grid-slider.slick-dotted.slick-slider{margin-bottom:0;}
 .home-slider{height:100vh;padding:0;}
 .slick-arrow {
   color: black;
   background-color: black;
 }
 .home-slider .default-slider, .home-slider .slick-list, .home-slider .slide-img, .home-slider .hero-text-wrap{height:100vh;width:100%;}
-/* .default-slider .slide{position:relative;height:768px;}
+.default-slider .slide{position:relative;height:768px;}
 .default-slider .slick-dots, .service-slider-2 .slick-dots{bottom:40px;}
 .default-slider .slick-dots li button, .portfolio-slider .slick-dots li button{font-size:0;width:40px;height:3px;padding:0px;cursor:pointer;border:0;outline:none;background:rgba(195, 195, 195, 0.5);} */
 section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33, 33, 0.5);}
@@ -1004,11 +1003,14 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
 
 /* Testimonials Style 01 */
 
-.testimonial {
+section.testimonial {
   position: relative;
+  overflow: hidden;
+
 }
 .testimonial .slide {
 	cursor: pointer;
+  height: inherit;
 
 }
 

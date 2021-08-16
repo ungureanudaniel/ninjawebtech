@@ -470,17 +470,21 @@
     <!--== Who We Are End ==-->
 
     <!--== Testimonials Start ==-->
-    <section class="testimonial parallax-bg fixed-bg text-white bg-dark" data-parallax-bg-image="#" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial" style="height:25rem;">
-
-      {% for review in reviews %}
-        <div class="slide col-xs-12 col-sm-6 col-md-4 text-center">
-          <h3 class="">{{ review.content|striptags }}</h3>
-          <div class="pointing"></div>
-          <div class="float-left">
-            <h5> {{ review.author }} </h5>
+    <section class="testimonial text-white bg-dark" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial" >
+        {% for review in reviews %}
+          <div class="slide col-xs-12 col-sm-6 col-md-4 text-center">
+            <h3 class="">{{ review.content|striptags }}</h3>
+            <div class="pointing"></div>
+            <div class="float-left">
+              <h5> {{ review.author }} </h5>
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+          <!-- <div class="slick-dots">
+            <div class="dot" id="dot1"></div>
+            <div class="dot" id="dot2"></div>
+            <div class="dot" id="dot3"></div>
+          </div> -->
 
     </section>
     <!--== Testimonials End ==-->
