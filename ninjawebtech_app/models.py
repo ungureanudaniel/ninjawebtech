@@ -119,7 +119,7 @@ class Review(models.Model):
     author = models.CharField(max_length=300)
     content = RichTextField(blank=False)
     date_posted = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
 
     def __str__(self):
         return '{}'.format(self.author)

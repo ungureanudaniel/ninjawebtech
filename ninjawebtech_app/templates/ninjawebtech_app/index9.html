@@ -458,7 +458,7 @@
                 <div class="skillbar" data-percent="{{ skill.percent }}">
                     <span class="skillbar-title">{{ skill.title|upper }}</span>
                     <span class="skill-bar-percent"></span>
-                    <p class="skillbar-bar corporate"></p>
+                    <p class="skillbar-bar corporate" id="hide_review_redirect"></p>
 
                 </div>
               {% endfor %}
@@ -472,7 +472,16 @@
     <!--== Testimonials Start ==-->
     <section class="testimonial text-white bg-dark" data-parallax-speed="0.5" data-parallax-direction="up" id="testimonial" >
         {% for review in reviews %}
+
           <div class="slide col-xs-12 col-sm-6 col-md-4 text-center">
+            {% if user.is_authenticated %}
+              <div>
+                <form action="{% url 'hide_review' review.pk %}" method="POST">
+                  {% csrf_token %}
+                  <input class="w-50 bg-warning text-dark" type="submit" value="Hide review">
+                </form>
+              </div>
+            {% endif %}
             <h3 class="">{{ review.content|striptags }}</h3>
             <div class="pointing"></div>
             <div class="float-left">

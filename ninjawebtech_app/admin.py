@@ -26,7 +26,7 @@ class TeamMemberAdmin(admin.ModelAdmin):
      list_display =  ['first_name', 'last_name', 'job', 'email', 'phone', 'insta', 'twitter', 'linkedin', 'photo']
 
 class ReviewAdmin(admin.ModelAdmin):
-     list_display =  ['author', 'content', 'date_posted', 'active']
+     list_display =  ['author', 'content', 'date_posted', 'approved']
 
 class LogoAdmin(admin.ModelAdmin):
      list_display =  ['text', 'photo']

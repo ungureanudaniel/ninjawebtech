@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
 import os
 import datetime
@@ -26,7 +26,7 @@ def homeview(request):
     #--------------------------------------------------------------------SKILLS
     skills = Skill.objects.all()
     #-------------------------------------------------------------------REVIEWS
-    reviews = Review.objects.filter(active=True)
+    reviews = Review.objects.filter(approved=True)
     #------------------------------------------------------------------category
     portfolio_category = ProjectCategory.objects.all()
     #------------------------------------------------------------------PORTFOLIO
@@ -242,20 +242,43 @@ def reviewview(request):
             new_review.save()
             messages.success(request, "Your review has been sent!")
 
-    context = {
+    context = {}
+    return render(request, template, context)
 
-    }
+def hide_review_view(request, pk):
+    rev = get_object_or_404(Review, pk=pk)
+
+    if request.method == "POST":
+        rev.approved = False
+        rev.save()
+        return redirect('/#hide_review_redirect')
+
+    context = {"rev":rev}
     return render(request, template, context)
 
 #--------------------------------------------------------------------BLOG VIEW
 @csrf_protect
 def bloglistview(request):
     template = 'ninjawebtech_app/blog.html'
+    blog_posts = Post.objects.all()
 
     context = {
-
+        "blog_posts":blog_posts,
     }
     return render(request, template, context)
+
+#---------------------------------------------------------------BLOG DETAIL VIEW
+def blogdetailview(request):
+    template_name = 'blogapp/contact.html'
+    categories = Category.objects.all()
+    #--------------logo------------------------------
+    # logos = Logo.objects.filter(status='active')
+    form = CaptchaForm(request.POST)
+    if request.method == "POST":
+        message_name = request.POST.get('message-name')
+        message_email = request.POST.get('message-email')
+        message = request.POST.get('message')
+
 @csrf_protect
 def ContactView(request):
     template_name = 'blogapp/contact.html'
