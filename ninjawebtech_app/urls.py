@@ -7,6 +7,7 @@ from .views import homeview, reviewview, bloglistview, subscription_conf_view, h
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import ProjectCategorySitemap, ServiceSitemap, SkillSitemap, PortfolioSitemap, StaticSitemap
 from django.views.generic.base import TemplateView
+from django.conf.urls.i18n import i18n_patterns
 # app_name = "ninjawebtech_app"
 
 sitemaps = {
@@ -19,6 +20,7 @@ sitemaps = {
 
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', homeview, name='home'),
     path('review/', reviewview, name='review'),
     path('hide_review/<int:pk>', hide_review_view, name='hide_review'),

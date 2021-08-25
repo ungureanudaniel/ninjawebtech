@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Service, Portfolio, TeamMember, Logo, Email, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Post
+from .models import About, Service, Portfolio, TeamMember, Logo, Email, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Post, PostCategory
 class AboutAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'image', 'active']
 
@@ -45,6 +45,8 @@ class PostAdmin(admin.ModelAdmin):
     list_display =  ['title', 'text', 'featured', 'status', 'created_date', 'slug']
     prepopulated_fields = {'slug': ('title',), }
 
+class PostCategoryAdmin(admin.ModelAdmin):
+    list_display =  ['title']
 
 admin.site.register(About, AboutAdmin)
 admin.site.register(PricingFeatures, PricingFeaturesAdmin)
@@ -56,6 +58,7 @@ admin.site.register(Portfolio, PortfolioAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Logo, LogoAdmin)
 admin.site.register(Post, PostAdmin)
+admin.site.register(PostCategory, PostCategoryAdmin)
 admin.site.register(Email, EmailAdmin)
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)
 admin.site.register(Review, ReviewAdmin)

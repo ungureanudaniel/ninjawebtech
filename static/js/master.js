@@ -41,6 +41,7 @@
             time: 4000
     });
 
+
 		/* ===== SKILLS BAR ===== */
 
     $('.skillbar').skillBars({
@@ -258,13 +259,14 @@
         event.preventDefault();
   });
 
-	$(window).on("scroll", function(){
-			var scrollTop = $(window).scrollTop();
-			if(scrollTop >34){
-					$(".nav-scrollspy-onepage").addClass("fixed-menu");
-			}else {
-					$(".nav-scrollspy-onepage").removeClass("fixed-menu");
-			}
+	$(function () {
+	  $(document).scroll(function () {
+	    var $nav1 = $(".language");
+			var $nav2 = $(".lang_button")
+	    $nav1.toggleClass('scrolled', $(this).scrollTop() > 40);
+			$nav2.toggleClass('scrolled', $(this).scrollTop() > 40);
+
+	  });
 	});
 
 	/* ===== TYPE IT ===== */

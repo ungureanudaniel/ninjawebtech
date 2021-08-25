@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
 import os
+
 import datetime
 import random
 from django.utils.html import strip_tags
@@ -11,6 +12,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from .forms import CaptchaForm
 from django.views.decorators.csrf import csrf_protect
+
+# def set_language(request):
+#     if request.GET.has_key('language_id'):  # Set language in Session variable
+#         # Redirect to home
+#         request.session['language_id'] = request.GET['language_id']
+#     return HttpResponseRedirect('/')
 
 #-----------------------GENERATE RANDOM SUBSCRIBER ID--------------------------
 def random_digits():

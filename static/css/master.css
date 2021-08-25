@@ -259,6 +259,85 @@ nav.navbar.bootsnav ul.nav > li > a.nav-btn-default {padding: 10px 15px;margin-t
 
 .navbar-collapse .navbar-nav li a:hover {text-decoration: underline;}
 
+.language_dropdown {
+  position: absolute;
+  display: flex;
+  z-index: 15;
+  width: 7rem;
+  /* background-color: #f1f1f1; */
+}
+
+.language_dropdown .language {
+  background-color: transparent;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.language_dropdown .language:hover, .language:focus {
+  text-decoration: underline;
+}
+
+.language_dropdown .language.scrolled {
+  color: white !important;
+  transition: color 300ms linear;
+  transition-delay: 30ms;
+
+}
+
+.language_dropdown .lang_button {
+   width: 4rem;
+   color: black;
+   font-family: 'Raleway', sans-serif;
+   font-size: 0.9rem;
+   font-weight: 500;
+   background-color: transparent;
+
+   padding: 2px;
+   float: right;
+}
+
+.language_dropdown .lang_button.scrolled {
+   color: white;
+   border: 1px solid white;
+   transition: color 300ms linear;
+   transition-delay: 30ms;
+}
+
+.language_dropdown .lang_button:hover, .lang_button:focus {
+  text-decoration: underline;
+}
+
+
+/*
+.language_dropdown .lang_button:hover, .lang_button:focus,  {
+  background-color: black;
+  color: white;
+} */
+
+/* .lang-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+.lang-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  z-index: 3;
+}
+
+.language_dropdown a:hover {background-color: #ddd;} */
+
 /* ==== SLIDER ==== */
 .top-slides li div.brand {
   font-size: 10em !important;
@@ -537,13 +616,14 @@ section.review {
   background-color: #fff
 } */
 
-.mission-section a.btn-dark, .newsletter-confirmation a.btn-dark {
+#blog a.btn-dark, .mission-section a.btn-dark, .newsletter-confirmation a.btn-dark {
   color: #1d2124;
   border-color: #1d2124;
+  background-color: transparent;
 
 }
 
-.mission-section a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus, .newsletter-confirmation a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus {
+#blog a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus, .mission-section a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus, .newsletter-confirmation a.btn-dark:hover, a.btn-dark:active, a.btn-dark:focus {
   color: white;
   border-color: #1d2124;
   background-color: #1d2124;

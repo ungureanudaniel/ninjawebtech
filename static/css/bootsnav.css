@@ -1506,10 +1506,10 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         margin-top: 10px;
     }
 
-    nav.bootsnav.navbar-full .navbar-header {
+    /* nav.bootsnav.navbar-full .navbar-header {
         padding-left: 15px;
         padding-right: 15px;
-    }
+    } */
 
     /* Navbar Sidebar
     =================================*/

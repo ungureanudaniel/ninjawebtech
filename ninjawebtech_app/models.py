@@ -175,7 +175,21 @@ class Email(models.Model):
 #     def __str__(self):
 #         return '{}'.format(self.email)
 
+#----------------------------------THE CATEGORY MODEL-------------------------
+class PostCategory(models.Model):
+    title = models.CharField(max_length=30)
+    # slug = models.SlugField(max_length=255, unique=True)
 
+    class Meta:
+        verbose_name = "Post Category"
+        verbose_name_plural = "Post Categories"
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super(PostCategory, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return '{}'.format(self.title)
 #----------------------------------THE POST MODEL----------------------------
 class Post(models.Model):
     STATUS_CHOICES = (
@@ -186,7 +200,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to='blog_image', blank=True)
     text = RichTextField(blank=True, null=True)
-    # category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='postcategory')
+    category = models.ForeignKey(PostCategory, on_delete=models.CASCADE, related_name='postcategory')
     comment_count = models.IntegerField(default=0)
     views_count = models.IntegerField(default=0)
     featured = models.BooleanField()
