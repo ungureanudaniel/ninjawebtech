@@ -269,7 +269,7 @@ nav.navbar.bootsnav ul.nav > li > a.nav-btn-default {padding: 10px 15px;margin-t
 
 .language_dropdown .language {
   background-color: transparent;
-  color: black;
+  color: #212529;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -277,12 +277,13 @@ nav.navbar.bootsnav ul.nav > li > a.nav-btn-default {padding: 10px 15px;margin-t
   cursor: pointer;
 }
 
-.language_dropdown .language:hover, .language:focus {
+.language_dropdown .language:hover, .language:focus, .language:active {
   text-decoration: underline;
 }
 
 .language_dropdown .language.scrolled {
   color: white !important;
+  background-color: #212529;
   transition: color 300ms linear;
   transition-delay: 30ms;
 
@@ -290,7 +291,7 @@ nav.navbar.bootsnav ul.nav > li > a.nav-btn-default {padding: 10px 15px;margin-t
 
 .language_dropdown .lang_button {
    width: 4rem;
-   color: black;
+   color: #212529;
    font-family: 'Raleway', sans-serif;
    font-size: 0.9rem;
    font-weight: 500;

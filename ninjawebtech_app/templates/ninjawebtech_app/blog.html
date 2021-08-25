@@ -146,14 +146,13 @@
                     <div class="post-text">
                       <h3><a href="#">{{ post.title }}</a></h3>
                       <p>
-                        {{ post.text|striptags|truncatechars:310 }}
+                        {{ post.text|striptags }}
                       </p>
-                      <a href="#" class="btn-text">Read More</a>
                     </div>
                   </div>
                   <div class="post-meta">
-                      <span><i class="icofont icofont-user-male"></i><a href="#">Hugo Adams</a></span> <span><i class="icofont icofont-ui-tag"></i><a href="#">News</a>, <a href="#">Events</a></span>
-                      <span><i class="icofont icofont-comment"></i><a href="#">10 Comments</a></span> <span><i class="icofont icofont-simple-right"></i><a href="#">Read More</a></span>
+                      <span><i class="icofont icofont-user-male"></i><a href="#">{{ post.author }}</a></span> <span><i class="icofont icofont-ui-tag"></i><a href="#">News</a>, <a href="#">Events</a></span>
+                      <span><i class="icofont icofont-comment"></i><a href="#">10 Comments</a></span> <span><i class="icofont icofont-simple-right"></i><a href="#">20 Views</a></span>
                   </div>
                 </li>
                 {% endfor %}
