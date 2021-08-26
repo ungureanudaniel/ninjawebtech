@@ -82,14 +82,14 @@
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-          <li class="#"><a href="{% url 'home' %}" class="">Home</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#about">About</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#work">Portfolio</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#service">Services</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#team">Team</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#pricing">Pricing</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#blog">Blog</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#contact">Contact</a></li>
+          <li class="#"><a href="#home" class="page-scroll">{% trans "Home" %}</a></li>
+          <li><a class="page-scroll" href="#about">{% trans "About" %}</a></li>
+          <li><a class="page-scroll" href="#work">{% trans "Portfolio" %}</a></li>
+          <li><a class="page-scroll" href="#service">{% trans "Services" %}</a></li>
+          <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
+          <li><a class="page-scroll" href="#pricing">{% trans "Pricing" %}</a></li>
+          <li><a class="page-scroll" href="#blog">{% trans "Blog" %}</a></li>
+          <li><a class="page-scroll" href="#contact">{% trans "Contact" %}</a></li>
         </ul>
       </div>
       <!--== /.navbar-collapse ==-->
@@ -100,17 +100,17 @@
 
   <!--== Page Title Start ==-->
   <div class="transition-none">
-      <section class="title-hero-bg parallax-effect" style="background-image: url(assets/images/background/parallax-bg-2.jpg);">
+      <section class="title-hero-bg parallax-effect" style="background-image: url(assets/images/background/laptop1.png);">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="page-title text-center white-color">
-                <h1 class="raleway-font font-300">Blog Posts</h1>
+                <h1 class="raleway-font font-300">{% trans "Blog Posts" %}</h1>
                 <div class="breadcrumb col-md-12 text-centermt-2">
                     <!-- Breadcrumb Start -->
                         <ul class="breadcrumb-item text-white">
-                          <li><a href="index.html">Home</a></li>
-                          <li>Blog Posts</li>
+                          <li><a href="index.html">{% trans "Home" %}</a></li>
+                          <li>{% trans "Blog Posts" %}</li>
                         </ul>
                     <!-- Breadcrumb End -->
                 </div>
