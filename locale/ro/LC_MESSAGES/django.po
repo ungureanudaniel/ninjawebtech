@@ -41,13 +41,13 @@ msgstr "Suntem o "
 
 #----------------- main page title and subtitle -----------------
 msgid "Top notch, sharp and stunning websites"
-msgstr "Website-uri ultra moderne, solide si uimitoare"
+msgstr "Website-uri moderne, atractive si echilibrate"
 
 msgid "Fast and friendly support, fully customizable design"
 msgstr "Suport rapid si prietenos, design customizabil"
 
 msgid "Light engine, fully responsive and intuitive navigation"
-msgstr "Motor rapid, prietenos cu toate tipurile de ecrane si navigatie foarte intuitiva"
+msgstr "Motor rapid, prietenos cu toate tipurile de ecrane si navigatie intuitiva"
 
 #------------------- about us ------------------------
 msgid "Web Development Company"
@@ -71,6 +71,36 @@ msgstr "Mergi la "
 #--------------------SERVICES ------------------------------
 msgid "Our Services"
 msgstr "Serviciile Noastre"
+
+msgid "Websites"
+msgstr "Pagini web"
+
+msgid "Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients."
+msgstr "Pagini web 100% responsive, construite cu structura pentru ecrane mobile in minte, dinamice si atragatoare, cu scopul de a castiga multi vizitatori."
+
+msgid "Modern Software"
+msgstr "Software modern"
+
+msgid "Our website engines are done mostly in python and javascript, modern, versatile and very powerful programming languages, also popular amongst programmers."
+msgstr "Motoarele paginilor noastre de internet sunt facute majoritar in python si javascript, limbaje de programare moderne, versatile si puternice, populare intre programatori."
+
+
+msgid "Creative concepts"
+msgstr "Concepte creative"
+
+msgid "Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true."
+msgstr "Aici nu doar construim ceea ce ne cer clientii, ci oferim sfaturi si venim cu ideile proprii pentru indeplinirea scopului."
+
+msgid "Awesome Friendly"
+msgstr "Extrem de prietenosi"
+
+msgid "Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true."
+msgstr "Aici nu doar construim ceea ce ne cer clientii, ci oferim sfaturi si venim cu ideile proprii pentru indeplinirea scopului."
+
+msgid "SEO & Online Marketing"
+msgstr "Optimizare pentru cautari si marketing online"
+msgid "Custom graphics"
+msgstr "Grafica personalizata"
 
 msgid "Type and hit Enter"
 msgstr "Scrie si apasa Enter"
