@@ -18,6 +18,187 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+
+# --------NAV BAR ITEM ------------
+msgid "About"
+msgstr "Über Uns"
+
+msgid "Portfolio"
+msgstr "Portfolio"
+
+msgid "Services"
+msgstr "Dienstleistungen"
+
+msgid "Pricing"
+msgstr "Preisgestaltung"
+
+#------------- LANGUAGE --------------
+msgid "Language"
+msgstr "Sprache"
+
+
+#----------------- main page title and subtitle -----------------
+msgid "Top notch, fast and stunning websites"
+msgstr "Erstklassige, schnelle und beeindruckende Webseiten"
+
+msgid "Fast and friendly support, unique design, no templates"
+msgstr "Schneller und freundlicher Support, einzigartiges Design, keine Vorlagen"
+
+msgid "Google friendly, fully responsive and intuitive navigation"
+msgstr "Google-freundliche, reaktionsschnelle und intuitive Navigation"
+
+#------------------- about us ------------------------
+msgid "We Are a "
+msgstr "Wir sind ein "
+
+msgid "Web Development Company"
+msgstr "Webentwicklungsfirma"
+
+msgid "We started in 2019, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table for each and every project."
+msgstr "Wir sind 2019 mit einer starken Motivation gestartet, erfolgreich zu sein, indem wir bei jedem Projekt, harte Arbeit und die Zufriedenheit unserer Kunden auf den Tisch legen."
+
+#-------------------TESTIMONIALS ----------------------------
+msgid "Leave a review"
+msgstr "Eine Bewertung hinterlassen"
+
+msgid "Would be helpful to know your name"
+msgstr "Es wäre hilfreich, Ihren Namen zu kennen"
+
+msgid "A few words about your experience with us"
+msgstr "Ein paar Worte zu Ihrer Erfahrung mit uns"
+
+#-------------------PORTFOLIO -------------------------------
+msgid "Our Work"
+msgstr "Unsere Arbeit"
+
+msgid "Go to "
+msgstr "Gehe zu "
+
+
+#--------------------SERVICES ------------------------------
+msgid "Our Services"
+msgstr "Unser Serviceangebot"
+
+msgid "Websites"
+msgstr "Webseiten"
+
+msgid "Fully responsive web development, built with mobile design first in mind, 100% dynamic and eye catching, with the goal to win visitors for our clients."
+msgstr "Vollständig responsive Web-Entwicklung, mit mobilem Design im Hinterkopf, 100% dynamisch und auffällig, mit dem Ziel, Besucher für unsere Kunden zu gewinnen."
+
+
+msgid "Modern Software"
+msgstr "Moderne Software"
+
+msgid "Our website engines are done mostly in python and javascript, modern, versatile and very powerful programming languages, also popular amongst programmers."
+msgstr "Unsere Website-Engines werden hauptsächlich in Python und Javascript erstellt, modernen, vielseitigen und sehr leistungsfähigen Programmiersprachen, die auch bei Programmierern sehr beliebt sind."
+
+
+msgid "Creative concepts"
+msgstr "Kreative Konzepte"
+
+msgid "Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true."
+msgstr "Wir bauen nicht nur, was unsere Kunden wünschen, wir beraten sie auch und haben Ideen, wie sie ihre Ziele verwirklichen können."
+
+msgid "Awesome Friendly"
+msgstr "Fantastisch Freundlich"
+
+msgid "Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs."
+msgstr "Brauchen Sie Unterstützung? Wir sind immer freundlich, einfühlsam und für Sie da und nehmen alle Rückmeldungen und Kundenbedürfnisse ernst."
+
+msgid "SEO & Online Marketing"
+msgstr "SEO & Online Marketing"
+
+msgid "We are committed to make you successful online, thus make you as present as possible using various programming and google embedded techniques."
+msgstr "Wir sind bestrebt, Sie online erfolgreich zu machen, also machen Sie so präsent wie möglich mit verschiedenen Programmierung und Google eingebettet Techniken."
+
+msgid "Unique graphics"
+msgstr "Einzigartige Grafiken"
+
+msgid "Your website graphics will always be unique, customized to your requirements and we our touch of creativity. We don't use templates."
+msgstr "Ihre Website-Grafiken werden immer einzigartig sein, auf Ihre Anforderungen zugeschnitten und mit unserer Kreativität versehen. Wir verwenden keine Vorlagen."
+
+msgid "Type and hit Enter"
+msgstr "Tippen und Enter drücken"
+
+msgid "Join "
+msgstr "Jetzt "
+
+msgid "our Newsletter "
+msgstr "Unseren Newsletter "
+
+msgid " Now"
+msgstr "abonnieren "
+
+
+msgid "And receive interesting news from the technology world."
+msgstr "Und erhalten Sie interessante Neuigkeiten aus der Welt der Technik."
+
+msgid "Join"
+msgstr "Abonnieren"
+
+msgid "Man your own"
+msgstr "Bemanne dein eigenes"
+
+msgid " Online Battleship "
+msgstr " Online-Schlachtschiff "
+
+msgid " with Us "
+msgstr " mit Uns "
+
+msgid " and "
+msgstr " und "
+
+msgid " Conquer "
+msgstr " Erobern Sie "
+
+msgid "the Digital World!"
+msgstr "die digitale Welt!"
+
+msgid "Contact Us Now"
+msgstr "Kontaktieren Sie uns jetzt"
+
+#---------------------------pricing plans-------------------------------
+msgid "Our Pricing"
+msgstr "Preisgestaltung"
+
+msgid " Plans"
+msgstr " Unsere"
+
+#-------------------------BLOG---------------------------------------
+msgid "Our"
+msgstr "Unsere"
+
+msgid " Blog Posts"
+msgstr " Blog-Beiträge"
+
+msgid "Read More"
+msgstr "Mehr lesen"
+
+msgid "See More Posts"
+msgstr "Mehr Beiträge sehen"
+
+#----------------------ABOUT OUR COMPANY---------------------
+msgid "About Our Company"
+msgstr "Über unser Unternehmen"
+
+msgid "We are a small software development company, set on doing big things. We create modern, fully responsive websites, with unique and eye-catching design, using python, python frameworks for web development and JavaScript. We are fast, always listening to feedback and to your needs, always committed to do the our best, with no compromises."
+msgstr "Wir sind ein kleines Softwareentwicklungsunternehmen, das sich vorgenommen hat, Großes zu leisten. Wir erstellen moderne, vollständig reaktionsfähige Websites mit einzigartigem und auffälligem Design und verwenden Python, Python-Frameworks für die Webentwicklung und JavaScript. Wir sind schnell, haben immer ein offenes Ohr für Ihr Feedback und Ihre Bedürfnisse und geben immer unser Bestes, ohne Kompromisse."
+
+msgid " Our Work"
+msgstr " Unsere Arbeit"
+
+msgid " Contact Us"
+msgstr " Kontaktieren Sie uns"
+
+msgid "Contact"
+msgstr "Kontaktieren Sie"
+
+msgid " Us"
+msgstr " Uns"
+
+msgid "Send "
+msgstr "Sende "
+
 #: myvenv/lib/python3.6/site-packages/ckeditor_uploader/forms.py:6
 msgid "Search files"
 msgstr ""

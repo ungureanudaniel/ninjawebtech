@@ -40,14 +40,14 @@ msgid "We Are a "
 msgstr "Suntem o "
 
 #----------------- main page title and subtitle -----------------
-msgid "Top notch, sharp and stunning websites"
-msgstr "Website-uri moderne, atractive si echilibrate"
+msgid "Top notch, fast and stunning websites"
+msgstr "Website-uri moderne, atractive si rapide"
 
-msgid "Fast and friendly support, fully customizable design"
-msgstr "Suport rapid si prietenos, design customizabil"
+msgid "Fast and friendly support, unique design, no templates"
+msgstr "Suport rapid si prietenos, design unic, fara template-uri"
 
-msgid "Light engine, fully responsive and intuitive navigation"
-msgstr "Motor rapid, prietenos cu toate tipurile de ecrane si navigatie intuitiva"
+msgid "Google friendly, fully responsive and intuitive navigation"
+msgstr "Prietenos cu motorul google si cu toate tipurile de ecrane"
 
 #------------------- about us ------------------------
 msgid "Web Development Company"
@@ -59,6 +59,12 @@ msgstr "Am inceput in 2019, cu un muuult entusiasm si dorinta de a dezvolta acea
 #-------------------TESTIMONIALS ----------------------------
 msgid "Leave a review"
 msgstr "Lasa un review"
+
+msgid "Would be helpful to know your name"
+msgstr "Ar fi util sa iti stim numele"
+
+msgid "A few words about your experience with us"
+msgstr "Cateva cuvinte despre experienta ta cu noi"
 
 #-------------------PORTFOLIO -------------------------------
 msgid "Our Work"
@@ -75,8 +81,9 @@ msgstr "Serviciile Noastre"
 msgid "Websites"
 msgstr "Pagini web"
 
-msgid "Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients."
+msgid "Fully responsive web development, built with mobile design first in mind, 100% dynamic and eye catching, with the goal to win visitors for our clients."
 msgstr "Pagini web 100% responsive, construite cu structura pentru ecrane mobile in minte, dinamice si atragatoare, cu scopul de a castiga multi vizitatori."
+
 
 msgid "Modern Software"
 msgstr "Software modern"
@@ -94,21 +101,100 @@ msgstr "Aici nu doar construim ceea ce ne cer clientii, ci oferim sfaturi si ven
 msgid "Awesome Friendly"
 msgstr "Extrem de prietenosi"
 
-msgid "Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true."
-msgstr "Aici nu doar construim ceea ce ne cer clientii, ci oferim sfaturi si venim cu ideile proprii pentru indeplinirea scopului."
+msgid "Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs."
+msgstr "Aveti nevoie de ajutor? Suntem aici, intotdeauna prietenosi si empatici, luand in serios toate parerile si nevoile clientilor."
 
 msgid "SEO & Online Marketing"
 msgstr "Optimizare pentru cautari si marketing online"
-msgid "Custom graphics"
-msgstr "Grafica personalizata"
+
+msgid "We are committed to make you successful online, thus make you as present as possible using various programming and google embedded techniques."
+msgstr "Suntem dedicati scopului de a va aduce succesul in online, prin a fi cat mai prezent posibil in cautari, prin diverse tehnici de programare si specifice google."
+
+msgid "Unique graphics"
+msgstr "Grafica unica"
+
+msgid "Your website graphics will always be unique, customized to your requirements and we our touch of creativity. We don't use templates."
+msgstr "Website-ul dvs va fi 100% unic, customizat conform necesitatilor dvs si cu ceva creativitate din partea noastra. Nu folosim templates."
 
 msgid "Type and hit Enter"
 msgstr "Scrie si apasa Enter"
 
+msgid "Join "
+msgstr "Aboneaza-te "
+
+msgid "our Newsletter "
+msgstr "la Stirile noastre "
+
+msgid " Now"
+msgstr " Acum"
+
+
+msgid "And receive interesting news from the technology world."
+msgstr "si vei primi in inbox stiri interesante din lumea tehnologiei."
+
+msgid "Join"
+msgstr "Trimite"
+
+msgid "Man your own"
+msgstr "Preia carma propriei tale"
+
+msgid " Online Battleship "
+msgstr " Nave Digitale "
+
+msgid " with Us "
+msgstr " cu Noi "
+
+msgid " and "
+msgstr " si "
+
+msgid " Conquer "
+msgstr " Cucereste "
+
+msgid "the Digital World!"
+msgstr "Lumea Digitala!"
+
+msgid "Contact Us Now"
+msgstr "Contacteaza-ne acum"
+
+#---------------------------pricing plans-------------------------------
+msgid "Our Pricing"
+msgstr "Preturile"
+
+msgid " Plans"
+msgstr " Noastre"
+
+#-------------------------BLOG---------------------------------------
+msgid "Our"
+msgstr "Postarile"
+
+msgid " Blog Posts"
+msgstr " Noastre"
+
+msgid "Read More"
+msgstr "Vezi mai mult"
+
+msgid "See More Posts"
+msgstr "Mai multe postari"
 
 #----------------------ABOUT OUR COMPANY---------------------
 msgid "About Our Company"
 msgstr "Despre Compania Noastra"
+
+msgid "We are a small software development company, set on doing big things. We create modern, fully responsive websites, with unique and eye-catching design, using python, python frameworks for web development and JavaScript. We are fast, always listening to feedback and to your needs, always committed to do the our best, with no compromises."
+msgstr "Suntem o companie de web development ... mica dar cu planuri marete. Producem website-uri moderne, prietenoase cu toate tipurile de ecrane, cu design unic si atragator, folosing limbajul python, framework-uri specifice pentru web si javascript. Suntem rapizi, cu nevoile dvs in minte, intotdeauna dand tot ce avem mai bun, cu nici un compromis."
+
+msgid " Our Work"
+msgstr " Proiectele noastre"
+
+msgid " Contact Us"
+msgstr " Contactati-ne"
+
+msgid "Contact"
+msgstr "Contactati-ne"
+
+msgid " Us"
+msgstr " "
+
 
 
 #: myvenv/lib/python3.6/site-packages/ckeditor_uploader/forms.py:6

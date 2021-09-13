@@ -80,6 +80,7 @@
         </div>
       </div>
       <!--== End Top Search ==-->
+      <!-- ======language button ==== -->
       <div class="language_dropdown">
         <form action="{% url 'set_language' %}" method="post">
           {% csrf_token %}
@@ -97,7 +98,7 @@
             <input class="lang_button" type="submit" value="Go">
         </form>
       </div>
-
+      <!-- ======language button end ==== -->
       <div class="container">
         <!--== Start Atribute Navigation ==-->
         <div class="attr-nav hidden-xs sm-display-none">
@@ -248,7 +249,7 @@
   					data-paddingbottom="[0,0,0,0]"
   					data-paddingleft="[0,0,0,0]"
 
-  					style="z-index: 7; margin-top: 3rem; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Top notch, sharp and stunning websites" %}</span> </div>
+  					style="z-index: 7; margin-top: 3rem; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(45,48,50,1);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Top notch, fast and stunning websites" %}</span> </div>
 
   				<!-- LAYER NR. 4 -->
   				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-10-layer-10"
@@ -350,7 +351,7 @@
   					data-paddingleft="[0,0,0,0]"
   					data-blendmode="exclusion"
 
-  					style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 25px; font-weight: 400; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Fast and friendly support, fully customisable design" %}</span></div>
+  					style="z-index: 7; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Fast and friendly support, unique design, no templates" %}</span></div>
 
   				<!-- LAYER NR. 8 -->
   				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-11-layer-12"
@@ -447,7 +448,7 @@
   					data-paddingleft="[0,0,0,0]"
   					data-blendmode="exclusion"
 
-  					style="z-index: 7; white-space: nowrap; font-size: 17px; line-height: 25px; font-weight: 300; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Light engine, fully responsive and intuitive navigation" %}</span> </div>
+  					style="z-index: 7; white-space: nowrap; line-height: 25px; font-weight: 300; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Google friendly, fully responsive and intuitive navigation" %}</span> </div>
 
   				<!-- LAYER NR. 12 -->
   				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-12-layer-15"
@@ -630,13 +631,13 @@
               <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.1s">
                 <i class="icofont icofont-test-tube-alt font-40px"></i>
                 <h3 class="mt-0 font-600">{% trans "Websites" %}</h3>
-                <p class="font-400">{% trans "Fully responsive web development, built with mobile design first in mind, 100% dinamic & eye catching, with the goal to win visitors for our clients." %}</p>
+                <p class="font-400">{% trans "Fully responsive web development, built with mobile design first in mind, 100% dynamic and eye catching, with the goal to win visitors for our clients." %}</p>
               </div>
 
               <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.2s">
                 <i class="icofont icofont-samsung-galaxy font-40px"></i>
                 <h3 class="mt-0 font-600">{% trans "Modern Software" %}</h3>
-                <p class="font-400">{% trans "Our websites engines are done mostly in python and javascript, modern, versatile and very powerful programming languages, also popular amongst programmers." %}</p>
+                <p class="font-400">{% trans "Our website engines are done mostly in python and javascript, modern, versatile and very powerful programming languages, also popular amongst programmers." %}</p>
               </div>
               <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.3s">
                 <i class="icofont icofont-ui-head-phone font-40px"></i>
@@ -651,19 +652,19 @@
   <!-- {% static 'images/happy-client1.png' %} -->
           	  <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.5s">
                 <i class="icofont icofont-space-shuttle font-40px"></i>
-                <h3 class="mt-0">{% trans "Awesome Friendly" %}</h3>
+                <h3 class="mt-0 font-600">{% trans "Awesome Friendly" %}</h3>
                 <p class="font-300">{% trans "Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs." %}</p>
               </div>
 
               <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.6s">
                 <i class="icofont icofont-interface font-40px"></i>
-                <h3 class="mt-0">{% trans "SEO & Online Marketing" %}</h3>
-                <p class="font-300">{% trans "We are commited to make you succesful online, thus make you as present as possible using various programming and google embedded techniques." %}</p>
+                <h3 class="mt-0 font-600">{% trans "SEO & Online Marketing" %}</h3>
+                <p class="font-300">{% trans "We are committed to make you successful online, thus make you as present as possible using various programming and google embedded techniques." %}</p>
               </div>
               <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.7s">
                 <i class="icofont icofont-ui-video-play font-40px"></i>
-                <h3 class="mt-0">{% trans "Custom graphics" %}</h3>
-                <p class="font-300">{% trans "We can draw digital graphics according to your needs, create cartoons and caricatures or anything you can think of to make your online presence more effective." %}</p>
+                <h3 class="mt-0 font-600">{% trans "Unique graphics" %}</h3>
+                <p class="font-300">{% trans "Your website graphics will always be unique, customized to your requirements and we our touch of creativity. We don't use templates." %}</p>
               </div>
           </div>
         </div>
@@ -762,7 +763,7 @@
       <div class="container">
       	  <div class="row">
               <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-                <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">{% trans "Man your own" %}</span>{% trans " Online Battleship " %}<span class="font-200"> with Us <br />{% trans " and " %}</span>{% trans " Conquer " %}"<span class="font-100"> </span>{% trans "the Digital World!" %}</h5>
+                <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">{% trans "Man your own" %}</span>{% trans " Online Battleship " %}<span class="font-200">{% trans " with Us " %}<br />{% trans " and " %}</span>"{% trans " Conquer " %}"<span class="font-100"> </span>{% trans "the Digital World!" %}</h5>
                 <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
                 <!-- <div class="call-to-action-image d-flex justify-content-center"><img class="img-responsive" src="{% static 'images/icons/fist-svgrepo-com.png' %}" alt="02"/> </div> -->
                 <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">{% trans "Code. Design. Development." %}</h5>
@@ -861,7 +862,7 @@
                 <p>
                   {{ post.text|striptags|truncatechars:50 }}
                 </p>
-                <a href="#" class="btn-text">Read More</a>
+                <a href="#" class="btn-text">{% trans "Read More" %}</a>
               </div>
             </div>
           </div>
@@ -899,7 +900,7 @@
                 {% trans "Hi there!" %}
               </p>
               <p>
-                {% trans "We are a small software development company, set on doing big things. We create modern, fully responsive websites, using python and django, 100% customisable. We are fast, always listening to feedback and to your needs, always commited to do the our best, with no compromises." %}
+                {% trans "We are a small software development company, set on doing big things. We create modern, fully responsive websites, with unique and eye-catching design, using python, python frameworks for web development and JavaScript. We are fast, always listening to feedback and to your needs, always committed to do the our best, with no compromises." %}
               </p>
               <div class="mt-3">
                 <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i>{% trans " Our Work" %}</a>

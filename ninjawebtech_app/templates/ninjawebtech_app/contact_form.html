@@ -1,12 +1,12 @@
 {% load static %}
-
+{% load i18n %}
 <!--== Contact Start ==-->
 <section class="white-bg" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-md-8 centerize-col text-center">
         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-          <h1 class="raleway-font"><span class="font-100">Contact</span> Us</h1>
+          <h1 class="raleway-font"><span class="font-100">{% trans "Contact" %}</span>{% trans " Us" %}</h1>
           <hr class="center_line dark-bg">
         </div>
       </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-md-12 col-sm-12">
               <div class="text-left">
-                <button type="submit" name="submit" class="btn btn-primary btn-animate remove-margin btn-zoom "><span>Send <i class="ion-android-arrow-forward"></i></span></button>
+                <button type="submit" name="submit" class="btn btn-primary btn-animate remove-margin btn-zoom "><span>{% trans "Send " %}<i class="ion-android-arrow-forward"></i></span></button>
               </div>
             </div>
           </div>

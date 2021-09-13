@@ -48,6 +48,24 @@
       </div>
     </div>
     <!--== End Top Search ==-->
+    <!-- ======language button ==== -->
+    <div class="language_dropdown">
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}">
+        <select class="language" name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.code|upper }}
+                </option>
+            {% endfor %}
+        </select>
+          <input class="lang_button" type="submit" value="Go">
+      </form>
+    </div>
     <div class="container">
       <!--== Start Atribute Navigation ==-->
       <div class="attr-nav hidden-xs sm-display-none">
@@ -69,14 +87,14 @@
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="review_navbar collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-          <li class="#"><a href="{% url 'home' %}" class="">Home</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#about">About</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#work">Works</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#service">Services</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#team">Team</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#pricing">Pricing</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#blog">Blog</a></li>
-          <li><a class="page-scroll" href="{% url 'home' %}#contact">Contact</a></li>
+          <li class="#"><a href="{% url 'home' %}" class="">{% trans "Home" %}</a></li>
+          <li><a class="page-scroll" href="#about">{% trans "About" %}</a></li>
+          <li><a class="page-scroll" href="#work">{% trans "Portfolio" %}</a></li>
+          <li><a class="page-scroll" href="#service">{% trans "Services" %}</a></li>
+          <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
+          <li><a class="page-scroll" href="#pricing">{% trans "Pricing" %}</a></li>
+          <li><a class="page-scroll" href="#blog">{% trans "Blog" %}</a></li>
+          <li><a class="page-scroll" href="#contact">{% trans "Contact" %}</a></li>
         </ul>
       </div>
       <!--== /.navbar-collapse ==-->
@@ -92,11 +110,11 @@
           <div class="row">
             <div class="col-md-12">
               <div class="page-title text-center text-white">
-                <h1 class="raleway-font font-300">Leave a review</h1>
+                <h1 class="raleway-font font-300">{% trans "Leave a review" %}</h1>
                 <div class="breadcrumb col-md-12 mt-2 text-white bg-transparent">
                     <!-- Breadcrumb Start -->
                         <ul class="breadcrumb-item">
-                          <li><a href="{% url 'home' %}">Home</a></li>
+                          <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
                           <li>Review</li>
                         </ul>
                     <!-- Breadcrumb End -->
@@ -120,7 +138,7 @@
 
             <div class="col-md-12 col-sm-12">
               <div class="form-group">
-                <label for="name">Would be helpful to know your name *</label>
+                <label for="name">{% trans "Would be helpful to know your name" %} *</label>
                 <input type="text" name="name" class="md-input" id="name" required data-error="Your Name is Required">
                 <div class="help-block with-errors"></div>
               </div>
@@ -128,7 +146,7 @@
 
             <div class="col-md-12 col-sm-12">
               <div class="form-group">
-                <label for="message">A few words about your experience with us *</label>
+                <label for="message">{% trans "A few words about your experience with us" %} *</label>
                 <textarea name="message" class="md-textarea" id="message" rows="7" required data-error="Please, Leave us a message"></textarea>
                 <div class="help-block with-errors"></div>
               </div>
@@ -136,7 +154,7 @@
 
             <div class="col-md-12 col-sm-12">
               <div class="text-left">
-                <button type="submit" name="submit" class="btn btn-primary btn-md btn-square btn-animate remove-margin btn-zoom"><span>Send <i class="ion-android-arrow-forward"></i></span></button>
+                <button type="submit" name="submit" class="btn btn-primary btn-md btn-square btn-animate remove-margin btn-zoom"><span>{% trans "Send" %} <i class="ion-android-arrow-forward"></i></span></button>
               </div>
             </div>
           </div>
