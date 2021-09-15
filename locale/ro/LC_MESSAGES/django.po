@@ -119,6 +119,9 @@ msgstr "Website-ul dvs va fi 100% unic, customizat conform necesitatilor dvs si 
 msgid "Type and hit Enter"
 msgstr "Scrie si apasa Enter"
 
+msgid "Enter your email address..."
+msgstr "Introduceti adresa dvs de email..."
+
 msgid "Join "
 msgstr "Aboneaza-te "
 
@@ -163,6 +166,28 @@ msgstr "Preturile"
 msgid " Plans"
 msgstr " Noastre"
 
+msgid "Mobile-Optimized Website "
+msgstr "Website Optimizat pentru Mobil "
+msgid "SEO Optimization "
+msgstr "Optimizare SEO "
+msgid "24/7 Customer Support "
+msgstr "Suport 24/7 "
+msgid "Contact & Newsletter form "
+msgstr "Formulare de Contact si Newsletter "
+msgid "Max 7 Pages "
+msgstr "Max 7 Pagini "
+msgid "Max 5 Pages "
+msgstr "Max 5 Pagini "
+msgid "Max 3 Pages "
+msgstr "Max 3 Pagini "
+msgid "1 Years Maintenance "
+msgstr "1 An Mentenanta "
+msgid "2 Years Maintenance "
+msgstr "2 Ani Mentenanta "
+msgid "Admin Page "
+msgstr "Pagina Administrator "
+msgid "Easy content management "
+msgstr "Management Facil al Continutului "
 #-------------------------BLOG---------------------------------------
 msgid "Our"
 msgstr "Postarile"
@@ -179,6 +204,9 @@ msgstr "Mai multe postari"
 #----------------------ABOUT OUR COMPANY---------------------
 msgid "About Our Company"
 msgstr "Despre Compania Noastra"
+
+msgid "Hi there!"
+msgstr "Salutare!"
 
 msgid "We are a small software development company, set on doing big things. We create modern, fully responsive websites, with unique and eye-catching design, using python, python frameworks for web development and JavaScript. We are fast, always listening to feedback and to your needs, always committed to do the our best, with no compromises."
 msgstr "Suntem o companie de web development ... mica dar cu planuri marete. Producem website-uri moderne, prietenoase cu toate tipurile de ecrane, cu design unic si atragator, folosing limbajul python, framework-uri specifice pentru web si javascript. Suntem rapizi, cu nevoile dvs in minte, intotdeauna dand tot ce avem mai bun, cu nici un compromis."

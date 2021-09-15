@@ -363,7 +363,7 @@ nav.navbar.bootsnav ul.nav > li > a.nav-btn-default {padding: 10px 15px;margin-t
 /* Menu Overlay */
 
 .whoweare .container .skillrow .skill-image {
-  margin-top:9em;
+  margin-top:2em;
 }
 
 @media screen and (max-width:768px) {
@@ -1264,10 +1264,32 @@ section.big-block .client-logo {padding:10%;}
 
 /* Skills Bar */
 
-.skillbar-style-02 .skillbar {position:relative;display:inline-block;margin:80px 0 10px;width:100%;height:7px;width:100%;background-color: #DCDCDC;}
-.skillbar-style-02 .skillbar-title {position:absolute;top:-35px;left:0;font-weight: 600;font-family: 'Raleway', sans-serif;font-size: 16px; }
-.skillbar-style-02 p.skillbar-bar.corporate{height:7px;width:0px;display:inline-block;background: #40E0D0;top:1rem;}
-.skillbar-style-02 .skill-bar-percent {
+/* .skillbar-style-02 .skillbar {position:relative;display:inline-block;margin:80px 0 10px;width:100%;height:7px;width:100%;background-color: #DCDCDC;} */
+.skillbar-style-02 {
+  margin-top: 8em;
+}
+.skillbar-style-02 .skillbar {display: inline-block;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  justify-content: center;
+  -moz-border-radius:20px;
+  -webkit-border-radius:10px;
+  border-radius:25px;
+  overflow: hidden;
+
+  }
+
+.skillbar-style-02 .skillbar:hover, .skillbar:focus {
+  background: #40E0D0;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+}
+.skillbar-style-02 .skillbar-title {font-weight: 600;font-family: 'Raleway', sans-serif;display:inline-block;font-size: 16px; padding: 1rem;border: 2px solid #40E0D0;border-radius:25px;}
+
+
+/* .skillbar-style-02 p.skillbar-bar.corporate{height:7px;width:0px;display:inline-block;background: #40E0D0;top:1rem;} */
+/* .skillbar-style-02 .skill-bar-percent {
   display: inline-block;
   float:right !important;
   font-family: 'Raleway', sans-serif;
@@ -1282,7 +1304,7 @@ section.big-block .client-logo {padding:10%;}
   right: 0px;
 
 }
-.skillbar-style-02 .skill-bar-percent::after{content: "";position: absolute;width: 0;height: 0;border-width: 4px;border-style: solid;border-color: #1d2124 transparent transparent;top: 1.8em;right:1.4em;}
+.skillbar-style-02 .skill-bar-percent::after{content: "";position: absolute;width: 0;height: 0;border-width: 4px;border-style: solid;border-color: #1d2124 transparent transparent;top: 1.8em;right:1.4em;} */
 
 /* Pie Charts */
 

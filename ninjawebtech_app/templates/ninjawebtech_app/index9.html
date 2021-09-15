@@ -500,8 +500,8 @@
               {% for skill in skills %}
                 <div class="skillbar" data-percent="{{ skill.percent }}">
                     <span class="skillbar-title">{{ skill.title|upper }}</span>
-                    <span class="skill-bar-percent"></span>
-                    <p class="skillbar-bar corporate" id="hide_review_redirect"></p>
+                    <!-- <span class="skill-bar-percent"></span> -->
+                    <!-- <p class="skillbar-bar corporate" id="hide_review_redirect"></p> -->
 
                 </div>
               {% endfor %}
@@ -631,7 +631,7 @@
               <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.1s">
                 <i class="icofont icofont-test-tube-alt font-40px"></i>
                 <h3 class="mt-0 font-600">{% trans "Websites" %}</h3>
-                <p class="font-400">{% trans "Fully responsive web development, built with mobile design first in mind, 100% dynamic and eye catching, with the goal to win visitors for our clients." %}</p>
+                <p class="font-400">{% trans "Fully responsive web development, built with mobile design first in mind, dynamic and eye catching, with the goal to win visitors for our clients." %}</p>
               </div>
 
               <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.2s">
@@ -697,7 +697,7 @@
                   <form method="POST" action="#newsletter_form">
                     {% csrf_token %}
 
-                    <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="Enter your email address..." class="text-secondary wow fadeInUp mt-5">
+                    <input type="text" value="" name="sub_email" style="color: black; font-size:1.2rem;" placeholder="{% trans 'Enter your email address...' %}" class="text-secondary wow fadeInUp mt-5">
 
                     <button class="btn buttons white-buttons  btn-square btn-zoom wow fadeInUp mt-5" data-wow-delay="0.4s">{% trans "Join" %}</button>
                   </form>
@@ -786,28 +786,96 @@
           </div>
         </div>
           <div class="row mt-5">
-            {% for plan in price_plans %}
+
             <div class="col-md-4 pricing-table col-sm-4">
 
               <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="plan-name ">
-                  <h3 class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.category }}</h3>
+                  <h3 class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">
+
+                      <!-- {{ plan.category }} -->
+                      Premium
+                  </h3>
                 </div>
                 <hr class="sep_lines">
                 <div class="value ">
-                  <h3 class="{% if plan.highlighted %} highlighted_plan {% endif %}">{{ plan.price }}<span> Euro</span></h3>
+                  <h3 class="{% if plan.highlighted %} highlighted_plan {% endif %}">2000<span> Euro</span></h3>
                   <!-- <span class="per">Per Month</span> -->
                 </div>
                 <hr class="sep_lines">
                 <ul class="mt-5">
+                	<!-- <li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li> -->
+                  <li class="features">{% trans "Mobile-Optimized Website " %}<br></li>
+                  <li class="features">{% trans "SEO Optimization " %}<br></li>
+                  <li class="features">{% trans "24/7 Customer Support " %}<br></li>
+                  <li class="features">{% trans "Contact & Newsletter form " %} <br></li>
+                  <li class="features">{% trans "Max 7 Pages " %}<br></li>
+                  <li class="features">{% trans "2 Years Maintenance " %}<br></li>
+                  <li class="features">{% trans "Admin Page " %}<br></li>
+                  <li class="features">{% trans "Easy content management " %}<br></li>
+                  <li class="features">{% trans "Google Analytics " %}<br></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 pricing-table col-sm-4">
+              <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="plan-name ">
+                  <h3 style="color:#40E0D0; font-weight: 800" class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">
 
-                	<li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li>
+                      <!-- {{ plan.category }} -->
+                      Standard
+                  </h3>
+                </div>
+                <hr class="sep_lines">
+                <div class="value ">
+                  <h3 style="color:#40E0D0; font-weight: 800" class=" {% if plan.highlighted %} highlighted_plan {% endif %}">1000<span> Euro</span></h3>
+                  <!-- <span class="per">Per Month</span> -->
+                </div>
+                <hr class="sep_lines">
+                <ul class="mt-5">
+                	<!-- <li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li> -->
+                  <li class="features">{% trans "Mobile-Optimized Website " %}<br></li>
+                  <li class="features">{% trans "SEO Optimization " %}<br></li>
+                  <li class="features">{% trans "24/7 Customer Support " %}<br></li>
+                  <li class="features">{% trans "Contact & Newsletter form " %} <br></li>
+                  <li class="features">{% trans "Max 5 Pages " %}<br></li>
+                  <li class="features">{% trans "1 Years Maintenance " %}<br></li>
+                  <li class="features">{% trans "Admin Page " %}<br></li>
+                  <li class="features">{% trans "Easy content management " %}<br></li>
+                  <li class="features">{% trans "Google Analytics " %}<br></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 pricing-table col-sm-4">
+              <div class="pricing-box pricing-box-bg text-center wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="plan-name ">
+                  <h3 class="mt-5 {% if plan.highlighted %} highlighted_plan {% endif %}">
+
+                      <!-- {{ plan.category }} -->
+                      Basic
+                  </h3>
+                </div>
+                <hr class="sep_lines">
+                <div class="value ">
+                  <h3 class="{% if plan.highlighted %} highlighted_plan {% endif %}">500<span> Euro</span></h3>
+                  <!-- <span class="per">Per Month</span> -->
+                </div>
+                <hr class="sep_lines">
+                <ul class="mt-5">
+                	<!-- <li class="features">{% for item in plan.features.all %} {{ item }} <br>{% endfor %}</li> -->
+                  <li class="features">{% trans "Mobile-Optimized Website " %}<br></li>
+                  <li class="features">{% trans "24/7 Customer Support " %}<br></li>
+                  <li class="features">{% trans "Max 3 Pages " %}<br></li>
+                  <li class="features">{% trans "1 Years Maintenance " %}<br></li>
+                  <li class="features">{% trans "Admin Page " %}<br></li>
+                  <li class="features">{% trans "Google Analytics " %}<br></li>
 
                 </ul>
               </div>
 
             </div>
-            {% endfor %}
+
           </div>
       </div>
     </section>

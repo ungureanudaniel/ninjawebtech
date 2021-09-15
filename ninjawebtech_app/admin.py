@@ -36,7 +36,7 @@ class NewsletterUserAdmin(admin.ModelAdmin):
      list_display =  ['email', 'conf_number', 'confirmed', 'timestamp']
 
 class PricingFeaturesAdmin(admin.ModelAdmin):
-    list_display =  ['feature']
+    list_display =  ['feature_en', 'feature_de', 'feature_ro']
 
 class PricingAdmin(admin.ModelAdmin):
     list_display =  ['category', 'price', 'highlighted']

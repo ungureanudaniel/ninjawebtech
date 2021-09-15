@@ -50,10 +50,12 @@ class Service(models.Model):
         return '{}'.format(self.title)
 
 class PricingFeatures(models.Model):
-    feature = models.CharField(max_length=30)
+    feature_en = models.CharField(max_length=30)
+    feature_de = models.CharField(max_length=30)
+    feature_ro = models.CharField(max_length=30)
 
     def __str__(self):
-        return '{}'.format(self.feature)
+        return '{}'.format(self.feature_en)
 
 class Pricing(models.Model):
     # features = PricingFeatures.objects.all().values_list('feature', 'feature')
