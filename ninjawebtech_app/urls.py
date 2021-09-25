@@ -6,7 +6,6 @@ from django.views.generic.base import TemplateView
 from .views import homeview, reviewview, bloglistview, subscription_conf_view, hide_review_view
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import ProjectCategorySitemap, ServiceSitemap, SkillSitemap, PortfolioSitemap, StaticSitemap
-from django.views.generic.base import TemplateView
 from django.conf.urls.i18n import i18n_patterns
 # app_name = "ninjawebtech_app"
 

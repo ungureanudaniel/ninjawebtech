@@ -167,6 +167,12 @@ msgstr "Unsere"
 msgid " Plans"
 msgstr " Preisangebot"
 
+msgid "Very flexible and accustomed to your needs !"
+msgstr "Sehr flexibel und an Ihre Bedürfnisse gewöhnt !"
+
+msgid "Starting at 500"
+msgstr "Ab 500"
+
 msgid "Mobile-Optimized Website "
 msgstr "Mobil-optimierte Website "
 msgid "SEO Optimization "
@@ -187,9 +193,14 @@ msgid "2 Years Maintenance "
 msgstr "2 Jahre Wartung "
 msgid "Admin Page "
 msgstr "Verwaltungsseite "
-msgid "Easy content management "
-msgstr "Einfache Verwaltung von Inhalt "
+msgid "Content Management System "
+msgstr "Inhaltsverwaltungssystem "
 
+msgid "And so much more "
+msgstr "Und so viel mehr "
+
+msgid "Write us or call us and tell us what you need, so we can come with a suitable offer for you."
+msgstr "Schreiben Sie uns oder rufen Sie uns an und sagen Sie uns, was Sie brauchen, damit wir Ihnen ein passendes Angebot machen können."
 #-------------------------BLOG---------------------------------------
 msgid "Our"
 msgstr "Unsere"

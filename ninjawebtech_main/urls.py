@@ -27,7 +27,7 @@ if settings.DEBUG:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+
 ]
 
 urlpatterns += i18n_patterns(
