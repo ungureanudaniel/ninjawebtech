@@ -167,8 +167,8 @@ msgstr "Unsere"
 msgid " Plans"
 msgstr " Preisangebot"
 
-msgid "Very flexible and accustomed to your needs !"
-msgstr "Sehr flexibel und an Ihre Bedürfnisse gewöhnt !"
+msgid "Very flexible pricing plans and accustomed to your needs !"
+msgstr "Sehr flexibel Preisgestaltung und an Ihre Bedürfnisse gewöhnt !"
 
 msgid "Starting at 500"
 msgstr "Ab 500"

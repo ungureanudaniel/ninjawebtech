@@ -166,8 +166,8 @@ msgstr "Preturile"
 msgid " Plans"
 msgstr " Noastre"
 
-msgid "Very flexible and accustomed to your needs !"
-msgstr "Foarte flexibile si potrivite necesitatilor dvs !"
+msgid "Very flexible pricing plans and accustomed to your needs !"
+msgstr "Planuri de preturi foarte flexibile si potrivite necesitatilor dvs !"
 
 msgid "Starting at 500"
 msgstr "Porning de la 500"

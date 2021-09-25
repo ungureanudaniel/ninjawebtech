@@ -1350,11 +1350,15 @@ section.big-block .client-logo {padding:10%;}
 .pricing-table .pricing-box .plan-name h3 {
   margin-top: 2em;
   padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.3em;
+  font-weight: bolder;
 }
 
 .pricing-table .pricing-box .value h3 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: 900;
+  color: #40E0D0;
 }
 
 .pricing-table .pricing-box .features {
