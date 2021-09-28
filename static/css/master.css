@@ -1331,7 +1331,7 @@ section.big-block .client-logo {padding:10%;}
 
 .pricing .pricing-table .pricing-box {
   padding-top: 2rem;
-  height: 50rem;
+  height: 60rem;
   width: 400rem;
   text-align: center;
   justify-content: center;
@@ -1359,6 +1359,7 @@ section.big-block .client-logo {padding:10%;}
   font-size: 2.2em;
   font-weight: 900;
   color: #40E0D0;
+  padding: 10px;
 }
 
 .pricing-table .pricing-box .features {

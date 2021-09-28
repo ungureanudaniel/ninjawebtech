@@ -196,10 +196,10 @@ msgid "Content Management System "
 msgstr "Sisteme pentru Managementul Continutului "
 
 msgid "And so much more "
-msgstr "Si multe altele "
+msgstr "Si multe altele... "
 
-msgid "Write us or call us and tell us what you need, so we can come with a suitable offer for you."
-msgstr "Scrieti-ne sau sunati-ne si spuneti-ne ce aveti nevoie, iar noi va vom face o oferta."
+msgid "Just reach up to us!"
+msgstr "Contacteaza-ne!"
 #-------------------------BLOG---------------------------------------
 msgid "Our"
 msgstr "Postarile"

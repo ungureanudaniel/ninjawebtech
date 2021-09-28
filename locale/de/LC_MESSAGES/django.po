@@ -197,10 +197,10 @@ msgid "Content Management System "
 msgstr "Inhaltsverwaltungssystem "
 
 msgid "And so much more "
-msgstr "Und so viel mehr "
+msgstr "Und so viel mehr... "
 
-msgid "Write us or call us and tell us what you need, so we can come with a suitable offer for you."
-msgstr "Schreiben Sie uns oder rufen Sie uns an und sagen Sie uns, was Sie brauchen, damit wir Ihnen ein passendes Angebot machen können."
+msgid "Just reach out to us!"
+msgstr "Greifen Sie einfach zu uns!"
 #-------------------------BLOG---------------------------------------
 msgid "Our"
 msgstr "Unsere"
