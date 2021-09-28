@@ -200,7 +200,7 @@ msgid "And so much more "
 msgstr "Und so viel mehr... "
 
 msgid "Just reach out to us!"
-msgstr "Greifen Sie einfach zu uns!"
+msgstr "Sprechen Sie uns einfach an!"
 #-------------------------BLOG---------------------------------------
 msgid "Our"
 msgstr "Unsere"
