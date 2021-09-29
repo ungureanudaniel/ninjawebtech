@@ -13,4 +13,5 @@ venv/
 
 
 # Static folder at project root
+staticfiles
 reset_password.py
