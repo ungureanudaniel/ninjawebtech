@@ -198,7 +198,7 @@ msgstr "Sisteme pentru Managementul Continutului "
 msgid "And so much more "
 msgstr "Si multe altele... "
 
-msgid "Just reach up to us!"
+msgid "Just reach out to us!"
 msgstr "Contacteaza-ne!"
 #-------------------------BLOG---------------------------------------
 msgid "Our"
