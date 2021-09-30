@@ -121,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 # LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ro'
 
 TIME_ZONE = 'Europe/Bucharest'
 
@@ -134,8 +134,8 @@ USE_TZ = True
 #- -----------translation settings ---------------------
 ugettext = lambda s: s
 LANGUAGES = [
-    ('en', 'English'),
     ('ro', 'Romanian'),
+    ('en', 'English'),
     ('de', 'Deutsch')
 ]
 
