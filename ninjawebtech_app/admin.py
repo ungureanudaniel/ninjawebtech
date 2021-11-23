@@ -1,7 +1,11 @@
 from django.contrib import admin
-from .models import About, Service, Portfolio, TeamMember, Logo, Email, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Post, PostCategory
+from .models import About, Service, TeamMember, Logo, Email, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Portfolio, Post, PostCategory, BlogTag, PortfolioTags
 class AboutAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'image', 'active']
+
+class PostViewsAdmin(admin.ModelAdmin):
+     list_display =  ['IPAddress', 'post', 'timestamp']
+
 
 class EmailAdmin(admin.ModelAdmin):
      list_display =  ['contact_email', 'contact_subject', 'contact_message', 'contact_author', 'timestamp']
@@ -21,6 +25,9 @@ class SkillAdmin(admin.ModelAdmin):
 class PortfolioAdmin(admin.ModelAdmin):
      list_display =  ['title', 'short_description', 'link', 'start_date', 'end_date', 'category', 'author', 'image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image6', 'image7']
      # prepopulated_fields = {'slug': ('title',), }
+
+class PortfolioTagsAdmin(admin.ModelAdmin):
+    list_display =  ['name']
 
 class TeamMemberAdmin(admin.ModelAdmin):
      list_display =  ['first_name', 'last_name', 'job', 'email', 'phone', 'insta', 'twitter', 'linkedin', 'photo']
@@ -42,8 +49,12 @@ class PricingAdmin(admin.ModelAdmin):
     list_display =  ['category', 'price', 'highlighted']
 
 class PostAdmin(admin.ModelAdmin):
-    list_display =  ['title', 'text', 'featured', 'status', 'created_date', 'slug']
+    list_display =  ['title', 'short_descr', 'featured', 'status', 'created_date', 'slug']
     prepopulated_fields = {'slug': ('title',), }
+    def short_descr(self, obj):
+        return obj.text[:100]
+class BlogTagAdmin(admin.ModelAdmin):
+    list_display =  ['name']
 
 class PostCategoryAdmin(admin.ModelAdmin):
     list_display =  ['title']
@@ -55,9 +66,11 @@ admin.site.register(Service, ServiceAdmin)
 admin.site.register(Skill, SkillAdmin)
 admin.site.register(NewsletterUser, NewsletterUserAdmin)
 admin.site.register(Portfolio, PortfolioAdmin)
+admin.site.register(PortfolioTags, PortfolioTagsAdmin)
 admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Logo, LogoAdmin)
 admin.site.register(Post, PostAdmin)
+admin.site.register(BlogTag, BlogTagAdmin)
 admin.site.register(PostCategory, PostCategoryAdmin)
 admin.site.register(Email, EmailAdmin)
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)

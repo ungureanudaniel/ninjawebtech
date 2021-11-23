@@ -70,14 +70,14 @@
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-          <li class="#"><a href="{% url 'home' %}" class="dropdown-toggle page-scroll" data-toggle="dropdown">Home</a></li>
-          <li><a class="page-scroll" href="#about">About</a></li>
-          <li><a class="page-scroll" href="#work">Works</a></li>
-          <li><a class="page-scroll" href="#service">Services</a></li>
-          <li><a class="page-scroll" href="#team">Team</a></li>
-          <li><a class="page-scroll" href="#pricing">Pricing</a></li>
-          <li><a class="page-scroll" href="#blog">Blog</a></li>
-          <li><a class="page-scroll" href="#contact">Contact</a></li>
+          <li class="#"><a href="{% url 'home' %}" class="">{% trans "Home" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#about">{% trans "About" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#work">{% trans "Portfolio" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#service">{% trans "Services" %}</a></li>
+          <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
+          <li><a class="page-scroll" href="{% url 'home' %}#pricing">{% trans "Pricing" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#blog">{% trans "Blog" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#contact">{% trans "Contact" %}</a></li>
         </ul>
       </div>
       <!--== /.navbar-collapse ==-->
@@ -89,14 +89,14 @@
             <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
             <div class="widget mt-120">
               <ul class="link">
-                <li class="link-item"><a class="page-scroll" href="#home">Home</a></li>
-                <li class="link-item"><a class="page-scroll" href="#about">About</a></li>
-                <li class="link-item"><a class="page-scroll" href="#work">Works</a></li>
-                <li class="link-item"><a class="page-scroll" href="#service">Services</a></li>
-                <li class="link-item"><a class="page-scroll" href="#team">Team</a></li>
-                <li class="link-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
-                <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
-                <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
+                <li class="#"><a href="{% url 'home' %}" class="">{% trans "Home" %}</a></li>
+                <li><a class="page-scroll" href="{% url 'home' %}#about">{% trans "About" %}</a></li>
+                <li><a class="page-scroll" href="{% url 'home' %}#work">{% trans "Portfolio" %}</a></li>
+                <li><a class="page-scroll" href="{% url 'home' %}#service">{% trans "Services" %}</a></li>
+                <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
+                <li><a class="page-scroll" href="{% url 'home' %}#pricing">{% trans "Pricing" %}</a></li>
+                <li><a class="page-scroll" href="{% url 'home' %}#blog">{% trans "Blog" %}</a></li>
+                <li><a class="page-scroll" href="{% url 'home' %}#contact">{% trans "Contact" %}</a></li>
               </ul>
             </div>
             <ul class="social-media">

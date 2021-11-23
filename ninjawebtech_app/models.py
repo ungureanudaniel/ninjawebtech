@@ -3,9 +3,9 @@ from ckeditor.fields import RichTextField
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 import datetime
-from taggit.managers import TaggableManager
 from django.template.defaultfilters import truncatechars
-
+from hitcount.models import HitCountMixin, HitCount
+from django.contrib.contenttypes.fields import GenericRelation
 
 class NewsletterUser(models.Model):
     email = models.CharField(max_length=40)
@@ -102,9 +102,7 @@ class Portfolio(models.Model):
     image5 = models.ImageField(upload_to='portfolio', blank=True)
     image6 = models.ImageField(upload_to='portfolio', blank=True)
     image7 = models.ImageField(upload_to='portfolio', blank=True)
-    tags = TaggableManager()
     # slug = models.SlugField(default="", max_length=255, unique=True)
-
     @property
     def short_description(self):
         return truncatechars(self.description, 50)
@@ -115,7 +113,12 @@ class Portfolio(models.Model):
     def __str__(self):
         return '{}'.format(self.title)
 
+class PortfolioTags(models.Model):
+    name = models.CharField(max_length=30)
+    project = models.ManyToManyField(Portfolio, blank=True)
 
+    def __str__(self):
+        return '{}'.format(self.name)
 #-------------------------COMMENTS / REVIEWS MODEL------------------------------
 class Review(models.Model):
     author = models.CharField(max_length=300)
@@ -204,13 +207,15 @@ class Post(models.Model):
     text = RichTextField(blank=True, null=True)
     category = models.ForeignKey(PostCategory, on_delete=models.CASCADE, related_name='postcategory')
     comment_count = models.IntegerField(default=0)
-    views_count = models.IntegerField(default=0)
+    # views_count = models.IntegerField(default=0)
     featured = models.BooleanField()
     slug = models.SlugField(max_length=255, unique=True)
     created_date = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, default='Draft', choices=STATUS_CHOICES)
     previous_post = models.ForeignKey('self', related_name='previous', on_delete=models.SET_NULL, blank=True, null=True)
     next_post = models.ForeignKey('self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)
+    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
+     related_query_name='hit_count_generic_relation')
 
     class Meta:
         ordering = ["-created_date"]
@@ -219,13 +224,26 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post_detail', kwargs={'pk': self.pk})
+        return reverse('blog', kwargs={'slug': self.slug})
         #return reverse('home')
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         return super(Post, self).save(*args, **kwargs)
 
+    def month_published(self):
+        return self.created_date.strftime('%b %Y')
+
+    def post_count(self):
+        return self.pk.count()
+
     @property
     def get_comments(self):
         return self.comments.all().order_by('-timestamp')
+
+class BlogTag(models.Model):
+    name = models.CharField(max_length=30)
+    post = models.ManyToManyField(Post, blank=True)
+
+    def __str__(self):
+        return '{}'.format(self.name)

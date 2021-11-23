@@ -213,7 +213,8 @@ msgstr "Mehr lesen"
 
 msgid "See More Posts"
 msgstr "Mehr Beiträge sehen"
-
+msgid "Categories"
+msgstr "Kategorien"
 #----------------------ABOUT OUR COMPANY---------------------
 msgid "About Our Company"
 msgstr "Über unser Unternehmen"

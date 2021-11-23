@@ -213,6 +213,11 @@ msgstr "Vezi mai mult"
 msgid "See More Posts"
 msgstr "Mai multe postari"
 
+msgid "Categories"
+msgstr "Categorii"
+
+msgid ""
+msgstr ""
 #----------------------ABOUT OUR COMPANY---------------------
 msgid "About Our Company"
 msgstr "Despre Compania Noastra"

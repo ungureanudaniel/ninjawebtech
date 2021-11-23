@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'debug_toolbar',
+    'hitcount',
 ]
 
 SITE_ID = 1
@@ -123,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'ro'
 
-TIME_ZONE = 'Europe/Bucharest'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

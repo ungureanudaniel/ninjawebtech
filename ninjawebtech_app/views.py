@@ -1,17 +1,22 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.models import User
 from django.conf import settings
 import os
-
+from django.db.models import Count
+from django.db.models.functions import TruncMonth
+from django.db.models import Sum
+import itertools
 import datetime
 import random
 from django.utils.html import strip_tags
 from django.contrib import messages
-from .models import About, Service, Portfolio, TeamMember, Skill, Review, ProjectCategory, NewsletterUser, Pricing, Post,Email
+from .models import About, Service, TeamMember, Skill, Review, ProjectCategory, NewsletterUser, Pricing, Post, Email, PostCategory, Portfolio, PortfolioTags, BlogTag
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from .forms import CaptchaForm
 from django.views.decorators.csrf import csrf_protect
+from hitcount.views import HitCountDetailView
 
 # def set_language(request):
 #     if request.GET.has_key('language_id'):  # Set language in Session variable
@@ -171,70 +176,7 @@ def homeview(request):
             "form": form,
         }
         return render(request, template, context)
-    #         if message and message_name and message_email:
-    #             if form.is_valid():
-    #                 try:
-    #                     #----------------create database entry with contact data-------
-    #                     new_contact = Email(contact_email=message_email, contact_subject = ' ', contact_author = message_name, contact_message = message, timestamp=datetime.datetime.now())
-    #                     #-------------------------save the contact data to databse--
-    #                     new_contact.save()
-    #                     #----------------send the email to destination-------------
-    #                     send_mail(
-    #                     message_name,
-    #                     message,
-    #                     message_email,
-    #                     ['danielungureanu531@gmail.com']
-    #                     )
-    #                     messages.success(request, "Thank you for writting me {}! I will answer ASAP.".format(message_name))
-    #                 except BadHeaderError:
-    #                     return HttpResponse('Invalid header found.')
-    #                 return HttpResponseRedirect('/#contact/')
-    #             else:
-    #                 messages.warning(request, "Invalid captcha! Please try again.")
-    #                 return HttpResponseRedirect('/#contact')
-    #         else:
-    #             context = {
-    #                 "first_three_services": first_three_services,
-    #                 "last_three_services": last_three_services,
-    #                 "portfolio_category": portfolio_category,
-    #                 "portfolio": portfolio,
-    #                 'about_us': about_us,
-    #                 "skills": skills,
-    #                 "reviews": reviews,
-    #                 "price_plans": price_plans,
-    #                 "blog_posts": blog_posts,
-    #                 "feat": feat,
-    #                 "form": form,
-    #
-    #             }
-    #
-    #             return render(request, template, context)
-    # else:
-    #     context = {
-    #         "first_three_services": first_three_services,
-    #         "last_three_services": last_three_services,
-    #         "portfolio_category": portfolio_category,
-    #         "portfolio": portfolio,
-    #         'about_us': about_us,
-    #         "skills": skills,
-    #         "reviews": reviews,
-    #         "price_plans": price_plans,
-    #         "blog_posts": blog_posts,
-    #         "feat": feat,
-    #         "form": form,
-    #     }
-    #     return render(request, template, context)
 
-#-------------------------------------------------------------------CONTACT VIEW
-
-# def contactview(request):
-#     template = 'ninjawebtech_app/page-contact.html'
-#
-#     context = {
-#
-#     }
-#     return render(request, template, context)
-#
 #--------------------------------------------------------------------REVIEW VIEW
 @csrf_protect
 def reviewview(request):
@@ -263,32 +205,52 @@ def hide_review_view(request, pk):
     context = {"rev":rev}
     return render(request, template, context)
 
+#---------------------------strip month and year -----------------------------
+def strip_date(request):
+    date = datetime.datetime.strptime(request, "%Y-%m-%d")
+    return date
+
+
 #--------------------------------------------------------------------BLOG VIEW
 @csrf_protect
 def bloglistview(request):
-    template = 'ninjawebtech_app/blog.html'
+    template = 'ninjawebtech_app/blog_list.html'
+    categories = PostCategory.objects.all()
     blog_posts = Post.objects.all()
 
+    qs = Post.objects.values('created_date').values('created_date')
+    grouped = itertools.groupby(qs, lambda d: d.get('created_date').strftime('%b %Y'))
+    # [(day, len(list(this_day))) for day, this_day in grouped]
+    for k, g in grouped:
+        count_posts = [k, sum(1 for _ in g)]
+    print(count_posts)
     context = {
+        "categories": categories,
         "blog_posts":blog_posts,
+        "count_posts": count_posts,
     }
     return render(request, template, context)
 
 #---------------------------------------------------------------BLOG DETAIL VIEW
-def blogdetailview(request):
-    template_name = 'blogapp/contact.html'
-    categories = Category.objects.all()
-    #--------------logo------------------------------
-    # logos = Logo.objects.filter(status='active')
-    form = CaptchaForm(request.POST)
-    if request.method == "POST":
-        message_name = request.POST.get('message-name')
-        message_email = request.POST.get('message-email')
-        message = request.POST.get('message')
+class PostDetailView(HitCountDetailView):
+    model = Post
+    template_name = 'ninjawebtech_app/blog_detail.html'
+    context_object_name = 'post'
+    slug_field = 'slug'
+    # set to True to count the hit
+    count_hit = True
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailView, self).get_context_data(**kwargs)
+        context.update({
+        'popular_posts': Post.objects.order_by('-hit_count_generic__hits')[:3],
+        })
+        return context
+
 
 @csrf_protect
 def ContactView(request):
-    template_name = 'blogapp/contact.html'
+    template_name = 'ninjawebtech_app/contact.html'
     categories = Category.objects.all()
     #--------------logo------------------------------
     # logos = Logo.objects.filter(status='active')
@@ -321,6 +283,11 @@ def ContactView(request):
         render(request, template_name, {'message_name': message_name, 'categories': categories, 'form': form,})
     else:
         return render(request, template_name, {'categories': categories, 'form': form})
+
+
+
+
+
 @csrf_protect
 def subscription_conf_view(request):
     template = 'ninjawebtech_app/subscription_conf.html'

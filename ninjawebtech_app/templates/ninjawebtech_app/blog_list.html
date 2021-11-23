@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load hitcount_tags %}
 {% load i18n %}
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>NINJA WEBTECH - STUNNING WEB DEVELOPMENT</title>
-<link rel="shortcut icon" href="assets/images/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/static/logo/favicon.png"/>
 
 <!-- Core Style Sheets -->
 <link rel="stylesheet" href="{% static 'css/master.css' %}">
@@ -75,26 +75,50 @@
       <!--== Start Header Navigation ==-->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="index.html"><img class="logo logo-display" src="assets/images/logo-studio-white.png" alt=""> <img class="logo logo-scrolled" src="{% static 'logo/logo_black.png' %}" alt=""> </a> </div>
+        <div class="logo"> <a href="index.html"><img class="logo logo-display" src="{% static 'logo/logo.png' %}" alt=""> <img class="logo logo-scrolled" src="{% static 'logo/logo_black.png' %}" alt=""> </a> </div>
       </div>
       <!--== End Header Navigation ==-->
 
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-center" data-in="fadeIn" data-out="fadeOut">
-          <li class="#"><a href="#home" class="page-scroll">{% trans "Home" %}</a></li>
-          <li><a class="page-scroll" href="#about">{% trans "About" %}</a></li>
-          <li><a class="page-scroll" href="#work">{% trans "Portfolio" %}</a></li>
-          <li><a class="page-scroll" href="#service">{% trans "Services" %}</a></li>
+          <li class="#"><a href="{% url 'home' %}" class="page-scroll">{% trans "Home" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#about">{% trans "About" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#work">{% trans "Portfolio" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#service">{% trans "Services" %}</a></li>
           <!-- <li><a class="page-scroll" href="#team">Team</a></li> -->
-          <li><a class="page-scroll" href="#pricing">{% trans "Pricing" %}</a></li>
-          <li><a class="page-scroll" href="#blog">{% trans "Blog" %}</a></li>
-          <li><a class="page-scroll" href="#contact">{% trans "Contact" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#pricing">{% trans "Pricing" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#blog">{% trans "Blog" %}</a></li>
+          <li><a class="page-scroll" href="{% url 'home' %}#contact">{% trans "Contact" %}</a></li>
         </ul>
       </div>
       <!--== /.navbar-collapse ==-->
     </div>
+    <!-- Start Side Menu -->
+    <div class="side corporate dark-bg">
+        <a href="{% url 'home' %}" class="logo-side"><img src="{% static 'logo/logo.png' %}" alt="side-logo"/></a>
+            <a href="#" class="close-side"><i class="icofont icofont-close"></i></a>
+            <div class="widget mt-120">
+              <ul class="link">
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#about">{% trans "About" %}</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#work">{% trans "Portfolio" %}</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#service">{% trans "Services" %}</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#pricing">{% trans "Pricing" %}</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#blog">Blog</a></li>
+                <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#contact">Contact</a></li>
+              </ul>
+            </div>
+            <ul class="social-media">
+              <li><a href="#" class="icofont icofont-facebook"></a></li>
+              <li><a href="#" class="icofont icofont-twitter"></a></li>
+              <li><a href="#" class="icofont icofont-behance"></a></li>
+              <li><a href="#" class="icofont icofont-social-dribble"></a></li>
+              <li><a href="#" class="icofont icofont-linkedin"></a></li>
+            </ul>
 
+     </div>
+     <!-- End Side Menu -->
   </nav>
   <!--== Header End ==-->
 
@@ -146,13 +170,16 @@
                     <div class="post-text">
                       <h3><a href="#">{{ post.title }}</a></h3>
                       <p>
-                        {{ post.text|striptags }}
+                        {{ post.text|striptags|truncatechars:300 }}
                       </p>
                     </div>
                   </div>
-                  <div class="post-meta">
-                      <span><i class="icofont icofont-user-male"></i><a href="#">{{ post.author }}</a></span> <span><i class="icofont icofont-ui-tag"></i><a href="#">News</a>, <a href="#">Events</a></span>
-                      <span><i class="icofont icofont-comment"></i><a href="#">10 Comments</a></span> <span><i class="icofont icofont-simple-right"></i><a href="#">20 Views</a></span>
+                  <div class="post-meta text-center">
+                      <span><i class="icofont icofont-user-male"></i><a href="#">{{ post.author }}</a></span>
+                      {% for tag in post_tags %}
+                      <span><i class="icofont icofont-ui-tag"></i><a href="#">{{ tag.name }} </a> </span>
+                      {% endfor %}
+                      <span><i class="icofont icofont-comment"></i><a href="#">10 Comments</a></span> <span><i class="icofont icofont-simple-right"></i><a href="#">{% get_hit_count for post %} Views</a></span>
                   </div>
                 </li>
                 {% endfor %}
@@ -160,73 +187,7 @@
             </div>
             <!--== Post End ==-->
             <!-- == COMMENTS == -->
-            <div class="col-md-12 col-sm-12 col-xs-12 mb-50">
-              <h2 class="comment-reply-title mt-0">15 Comments</h2>
-              <ul class="comment-box">
-              <li class="post-comment">
-                <div class="comment-content"> <a href="#" class="avatar"><img src="assets/images/team/avatar-1.jpg" alt="#"></a>
-                  <div class="post-body">
-                    <div class="comment-header"> <span class="author"><a href="#">Karl Casey</a></span> <span class="time-ago"><a href="#">25 mins ago</a></span> </div>
-                    <div class="post-message">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam justo, ullamcorper tincidunt pellentesque in, condimentum ut enim.</p>
-                    </div>
-                    <div class="comment-footer"> <span class="reply"><a href="#"><i class="ion-reply"></i> Reply</a></span> </div>
-                  </div>
-                </div>
-                <ul class="reply-comment">
-                  <li class="post-comment">
-                    <div class="comment-content"> <a href="#" class="avatar"><img src="assets/images/team/avatar-2.jpg" alt="#"></a>
-                      <div class="post-body">
-                        <div class="comment-header"> <span class="author"><a href="#">Lynda Stone</a></span> <span class="time-ago"><a href="#">18 days ago</a></span> </div>
-                        <div class="post-message">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="comment-footer"> <span class="reply"><a href="#"><i class="ion-reply"></i> Reply</a></span> </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="post-comment">
-                <div class="comment-content"> <a href="#" class="avatar"><img src="assets/images/team/avatar-3.jpg" alt="#"></a>
-                  <div class="post-body">
-                    <div class="comment-header"> <span class="author"><a href="#">Roland Buford</a></span> <span class="time-ago"><a href="#">3 months ago</a></span> </div>
-                    <div class="post-message">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam justo, ullamcorper tincidunt pellentesque in, condimentum ut enim.</p>
-                    </div>
-                    <div class="comment-footer"> <span class="reply"><a href="#"><i class="ion-reply"></i> Reply</a></span> </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <!-- == END COMMENTS == -->
 
-            <!-- == RECENT POSTS == -->
-            <h2 class="recent-post-title">Recent Posts</h2>
-            <div class="row">
-              {% for post in blog_posts %}
-              <div class="col-md-6 blog-list">
-                <div class="post-wrap">
-                  <div class="post-img">
-                    <div class="date-box dark-bg">
-                      <span class="day">{{ post.created_date.day }}</span>
-                      <span class="month">{{ post.created_date|date:'F' }}</span>
-                    </div>
-                    <div class="item"><img class="img-responsive" src="{{ post.image.url }}" alt=""/></div>
-                  </div>
-
-                  <div class="post-text">
-                    <h3><a href="blog.html">{{ post.title }}</a></h3>
-                    <p>
-                      {{ post.text|striptags|truncatechars:50 }}
-                    </p>
-                    <a href="#" class="btn-text">Read More</a>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
 
 
           </div>
@@ -262,7 +223,7 @@
           </div>
           <div class="mb-50">
             <h5 class="aside-title">About Us</h5>
-            <a href="index.html">
+            <a href="{% url 'home' %}">
               <img src="{% static 'images/background/programing1.png' %}" alt="about-me" />
             </a>
             <p class="font-300 mt-3">Hi there! </p>
@@ -272,11 +233,13 @@
           <div class="sidebar_widget widget_archive mb-5">
             <h5 class="aside-title">Archive</h5>
             <ul>
-              <li> <a href="#">January 2018</a> <span>14</span></li>
-              <li> <a href="#">May 2017</a> <span>8</span></li>
+              {% for item in count_posts %}
+              <li> <a href="#">{{ item.0 }}</a> <span>{{ item.1 }}</span></li>
+              {% endfor %}
+              <!-- <li> <a href="#">May 2017</a> <span>8</span></li>
               <li> <a href="#">June 2017</a> <span>63</span></li>
               <li> <a href="#">Febuary 2012</a> <span>45</span></li>
-              <li> <a href="#">April 2016</a> <span>88</span></li>
+              <li> <a href="#">April 2016</a> <span>88</span></li> -->
             </ul>
           </div>
           <div class="social-icons-style-06 mb-5">
@@ -290,53 +253,47 @@
             </ul>
           </div>
 
-          <div class="sidebar_widget widget_categories mb-50">
-            <h5 class="aside-title">Categories</h5>
+          <div class="sidebar_widget widget_categories mb-5">
+            <h5 class="aside-title">{% trans "Categories" %}</h5>
             <ul>
-              <li> <a href="#">Business</a></li>
-              <li> <a href="#">Health</a> </li>
-              <li> <a href="#">Motion Graphic</a> </li>
-              <li> <a href="#">Conecpt Design</a> </li>
-              <li> <a href="#">Lifestyle</a> </li>
+              {% for cat in categories %}
+              <li> <a href="#">{{ cat|title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
           <div class="sidebar_widget widget_tag_cloud mb-50">
             <h5 class="aside-title">Tags</h5>
-            <div class="post-tags"> <a href="#">Branding</a> <a href="#">Marketing</a> <a href="#">Photography</a> <a href="#">Illustration</a> <a href="#">Development</a> <a href="#">Multipurpose</a> <a href="#">Creativity</a> <a href="#">Apps</a>  <a href="#">Fashion</a> <a href="#">Concept</a> <a href="#">Design</a></div>
+            <div class="post-tags">
+              {% for tag in post_tags.objects.all %}
+              <a href="#">{{ tag.names }}</a>
+              {% endfor %}
+              <!-- <a href="#">Marketing</a>
+              <a href="#">Photography</a>
+              <a href="#">Illustration</a>
+              <a href="#">Development</a>
+              <a href="#">Multipurpose</a>
+              <a href="#">Creativity</a>
+              <a href="#">Apps</a>
+              <a href="#">Fashion</a>
+              <a href="#">Concept</a>
+              <a href="#">Design</a> -->
+            </div>
           </div>
 
           <div class="sidebar_widget widget_recent_post mb-50">
             <h5 class="aside-title">Recent Posts</h5>
+            {% for post in blog_posts %}
             <div class="post-item">
               <div class="post-thumb">
-                <a href=""><img width="75" height="75" src="assets/images/post/post-img-1.jpg" class="img-responsive" alt="post-01"/></a>
+                <a href="{% url 'blog_detail' post.slug %}"><img width="75" height="75" src="{{ post.image.url }}" class="img-responsive" alt="{{ post.title }}"/></a>
               </div>
               <div class="post-body">
-                <span class="font-14px"><a href="">Web Design</a></span>
-                <div class="post-time">1/01/2019 </div>
-                <a href="" class="subtitle">Travel Adventure</a>
+                <span class="font-14px"><a href="">{{ post.title|title }}</a></span>
+                <div class="post-time">{{ post.created_date|date:'F Y' }} </div>
+                <a href="" class="subtitle">{{ post.category }}</a>
               </div>
             </div>
-            <div class="post-item">
-              <div class="post-thumb">
-                <a href=""><img width="75" height="75" src="assets/images/post/post-img-2.jpg" class="img-responsive" alt="post-02"/></a>
-              </div>
-              <div class="post-body">
-                <span class="font-14px"><a href="">Small Business</a></span>
-                <div class="post-time">5/03/2019 </div>
-                <a href="" class="subtitle">Photography</a>
-              </div>
-            </div>
-            <div class="post-item">
-              <div class="post-thumb">
-                <a href=""><img width="75" height="75" src="assets/images/post/post-img-3.jpg" class="img-responsive" alt="post-03" /></a>
-              </div>
-              <div class="post-body">
-                <span class="font-14px"><a href="">SEO Marketing</a></span>
-                <div class="post-time">4/05/2019 </div>
-                <a href="" class="subtitle">Web Development</a>
-              </div>
-            </div>
+            {% endfor %}
           </div>
 
         </div>
@@ -347,27 +304,7 @@
   <!--== Blog Details End ==-->
 
   <!--== Footer Start ==-->
-  <footer class="footer">
-    <div class="footer-copyright">
-      <div class="container">
-        <div class="row wow fadeInUp" data-wow-delay="0.1s">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="footer-logo">
-              <a href="index.html"><img src="assets/images/logo-studio-white.png" class="img-responsive centerize-col" alt="Footer Logo"/></a>
-            </div>
-            <div class="copy-right">© 2019 <span class="default-color">Sylphy.</span> All rights reserved</div>
-            <ul class="social-media mt-30 float-none">
-              <li><a href="#" class="icofont icofont-facebook"></a></li>
-      			  <li><a href="#" class="icofont icofont-twitter"></a></li>
-      			  <li><a href="#" class="icofont icofont-behance"></a></li>
-      			  <li><a href="#" class="icofont icofont-dribble"></a></li>
-              <li><a href="#" class="icofont icofont-linkedin"></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  {% include 'ninjawebtech_app/footer.html' %}
   <!--== Footer End ==-->
 
   <!--== Go to Top  ==-->

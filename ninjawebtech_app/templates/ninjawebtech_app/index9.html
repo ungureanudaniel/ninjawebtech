@@ -145,13 +145,12 @@
               <div class="widget mt-120">
                 <ul class="link">
                   <li class="link-item"><a class="page-scroll" href="{% url 'home' %}">{% trans "Home" %}</a></li>
-                  <li class="link-item"><a class="page-scroll" href="#about">{% trans "About" %}</a></li>
-                  <li class="link-item"><a class="page-scroll" href="#work">{% trans "Portfolio" %}</a></li>
-                  <li class="link-item"><a class="page-scroll" href="#service">{% trans "Services" %}</a></li>
-                  <!-- <li class="link-item"><a class="page-scroll" href="#team">{% trans "Team</a></li> -->
-                  <li class="link-item"><a class="page-scroll" href="#pricing">{% trans "Pricing" %}</a></li>
-                  <li class="link-item"><a class="page-scroll" href="#blog">Blog</a></li>
-                  <li class="link-item"><a class="page-scroll" href="#contact">Contact</a></li>
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#about">{% trans "About" %}</a></li>
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#work">{% trans "Portfolio" %}</a></li>
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#service">{% trans "Services" %}</a></li>
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#pricing">{% trans "Pricing" %}</a></li>
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#blog">Blog</a></li>
+                  <li class="link-item"><a class="page-scroll" href="{% url 'home' %}#contact">Contact</a></li>
                 </ul>
               </div>
               <ul class="social-media">
@@ -639,7 +638,7 @@
               <div class="feature-box corporate text-right mb-5 wow fadeInRight" data-wow-delay="0.3s">
                 <i class="icofont icofont-ui-head-phone font-40px"></i>
                 <h3 class="mt-0 font-600">{% trans "Creative concepts" %}</h3>
-                <p class="font-400">{% trans "Here do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true." %}</p>
+                <p class="font-400">{% trans "Here, we do not only build what our clients ask, we offer advice and come up with ideas to make your goal come true." %}</p>
               </div>
           </div>
           <div class="col-md-4 xs-mt-80 phone wow zoomIn" data-wow-delay="0.4s">
@@ -650,7 +649,7 @@
           	  <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.5s">
                 <i class="icofont icofont-space-shuttle font-40px"></i>
                 <h3 class="mt-0 font-600">{% trans "Awesome Friendly" %}</h3>
-                <p class="font-300">{% trans "Need support? We are always friendly, empathetic and there for you, taking seriously all feedback and clients needs." %}</p>
+                <p class="font-300">{% trans "Need support? We are always friendly, empathetic and there for you, taking all feedback and clients needs seriously." %}</p>
               </div>
 
               <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.6s">
@@ -661,7 +660,7 @@
               <div class="feature-box corporate text-left mb-5 wow fadeInLeft" data-wow-delay="0.7s">
                 <i class="icofont icofont-ui-video-play font-40px"></i>
                 <h3 class="mt-0 font-600">{% trans "Unique graphics" %}</h3>
-                <p class="font-300">{% trans "Your website graphics will always be unique, customized to your requirements and we our touch of creativity. We don't use templates." %}</p>
+                <p class="font-300">{% trans "Your website graphics will always be unique, customized to your requirements and with our touch of creativity." %}</p>
               </div>
           </div>
         </div>
@@ -713,46 +712,6 @@
       </video>
     </section>
     <!--== Newsletter End ==-->
-
-    <!--== Team Start ==-->
-    <!-- <section class="white-bg" id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 centerize-col text-center">
-            <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-              <h1 class="raleway-font"><span class="font-100">Our Creative</span> Team</h1>
-              <hr class="center_line dark-bg">
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="team-member">
-                <div class="team-thumb">
-                  <div class="thumb-overlay"></div>
-                  <img src="{% static 'images/team/team-01.jpg' %}" alt="">
-                </div>
-              </div>
-              <div class="member-info text-center white-bg">
-                <h3>Bobby Castro</h3>
-                <span class="title primary-color">Project Manager</span>
-                <div class="social-icons-style-02">
-                  <ul class="sm-icon mt-2 mb-0">
-                    <li><a class="fb" href="#."><i class="icofont icofont-facebook"></i></a></li>
-                    <li><a class="tw" href="#."><i class="icofont icofont-twitter"></i></a></li>
-                    <li><a class="be" href="#."><i class="icofont icofont-behance"></i></a></li>
-                    <li><a class="in" href="#."><i class="icofont icofont-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div> -->
-            <!--== Member End ==-->
-  <!--
-        </div>
-      </div>
-    </section> -->
-    <!--== Team End ==-->
-
     <!--== Call to Actions Start ==-->
     <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
       <div class="overlay-bg"></div>
@@ -761,7 +720,6 @@
               <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
                 <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">{% trans "Man your own" %}</span>{% trans " Online Battleship " %}<span class="font-200">{% trans " with Us " %}<br />{% trans " and " %}</span>"{% trans " Conquer " %}"<span class="font-100"> </span>{% trans "the Digital World!" %}</h5>
                 <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
-                <!-- <div class="call-to-action-image d-flex justify-content-center"><img class="img-responsive" src="{% static 'images/icons/fist-svgrepo-com.png' %}" alt="02"/> </div> -->
                 <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">{% trans "Code. Design. Development." %}</h5>
                 <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">{% trans "Contact Us Now" %}</a>
               </div>
@@ -865,7 +823,7 @@
               </div>
 
               <div class="post-text">
-                <h3><a href="{% url 'blog' %}">{{ post.title }}</a></h3>
+                <h3><a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a></h3>
                 <p>
                   {{ post.text|striptags|truncatechars:50 }}
                 </p>
@@ -876,7 +834,7 @@
           {% endfor %}
         </div>
         <div class="text-center justify-content-center font-900">
-          <a href="{% url 'blog' %}" class="btn buttons btn-dark">{% trans "See More Posts" %}</a>
+          <a href="{% url 'blog_list' %}" class="btn buttons btn-dark">{% trans "See More Posts" %}</a>
         </div>
       </div>
 
