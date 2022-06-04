@@ -210,7 +210,7 @@ class Post(models.Model):
     # views_count = models.IntegerField(default=0)
     featured = models.BooleanField()
     slug = models.SlugField(max_length=255, unique=True)
-    created_date = models.DateTimeField(auto_now_add=True)
+    created_date = models.DateTimeField()
     status = models.CharField(max_length=10, default='Draft', choices=STATUS_CHOICES)
     previous_post = models.ForeignKey('self', related_name='previous', on_delete=models.SET_NULL, blank=True, null=True)
     next_post = models.ForeignKey('self', related_name='next', on_delete=models.SET_NULL, blank=True, null=True)

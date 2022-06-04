@@ -347,7 +347,7 @@
   					data-paddingleft="[0,0,0,0]"
   					data-blendmode="exclusion"
 
-  					style="z-index: 7; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Fast and friendly support, unique design, no templates" %}</span></div>
+  					style="z-index: 7; white-space: nowrap; line-height: 25px; font-weight: 400; color: rgba(255,255,255,0.85);font-family: 'Raleway', sans-serif;letter-spacing:10px;"><span class="text-uppercase">{% trans "Fast and friendly support, unique design" %}</span></div>
 
   				<!-- LAYER NR. 8 -->
   				<a class="tp-caption rev-btn  tp-resizeme" href="#." target="_blank" id="slide-11-layer-12"
@@ -604,11 +604,25 @@
     <!--== Portfolio End ==-->
     <br><br>
     <!--== Counters Start ==-->
-    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
       <div class="overlay-bg"></div>
-    </section>
+    </section> -->
     <!--== Counters End ==-->
-
+    <!--== Call to Actions Start ==-->
+    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+      <div class="overlay-bg"></div>
+      <div class="container">
+      	  <div class="row">
+              <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
+                <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">{% trans "Man your own" %}</span>{% trans " Online Battleship " %}<span class="font-200">{% trans " with Us " %}<br />{% trans " and " %}</span>"{% trans " Conquer " %}"<span class="font-100"> </span>{% trans "the Digital World!" %}</h5>
+                <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
+                <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">{% trans "Code. Design. Development." %}</h5>
+                <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">{% trans "Contact Us Now" %}</a>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!--== Call to Actions End ==-->
     <!--== Services Start ==-->
     <section class="white-bg pb-5" id="service">
       <div class="container">
@@ -712,21 +726,6 @@
       </video>
     </section>
     <!--== Newsletter End ==-->
-    <!--== Call to Actions Start ==-->
-    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
-      <div class="overlay-bg"></div>
-      <div class="container">
-      	  <div class="row">
-              <div class="call-to-action col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-                <h5 class="font-40px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span class="font-100">{% trans "Man your own" %}</span>{% trans " Online Battleship " %}<span class="font-200">{% trans " with Us " %}<br />{% trans " and " %}</span>"{% trans " Conquer " %}"<span class="font-100"> </span>{% trans "the Digital World!" %}</h5>
-                <hr class="green-sepline wow fadeInUp" data-wow-delay="0.2s">
-                <h5 class="mb-3 font-40px white-color font-400 wow fadeInUp" data-wow-delay="0.3s">{% trans "Code. Design. Development." %}</h5>
-                <a href="#contact" class="btn buttons white-buttons wow fadeInUp mt-5" data-wow-delay="0.4s">{% trans "Contact Us Now" %}</a>
-              </div>
-          </div>
-      </div>
-    </section>
-    <!--== Call to Actions End ==-->
 
     <!--== Pricing Table Start ==-->
     <section class="pricing white-bg" id="pricing">
@@ -785,13 +784,18 @@
           <div class="client-slider slick">
             <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/coding-programming-language-svgrepo-com-white.png' %}" alt="02"/> </div>
             <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/laptop-computer-programming-svgrepo-com-white.png' %}" alt="03"/> </div>
-            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/medal-winner-svgrepo-com-white.png' %}" alt="04"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'svg/aws-svgrepo-com.svg' %}" alt="04"/> </div>
             <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/mysql-svg-white.png' %}" alt="05"/> </div>
             <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/programming-monitor-svgrepo-com-white.png' %}" alt="06"/> </div>
             <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/python-brands-white.png' %}" alt="07"/> </div>
             <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/seo-user-svgrepo-com-white.png' %}" alt="08"/> </div>
-            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/wheel-svgrepo-com-white.png' %}" alt="09"/> </div>
-            <div class="client-logo"> <img class="img-responsive" src="{% static 'images/icons/support-svgrepo-com-white.png' %}" alt="10"/> </div>
+            <div class="client-logo"> <img class="img-responsive" src="{% static 'svg/bootstrap-svgrepo-com.svg' %}" alt="09"/> </div>
+            <div class="client-logo"> <img class="img-responsive" style="fill:white" src="{% static 'svg/django-svgrepo-com.svg' %}" alt="10"/> </div>
+            <div class="client-logo"> <img class="img-responsive" style="fill:white" src="{% static 'svg/postgresql-svgrepo-com.svg' %}" alt="10"/> </div>
+            <div class="client-logo"> <img class="img-responsive" style="fill:white" src="{% static 'svg/jquery-fill-svgrepo-com.svg' %}" alt="10"/> </div>
+            <div class="client-logo"> <img class="img-responsive" style="fill:white" src="{% static 'svg/text-javascript-svgrepo-com.svg' %}" alt="10"/> </div>
+
+
           </div>
         </div>
       </div>
@@ -817,7 +821,8 @@
               <div class="post-img">
                 <div class="date-box dark-bg">
                   <span class="day">{{ post.created_date.day }}</span>
-                  <span class="month">{{ post.created_date|date:'F' }}</span>
+                  <span class="month">{{ post.created_date|date:'M' }}</span>
+                  <span class="day">'{{ post.created_date|date:'y' }}</span>
                 </div>
                 <div class="item"><img class="img-responsive" src="{{ post.image.url }}" alt=""/></div>
               </div>

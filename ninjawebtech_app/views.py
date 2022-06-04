@@ -214,6 +214,7 @@ def strip_date(request):
 #--------------------------------------------------------------------BLOG VIEW
 @csrf_protect
 def bloglistview(request):
+    count_posts = []
     template = 'ninjawebtech_app/blog_list.html'
     categories = PostCategory.objects.all()
     blog_posts = Post.objects.all()
@@ -222,8 +223,7 @@ def bloglistview(request):
     grouped = itertools.groupby(qs, lambda d: d.get('created_date').strftime('%b %Y'))
     # [(day, len(list(this_day))) for day, this_day in grouped]
     for k, g in grouped:
-        count_posts = [k, sum(1 for _ in g)]
-    print(count_posts)
+        count_posts.append([k, sum(1 for _ in g)])
     context = {
         "categories": categories,
         "blog_posts":blog_posts,
