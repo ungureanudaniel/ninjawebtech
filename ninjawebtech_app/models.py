@@ -94,7 +94,7 @@ class Portfolio(models.Model):
     end_date = models.DateTimeField(default=datetime.datetime.now)
     category = models.ForeignKey(ProjectCategory, related_name='category', on_delete=models.SET_NULL, blank=True, null=True)
     author = models.CharField(max_length=30)
-    link = models.CharField(max_length=50, blank=True, null=True, default="")
+    link = models.CharField(max_length=500, blank=True, null=True, default="")
     image1 = models.ImageField(upload_to='portfolio')
     image2 = models.ImageField(upload_to='portfolio', blank=True)
     image3 = models.ImageField(upload_to='portfolio', blank=True)
