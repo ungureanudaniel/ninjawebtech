@@ -53,8 +53,8 @@ msgstr "Prietenos cu motorul google si cu toate tipurile de ecrane"
 msgid "Web Development Company"
 msgstr "Companie de Web Development"
 
-msgid "We started in 2019, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table for each and every project."
-msgstr "Am inceput in 2019, cu un muuult entusiasm si dorinta de a dezvolta aceasta afacere pe plan international, iar pentru asta punem in prin plan multa responsabilitate, munca si satisfactia clientilor, in fiecare proiect in parte."
+msgid "I am Daniel and I started this business in 2019, out of passion for software. I've got a motivation of steel to be successful, by putting commitment, hard work and client satisfaction on the table for each and every project."
+msgstr "Eu sunt Daniel si am creat aceasta companie in 2019, din pasiune pentru software. Fac totul cu muuult entusiasm, datorita dorintei de a ma dezvolta personal si de a-i face pe ceilalti fericiti si de succes in mediul online, iar pentru asta pun in prin plan multa responsabilitate, munca si satisfactia clientilor, in fiecare proiect in parte."
 
 #-------------------TESTIMONIALS ----------------------------
 msgid "Leave a review"
@@ -120,7 +120,7 @@ msgid "Type and hit Enter"
 msgstr "Scrie si apasa Enter"
 
 msgid "Enter your email address..."
-msgstr "Introduceti adresa dvs de email..."
+msgstr "Introdu adresa de email..."
 
 msgid "Join "
 msgstr "Aboneaza-te "
@@ -160,8 +160,6 @@ msgid "Contact Us Now"
 msgstr "Contacteaza-ne acum"
 
 #---------------------------pricing plans-------------------------------
-msgid "Our Pricing"
-msgstr "Preturile"
 
 msgid " Plans"
 msgstr " Noastre"
@@ -201,12 +199,6 @@ msgstr "Si multe altele... "
 msgid "Just reach out to us!"
 msgstr "Contacteaza-ne!"
 #-------------------------BLOG---------------------------------------
-msgid "Our"
-msgstr "Postarile"
-
-msgid " Blog Posts"
-msgstr " Noastre"
-
 msgid "Read More"
 msgstr "Vezi mai mult"
 
@@ -216,11 +208,7 @@ msgstr "Mai multe postari"
 msgid "Categories"
 msgstr "Categorii"
 
-msgid ""
-msgstr ""
 #----------------------ABOUT OUR COMPANY---------------------
-msgid "About Our Company"
-msgstr "Despre Compania Noastra"
 
 msgid "Hi there!"
 msgstr "Salutare!"

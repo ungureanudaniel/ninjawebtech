@@ -2,9 +2,18 @@
     .hero-text h1{font-size:74px;}
     .hero-text h2 {font-size: 55px;}
 	/* heights */
+  .whoweare .contactus_button {
+    margin-top: 0.5em;
+    width: 100%;
+  }
+  .whoweare .btn-dark {
+    width: 100%;
+  }
 
 }
-
+@media screen and (max-width:1200px) {
+  section, .about-section {padding-top:20px;padding-bottom:20px;position: relative;z-index: 10;background:#f5f5f5;overflow: hidden;}
+}
 @media (max-width:1024px){
 	.side .widget ul.link li{float:right;font-size:23px;margin-bottom: 10px;}
   .language_dropdown .language {
@@ -35,8 +44,8 @@
 
 }
 
-@media (min-width:1024px) {
-  .mission-section .contactus_button {
+@media (min-width:1199px) {
+  .whoweare .contactus_button {
     margin-top: 0em;
   }
   .language_dropdown {
@@ -165,13 +174,13 @@
   .about-section .col-inner .spacer {
     padding: 5px;
   }
-  .mission-section .contactus_button {
+  .whoweare .contactus_button {
     width: 100%;
     margin-top: 20px;
     background-color: #40E0D0;
     color: white;
   }
-  .mission-section .btn-dark {
+  .whoweare .btn-dark {
     width: 100%;
   }
   /* .language_dropdown {
@@ -240,14 +249,23 @@
 	.countdown-container .countdown li {min-width: 110px;padding: 20px 10px;width: 110px;margin-right: 20px;}
 	.countdown li span {font-size: 30px;}
 	.countdown li p {font-size: 14px;margin-bottom: 0;}
-  .mission-section .contactus_button {
+  .whoweare .contactus_button {
     margin-top: 0.5em;
   }
+
+
 	/* .error-cover-bg p, .coming-cover-bg p{font-size: 18px;line-height: 32px;} */
 	/* .col-about-right, .widget-list ul, ol {padding-left: 30px;} */
 	/* .right-col-rv{margin-top:50px;} */
   /* .bg-flex-cover{min-height:350px;} */
 
+}
+@media (max-width:766px) {
+  .whoweare .section-title .about-me {display: flex;flex-direction: column-reverse;justify-content:space-around;;align-items: center;margin-top:40px;margin-bottom: 40px;}
+  .about-me span {border: 6px solid #212121;border-radius: 9px;width:auto;height:42.47em;padding-bottom:20px;position: relative;margin:0px 30px 0px;}
+  .about-me span .about-me-text {margin-top:40px;}
+  .about-me span img {object-fit: contain; }
+  .about-me p {align-items: center;justify-content:center;margin:0px 20px 0px;}
 }
 @media (max-width:650px){
   .language_dropdown {

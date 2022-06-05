@@ -202,12 +202,6 @@ msgstr "Und so viel mehr... "
 msgid "Just reach out to us!"
 msgstr "Kontaktieren Sie uns einfach!"
 #-------------------------BLOG---------------------------------------
-msgid "Our"
-msgstr "Unsere"
-
-msgid " Blog Posts"
-msgstr " Blog-Beiträge"
-
 msgid "Read More"
 msgstr "Mehr lesen"
 

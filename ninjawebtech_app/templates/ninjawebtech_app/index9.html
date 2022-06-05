@@ -19,8 +19,8 @@
     <meta property="og:site_name" content="Ninja WebTech">
     <meta property="og:title" content="Ninja WebTech | Pagini web moderne, rapide si ieftine" />
     <meta property="og:description" content="Realizam pagini web moderne, atragatoare si rapide, optimizate pentru cautari google, la preturi foarte bune">
-    <meta property="og:image" content="https://www.ninjaweb.tech/static/images/slides/home-bg-9.png">
-    <meta property="og:image:alt" content="https://www.ninjaweb.tech/static/images/slides/home-bg-9.png">
+    <meta property="og:image" content="https://www.ninjaweb.tech/static/images/slides/home-bg-9.WebP">
+    <meta property="og:image:alt" content="https://www.ninjaweb.tech/static/images/slides/home-bg-9.WebP">
 
     <link rel="canonical" href="https://wwww.ninjaweb.tech/">
 
@@ -201,7 +201,7 @@
   					data-paddingleft="[0,0,0,0]"
   					data-blendmode="screen"
 
-  					style="z-index: 5;"><img src="{% static 'images/slides/home-bg-9.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+  					style="z-index: 5;"><img src="{% static 'images/slides/home-bg-9.WebP' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
   				<!-- LAYER NR. 2 -->
   				<div class="tp-caption  brand tp-resizeme"
@@ -302,7 +302,7 @@
   					data-paddingleft="[0,0,0,0]"
   					data-blendmode="screen"
 
-  					style="z-index: 5;"><img src="{% static 'images/background/office1.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+  					style="z-index: 5;"><img src="{% static 'images/background/office1.WebP' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
   				<!-- LAYER NR. 6 -->
   				<div class="tp-caption brand tp-resizeme"
@@ -399,7 +399,7 @@
   					data-blendmode="screen"
   					data-autoplay="on"
 
-  					style="z-index: 5;"><img src="{% static 'images/background/header_tablet.png' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
+  					style="z-index: 5;"><img src="{% static 'images/background/header_tablet.WebP' %}" alt="" data-ww="['full-proportional','full-proportional','full-proportional','full-proportional']" data-hh="['full-proportional','full-proportional','full-proportional','full-proportional']" width="1920" height="1080" data-no-retina> </div>
 
   				<!-- LAYER NR. 10 -->
   				<div class="tp-caption brand tp-resizeme"
@@ -474,18 +474,32 @@
     <!--== Particle Slider End ==-->
 
     <!--== Who We Are Start ==-->
-    <section class="whoweare white-bg" id="about">
+    <section class="whoweare white-bg mt-5" id="about">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-md-12 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
             <div class="section-title">
-              <h1 class="raleway-font font-40px"><span class="font-100 font-40px">{% trans "We Are a " %}</span>{% trans "Web Development Company" %}"</h1>
+              <h1 class="raleway-font font-40px"><span class="font-100 font-40px">{% trans "We Are a " %}</span>{% trans "Web Development Company" %}</h1>
               <hr class="center_line dark-bg">
-              <p style="font-size:1.2rem;">
-                "{% trans "We started in 2019, with a strong motivation to be successful by putting commitment, hard work and our clients satisfaction on the table for each and every project." %}"
-              </p>
+              <div class="about-me">
+                <div class="about-me-text">
+                  <p style="font-size:1.2rem;">
+                    "{% trans "I am Daniel and I started this business in 2019, out of passion for software. I've got a motivation of steel to be successful, by putting commitment, hard work and client satisfaction on the table for each and every project. All my website are modern, fully responsive, with unique and eye-catching design. I am using python, django, modern database frameworks, JavaScript & much more." %}"
+                  </p>
+                  <div class="mt-3">
+                    <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i>{% trans " Our Work" %}</a>
+                    <a class="btn buttons contactus_button btn-zoom "><i class="icofont icofont-ui-message mr-1"></i>{% trans " Contact Us" %}</a>
+                  </div>
+                </div>
+                <span><img src="{% static 'images/team/daniel-ungureanu-pic.WebP' %}"></span>
+              </div>
+
             </div>
           </div>
+        </div>
+        <div class="section-title text-center">
+          <h1 class="raleway-font font-40px"><span class="font-100 font-40px">{% trans "Skills" %}</span></h1>
+          <hr class="center_line dark-bg">
         </div>
         <div class="skillrow row ">
           <div class="skill-image col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
@@ -604,12 +618,12 @@
     <!--== Portfolio End ==-->
     <br><br>
     <!--== Counters Start ==-->
-    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+    <!-- <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/clients1.WebP' %}" data-parallax-speed="0.5" data-parallax-direction="up">
       <div class="overlay-bg"></div>
     </section> -->
     <!--== Counters End ==-->
     <!--== Call to Actions Start ==-->
-    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.png' %}" data-parallax-speed="0.5" data-parallax-direction="up">
+    <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80" data-parallax-bg-image="{% static 'images/background/battle1.WebP' %}" data-parallax-speed="0.5" data-parallax-direction="up">
       <div class="overlay-bg"></div>
       <div class="container">
       	  <div class="row">
@@ -733,7 +747,7 @@
         <div class="row">
           <div class="col-md-8 centerize-col text-center">
             <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-              <h1 class="raleway-font"><span class="font-100">{% trans "Our Pricing" %}</span></h1>
+              <h1 class="raleway-font"><span class="font-100">{% trans "Pricing" %}</span></h1>
               <hr class="center_line dark-bg">
             </div>
           </div>
@@ -809,7 +823,7 @@
         <div class="row">
           <div class="col-md-8 centerize-col text-center">
             <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
-              <h1 class="raleway-font"><span class="font-100">{% trans "Our" %}</span>{% trans " Blog Posts" %}</h1>
+              <h1 class="raleway-font"><span class="font-100">{% trans "Blog" %}</span></h1>
               <hr class="center_line dark-bg">
             </div>
           </div>
@@ -847,40 +861,6 @@
     <!--== Blogs End ==-->
 
     <!--== About Company Start ==-->
-    <div class="grey-bg about-section mt-5">
-      <div class="col-md-6 col-sm-6 bg-flex bg-flex-left p-0">
-        <div class="d-flex">
-          <div class="about-box_overlay">
-            <div class="center-layout">
-            <div class="v-align-middle"> <img class="popup-youtube" src="{% static 'images/background/laptop4.png' %}">
-              <!-- <div class="play-button"><i class="tr-icon ion-android-arrow-dropright"></i></div> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container justify-content-center">
-        <div class="col-md-6 col-sm-12 col-md-offset-6 col-sm-offset-6">
-            <div class="col-inner spacer wow fadeInLeft" data-wow-delay="0.1s">
-              <div class="mission-section">
-              <h2 class="raleway-font about-title"><span class="font-100">{% trans "About Our Company" %}</span> </h2>
-              <hr class="left-line dark-bg" />
-              <hr class="about-center-line dark-bg" />
-              <p>
-                {% trans "Hi there!" %}
-              </p>
-              <p>
-                {% trans "We are a small software development company, set on doing big things. We create modern, fully responsive websites, with unique and eye-catching design, using python, python frameworks for web development and JavaScript. We are fast, always listening to feedback and to your needs, always committed to do the our best, with no compromises." %}
-              </p>
-              <div class="mt-3">
-                <a class="btn buttons btn-dark btn-zoom"><i class="icofont icofont-briefcase-2 mr-1"></i>{% trans " Our Work" %}</a>
-                <a class="btn buttons contactus_button btn-zoom "><i class="icofont icofont-ui-message mr-1"></i>{% trans " Contact Us" %}</a>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-    </div>
     <!--== About Company End ==-->
 
     <!--== Who We Are Start ==-->
