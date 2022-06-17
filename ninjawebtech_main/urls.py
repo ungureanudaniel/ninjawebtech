@@ -20,8 +20,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import ugettext_lazy as _
-if settings.DEBUG:
-    import debug_toolbar
+import debug_toolbar
 
 
 
@@ -29,9 +28,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 ]
+if settings.DEBUG == True:
+    urlpatterns += path('__debug__/', include(debug_toolbar.urls)),
 
 urlpatterns += i18n_patterns(
     path('', include('ninjawebtech_app.urls')),
     path('captcha/', include('captcha.urls')),
-    path('__debug__/', include(debug_toolbar.urls)),
+
 )+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

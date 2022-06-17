@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'https://www.ninjaweb.tech', 'ninjaweb.tech', 'www.ninjaweb.tech']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'debug_toolbar',
     'hitcount',
+    'django.contrib.humanize',
 ]
 
 SITE_ID = 1
@@ -75,6 +76,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
+                'ninjawebtech_app.context_processors.posts',
             ],
         },
     },
@@ -160,7 +162,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-#----------------MEDIA FILES STORAGE SETTINGS--------------------------
+# MEDIA FILES STORAGE SETTINGS
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
@@ -172,8 +174,9 @@ EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 # NEWSLETTER EMAIL SETTINGS
 FROM_EMAIL = 'contact@ninjaweb.tech'
-
-#--------------------messages framework-------------------------------------
+# Configure DEFAULT_AUTO_FIELD
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+# Messages framework
 try:
     from django.contrib.messages import constants as messages
     MESSAGE_TAGS = {

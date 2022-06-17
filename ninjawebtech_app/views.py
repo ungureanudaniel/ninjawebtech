@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.conf import settings
 import os
+import requests
 from django.db.models import Count
 from django.db.models.functions import TruncMonth
 from django.db.models import Sum
@@ -10,14 +11,17 @@ import datetime
 import random
 from django.utils.html import strip_tags
 from django.contrib import messages
-from .models import About, Service, TeamMember, Skill, Review, ProjectCategory, NewsletterUser, Pricing, Post, Email, PostCategory, Portfolio, PortfolioTags, BlogTag
+from .models import About, Service, TeamMember, Skill, Review, ProjectCategory, NewsletterUser,\
+ Pricing, Post, Email, PostCategory, Portfolio, PortfolioTags, BlogTag, Comment
+from .forms import CommentForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from .forms import CaptchaForm
 from django.views.decorators.csrf import csrf_protect
 from hitcount.views import HitCountDetailView
-
+from django.views.generic import ListView, MonthArchiveView
+from django.views.generic.edit import FormMixin
 # def set_language(request):
 #     if request.GET.has_key('language_id'):  # Set language in Session variable
 #         # Redirect to home
@@ -212,42 +216,120 @@ def strip_date(request):
 
 
 #--------------------------------------------------------------------BLOG VIEW
-@csrf_protect
-def bloglistview(request):
-    count_posts = []
-    template = 'ninjawebtech_app/blog_list.html'
-    categories = PostCategory.objects.all()
-    blog_posts = Post.objects.all()
+# @csrf_protect
+# def bloglistview(request):
+#     count_posts = []
+#     template = 'ninjawebtech_app/blog_list.html'
+#     categories = PostCategory.objects.all()
+#     blog_posts = Post.objects.all()
+#
+#     qs = Post.objects.values('created_date').values('created_date')
+#     grouped = itertools.groupby(qs, lambda d: d.get('created_date').strftime('%b %Y'))
+#     # [(day, len(list(this_day))) for day, this_day in grouped]
+#     for k, g in grouped:
+#         count_posts.append([k, sum(1 for _ in g)])
+#     context = {
+#         "categories": categories,
+#         "blog_posts":blog_posts,
+#         "count_posts": count_posts,
+#     }
+#     return render(request, template, context)
+class BlogList(ListView):
+    template_name = "ninjawebtech_app/blog_list.html"
+    context_object_name = "bloglist"
+    paginate_by = 2 # add this
+    model = Post
 
-    qs = Post.objects.values('created_date').values('created_date')
-    grouped = itertools.groupby(qs, lambda d: d.get('created_date').strftime('%b %Y'))
-    # [(day, len(list(this_day))) for day, this_day in grouped]
-    for k, g in grouped:
-        count_posts.append([k, sum(1 for _ in g)])
-    context = {
-        "categories": categories,
-        "blog_posts":blog_posts,
-        "count_posts": count_posts,
-    }
-    return render(request, template, context)
-
+    def get_context_data(self, **kwargs):
+        context = super(BlogList, self).get_context_data(**kwargs)
+        context.update({
+            # ----------- recent posts ---------------------------------------
+            'recent_posts': Post.objects.all().order_by("-created_date")[:2],
+            # ----------- all posts by date-----------------------------------
+            'blog_posts': Post.objects.all().order_by("-created_date"),
+        })
+        return context
 #---------------------------------------------------------------BLOG DETAIL VIEW
-class PostDetailView(HitCountDetailView):
+class PostDetailView(HitCountDetailView, FormMixin):
     model = Post
     template_name = 'ninjawebtech_app/blog_detail.html'
     context_object_name = 'post'
     slug_field = 'slug'
+    form_class = CommentForm
     # set to True to count the hit
     count_hit = True
 
     def get_context_data(self, **kwargs):
         context = super(PostDetailView, self).get_context_data(**kwargs)
+        posts = Post.objects.all()
+        form2 = self.get_form()
+        comm = Comment.objects.filter(post=Post.objects.get(slug=self.object.slug))
         context.update({
-        'popular_posts': Post.objects.order_by('-hit_count_generic__hits')[:3],
+        # ----------- most viewed posts---------------------------------------
+        'popular_posts': posts.order_by('-hit_count_generic__hits')[:3],
+        # ----------- comments -------------------------------------------
+        'comm': comm,
+        'comments': comm.count(),
+        # ----------- recent posts ---------------------------------------
+        'recent_posts': posts.order_by("-created_date")[:2],
+        # ----------- most posts  ---------------------------------------
+        'posts': posts,
+        'form2': form2,
+        'form': CaptchaForm()
         })
         return context
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.save()
+        return super().form_valid(form)
+    def post(self, request, *args, **kwargs):
+        return self.get(request, *args, **kwargs)
+    # def post(self, request, *args, **kwargs):
+    #     f = CommentForm(request.POST)
+    #     if f.is_valid():
+    #         print(f)
+    #         f.save()
+    #         messages.success(request, f'Your comment has been saved.')
+    #     return redirect('.')
 
 
+
+    # def get_queryset(self):
+    #     self.p = get_object_or_404(Post, title=self.kwargs['post'])
+    #     return Comment.objects.filter(post=self.p)
+class ArticleMonthArchiveView(MonthArchiveView):
+
+    date_field = "created_date"
+    allow_future = True
+    template_name = "ninjawebtech_app/blog_list.html"
+    context_object_name = "bloglist"
+    paginate_by = 2 # add this
+    def get_queryset(self):
+        blog_posts = Post.objects.all().order_by("-created_date")
+        return blog_posts
+
+    def get_context_data(self, **kwargs):
+        context = super(ArticleMonthArchiveView, self).get_context_data(**kwargs)
+        context.update({
+            # ----------- recent posts ---------------------------------------
+            'recent_posts': Post.objects.all().order_by("-created_date")[:2],
+            # ----------- all posts by date-----------------------------------
+            'blog_posts': Post.objects.all().order_by("-created_date"),
+        })
+        return context
+#---------------------------------------------------------------BLOG SEARCH VIEW
+class SearchList(ListView):
+    template_name = "ninjawebtech_app/search_list.html"
+    paginate_by = 2 # add this
+    def get_queryset(self):
+        if request.method == "GET":
+            query = self.request.GET.get("q")
+            try:
+                results = Post.objects.filter(Q(title__icontains=query) | Q(text__icontains=query) | Q(category__icontains=query))
+        return results
+
+#---------------------------------------------------------------    CONTACT VIEW
 @csrf_protect
 def ContactView(request):
     template_name = 'ninjawebtech_app/contact.html'

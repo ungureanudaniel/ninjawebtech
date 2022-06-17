@@ -571,6 +571,16 @@
 		}, 500);
 	});
 
+	$(function () {
+	  // $(document).scroll(function () {
+	  //   var $nav = $(".navbar");
+	  //
+	  //   $nav.toggleClass('header-transparent', $(this).scrollTop() < $nav.height());
+	  // });
+	  $( "#CommentButton" ).click(function() {
+	    $( '.comment-form' ).toggleClass( "hidden" );
+	  });
+	});
 	/* ===== GOOGLE MAPS  ===== */
 
 		/* ~~~ Default Map ~~~ */

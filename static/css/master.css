@@ -199,7 +199,7 @@ hr.center_line{width:60px;}
 .section-title .md-icon li{margin: 0 4px;}
 .whoweare .section-title .about-me {display: flex;justify-content:center;align-items: center;margin-top:40px;margin-bottom: 70px;}
 .about-me span {border: 6px solid #212121;border-radius: 9px;width:140em;height:auto;position: relative;margin-left:40px;}
-.about-me span img {object-fit: contain;}
+.about-me span img {object-fit: fill;}
 .about-me-text {align-items: center;text-align: justify;margin-right:40px;}
 
 .display-table h1 {font-size: 5em;font-weight: 800;margin-top: 10px;text-transform: capitalize;letter-spacing: -1px;}
@@ -468,7 +468,7 @@ input.search-bar-top:-moz-placeholder { color: #fff!important; }
 .parallax-bg {background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-repeat:no-repeat;background-position: 50% 50%;}
 .dark-overlay-bg {background: rgba(0,0,0,0.9);width: 100%;height: 100%;position: absolute;z-index: -1;top:0;left:0;}
 
-
+#newsletter_form {background-image: url('/static/images/background/news_bg5.jpg');}
 /* Horizontal Line */
 
 
@@ -597,18 +597,19 @@ section.review {
   position: relative;
   height:80px;
 }
-/* .review .buttons {
+.review .buttons {
   font-family: 'Raleway', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   padding: 13px 40px;
+  color: #23272b;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 2px;
   background-color: transparent;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
-} */
+}
 /* .review .white-buttons {
   border: 1px solid white;
   color: white; */
@@ -619,7 +620,7 @@ section.review {
   background-color: #fff
 } */
 
-#blog a.btn-dark, .whoweare a.btn-dark, .newsletter-confirmation a.btn-dark {
+#blog a.btn-dark, .whoweare a.btn-dark, .newsletter-confirmation a.btn-dark, .dropdown a.btn-dark {
   color: #1d2124;
   border-color: #1d2124;
   background-color: transparent;
@@ -979,7 +980,7 @@ li.post-comment{list-style:none;}
   margin-bottom:2rem;
   left:0;
   z-index:10;
-  border: 2px solid #40E0D0;
+  border: 3px solid #1d2124;
   opacity: 1;
 }
 
@@ -1089,7 +1090,9 @@ section.dark-block .default-slider .slick-dots li button{background:rgba(33, 33,
 section.testimonial {
   position: relative;
   overflow: hidden;
-
+  background-image: url('/static/images/background/review_bg2.jpg');
+  background-attachment: fixed;
+  background-position: center;
 }
 .testimonial .slide {
 	cursor: pointer;
@@ -1108,7 +1111,9 @@ section.testimonial {
   font-family: 'Raleway', sans-serif;
 	color: white;
 }
-
+section.review {
+  background: transparent;
+}
 .review h5 {
   position: relative;
   text-transform: uppercase;

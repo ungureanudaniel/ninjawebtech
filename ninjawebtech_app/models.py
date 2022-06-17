@@ -145,7 +145,7 @@ class TeamMember(models.Model):
     def __str__(self):
        return '{} {}'.format(self.first_name, self.last_name)
 
-#-------------------------COMMENTS / REVIEWS MODEL------------------------------
+#-------------------------LOGO MODEL------------------------------
 class Logo(models.Model):
     text = models.CharField(max_length=300)
     photo = models.ImageField(upload_to='logo')
@@ -202,11 +202,10 @@ class Post(models.Model):
         ('Draft', 'Draft'),
     )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=255)
+    title_en = models.CharField(max_length=255)
     image = models.ImageField(upload_to='blog_image', blank=True)
-    text = RichTextField(blank=True, null=True)
+    text_en = RichTextField(blank=True, null=True)
     category = models.ForeignKey(PostCategory, on_delete=models.CASCADE, related_name='postcategory')
-    comment_count = models.IntegerField(default=0)
     # views_count = models.IntegerField(default=0)
     featured = models.BooleanField()
     slug = models.SlugField(max_length=255, unique=True)
@@ -220,15 +219,12 @@ class Post(models.Model):
     class Meta:
         ordering = ["-created_date"]
 
-    def __str__(self):
-        return self.title
-
     def get_absolute_url(self):
         return reverse('blog_detail', kwargs={'slug': self.slug})
         #return reverse('home')
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.title_en)
         return super(Post, self).save(*args, **kwargs)
 
     def month_published(self):
@@ -237,10 +233,17 @@ class Post(models.Model):
     def post_count(self):
         return self.pk.count()
 
-    @property
-    def get_comments(self):
-        return self.comments.all().order_by('-timestamp')
-
+    def __str__(self):
+        return self.slug
+#----------------------COMMENTS MODEL--------------------------------------------
+class Comment(models.Model):
+    thumbnail = models.ImageField(upload_to='comments')
+    name = models.CharField(max_length=255)
+    text=models.TextField(null=True)
+    post=models.ForeignKey(Post,related_name="post",null=True,on_delete=models.CASCADE)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
+#----------------------BLOG TAGS MODEL--------------------------------------------
 class BlogTag(models.Model):
     name = models.CharField(max_length=30)
     post = models.ManyToManyField(Post, blank=True)

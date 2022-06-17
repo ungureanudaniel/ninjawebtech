@@ -130,7 +130,7 @@
             <div class="col-md-12">
               <div class="page-title text-center white-color">
                 <h1 class="raleway-font font-300">{% trans "Blog Posts" %}</h1>
-                <div class="breadcrumb col-md-12 text-centermt-2">
+                <div class="breadcrumb col-md-12 text-centermt-2 bg-transparent">
                     <!-- Breadcrumb Start -->
                         <ul class="breadcrumb-item text-white">
                           <li><a href="index.html">{% trans "Home" %}</a></li>
@@ -154,8 +154,10 @@
         <div class="col-md-9 col-sm-9 col-xs-12 xs-mb-50">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 mb-50">
+              {% if bloglist %}
               <ul class="single-blog-list">
-                {% for post in blog_posts %}
+
+                {% for post in bloglist %}
                 <li>
                   <div class="post-wrap">
                     <div class="post-img">
@@ -170,9 +172,9 @@
                         <!-- <div class="item"><img class="img-responsive" src="assets/images/post/post-06.jpg" alt=""/></div> -->
                     </div>
                     <div class="post-text">
-                      <h3><a href="#">{{ post.title }}</a></h3>
+                      <h3><a href="{% url 'blog_detail' post.slug %}">{{ post.title_en }}</a></h3>
                       <p>
-                        {{ post.text|striptags|truncatechars:300 }}
+                        {{ post.text_en|striptags|safe|truncatechars:400 }}
                       </p>
                     </div>
                   </div>
@@ -181,35 +183,47 @@
                       {% for tag in post_tags %}
                       <span><i class="icofont icofont-ui-tag"></i><a href="#">{{ tag.name }} </a> </span>
                       {% endfor %}
-                      <span><i class="icofont icofont-comment"></i><a href="#">10 Comments</a></span> <span><i class="icofont icofont-simple-right"></i><a href="#">{% get_hit_count for post %} Views</a></span>
+                      <span><i class="icofont icofont-comment"></i><a href="#">{{ post.comm_count }} Comments</a></span> <span><i class="icofont icofont-simple-right"></i><a href="#">{% get_hit_count for post %} Views</a></span>
                   </div>
                 </li>
                 {% endfor %}
               </ul>
+              {% endif %}
             </div>
             <!--== Post End ==-->
-            <!-- == COMMENTS == -->
-
-
-
+            <!-- == Pagination navigation == -->
+            <nav aria-label="Page navigation example">
+              {% if is_paginated %}
+              <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{page_obj.previous_page_number}}"> &laquo;</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">&laquo;</a>
+                </li>
+                {% endif %} {% for i in paginator.page_range %} {% if page_obj.number == i %}
+                <li class="page-item"><a class="page-link active">{{ i }}</a></li>
+                {% else %}
+                <li class="page-item">
+                  <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                </li>
+                {% endif %} {% endfor %} {% if page_obj.has_next %}
+                <li class="page-item">
+                  <a href="?page={{page_obj.next_page_number}}" class="page-link">&raquo;</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                  <a class="page-link">&raquo;</a>
+                </li>
+                {% endif %}
+              </ul>
+              {% endif %}
+            </nav>
+            <!-- == Pagination navigation end == -->
           </div>
           <!-- == END RECENT POSTS == -->
-          <!-- == POSTS NAVIGATION == -->
-          <div class="row mt-100">
-              <div class="col-md-12">
-                  <div class="text-center">
-                    <div class="pagination text-uppercase dark-color">
-                          <ul>
-                              <li><a href="#"><i class="icofont icofont-long-arrow-left mr-5 xs-display-none"></i> Prev</a></li>
-                              <li class="active"><a href="#">1</a></li>
-                              <li><a href="#">2</a></li>
-                              <li><a href="#">3</a></li>
-                              <li><a href="#">Next <i class="icofont icofont-long-arrow-right ml-5 xs-display-none"></i></a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
         </div>
 
     <!-- == SIDE MENU == -->
@@ -218,8 +232,8 @@
         <div class="col-md-3 col-sm-3 col-xs-12">
           <div class="widget sidebar_widget">
             <h5 class="aside-title">Search</h5>
-            <form class="search-form" method="get">
-              <input type="text" name="name" class="md-input" id="search" required="" placeholder="Type what it's your mind...">
+            <form class="search-form" method="GET">
+              <input type="text" name="q" class="md-input" id="search" required="" placeholder="Type what it's your mind...">
               <button type="submit" class="icofont icofont-search-alt-2 search-submit"></button>
             </form>
           </div>
@@ -234,14 +248,19 @@
           </div>
           <div class="sidebar_widget widget_archive mb-5">
             <h5 class="aside-title">Archive</h5>
+            {% regroup all_posts by created_date.year as year_list %}
             <ul>
-              {% for item in count_posts %}
-              <li> <a href="#">{{ item.0 }}</a> <span>{{ item.1 }}</span></li>
+              {% for year in year_list %}
+              <li>{{ year.grouper }}
+                {% regroup year.list by created_date.month as month_list %}
+                <ul>
+                  {% for month in month_list %}
+                  <li><a href="{% url 'post_archive_month' year.grouper month.grouper %}">{{ month.list.0.created_date|date:"b" }}</a> <span>({{ month.list|length }})</span></li>
+                  {% endfor %}
+                </ul>
+              </li>
               {% endfor %}
-              <!-- <li> <a href="#">May 2017</a> <span>8</span></li>
-              <li> <a href="#">June 2017</a> <span>63</span></li>
-              <li> <a href="#">Febuary 2012</a> <span>45</span></li>
-              <li> <a href="#">April 2016</a> <span>88</span></li> -->
+
             </ul>
           </div>
           <div class="social-icons-style-06 mb-5">
@@ -258,46 +277,27 @@
           <div class="sidebar_widget widget_categories mb-5">
             <h5 class="aside-title">{% trans "Categories" %}</h5>
             <ul>
-              {% for cat in categories %}
-              <li> <a href="#">{{ cat|title }}</a></li>
+              {% for post in blog_posts %}
+              <li> <a href="#">{{ post.category|title }}</a></li>
               {% endfor %}
             </ul>
-          </div>
-          <div class="sidebar_widget widget_tag_cloud mb-50">
-            <h5 class="aside-title">Tags</h5>
-            <div class="post-tags">
-              {% for tag in post_tags.objects.all %}
-              <a href="#">{{ tag.names }}</a>
-              {% endfor %}
-              <!-- <a href="#">Marketing</a>
-              <a href="#">Photography</a>
-              <a href="#">Illustration</a>
-              <a href="#">Development</a>
-              <a href="#">Multipurpose</a>
-              <a href="#">Creativity</a>
-              <a href="#">Apps</a>
-              <a href="#">Fashion</a>
-              <a href="#">Concept</a>
-              <a href="#">Design</a> -->
-            </div>
           </div>
 
           <div class="sidebar_widget widget_recent_post mb-50">
             <h5 class="aside-title">Recent Posts</h5>
-            {% for post in blog_posts %}
+            {% for post in recent_posts %}
             <div class="post-item">
               <div class="post-thumb">
-                <a href="{% url 'blog_detail' post.slug %}"><img width="75" height="75" src="{{ post.image.url }}" class="img-responsive" alt="{{ post.title }}"/></a>
+                <a href=""><img width="75" height="75" src="{{ post.image.url }}" class="img-responsive" alt="post-01"/></a>
               </div>
               <div class="post-body">
-                <span class="font-14px"><a href="">{{ post.title|title }}</a></span>
-                <div class="post-time">{{ post.created_date|date:'F Y' }} </div>
-                <a href="" class="subtitle">{{ post.category }}</a>
+                <span class="font-14px "><a class="text-dark" href="">{{ post.title_en|title }}</a></span>
+                <div class="post-time">{{ post.created_date|date:"d M Y" }} </div>
+                <a href="" class="subtitle text-light bg-dark px-2">{{ post.category }}</a>
               </div>
             </div>
             {% endfor %}
           </div>
-
         </div>
       </div>
     </div>

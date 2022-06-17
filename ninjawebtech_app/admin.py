@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models import About, Service, TeamMember, Logo, Email, Review, Skill, ProjectCategory, NewsletterUser, Pricing, PricingFeatures, Portfolio, Post, PostCategory, BlogTag, PortfolioTags
+from .models import About, Service, TeamMember, Logo, Email, Review, Skill, ProjectCategory,\
+ NewsletterUser, Pricing, PricingFeatures, Portfolio, Post, PostCategory, BlogTag, PortfolioTags,\
+ Comment
+
 class AboutAdmin(admin.ModelAdmin):
      list_display =  ['title', 'text', 'image', 'active']
 
@@ -49,16 +52,17 @@ class PricingAdmin(admin.ModelAdmin):
     list_display =  ['category', 'price', 'highlighted']
 
 class PostAdmin(admin.ModelAdmin):
-    list_display =  ['title', 'short_descr', 'featured', 'status', 'created_date', 'slug']
-    prepopulated_fields = {'slug': ('title',), }
+    list_display =  ['title_en', 'short_descr', 'featured', 'status', 'created_date', 'slug']
+    prepopulated_fields = {'slug': ('title_en',), }
     def short_descr(self, obj):
-        return obj.text[:100]
+        return obj.text_en[:100]
 class BlogTagAdmin(admin.ModelAdmin):
     list_display =  ['name']
 
 class PostCategoryAdmin(admin.ModelAdmin):
     list_display =  ['title']
-
+class CommentAdmin(admin.ModelAdmin):
+    list_display =  ['name', 'text', 'thumbnail']
 admin.site.register(About, AboutAdmin)
 admin.site.register(PricingFeatures, PricingFeaturesAdmin)
 admin.site.register(Pricing, PricingAdmin)
@@ -75,3 +79,4 @@ admin.site.register(PostCategory, PostCategoryAdmin)
 admin.site.register(Email, EmailAdmin)
 admin.site.register(ProjectCategory, ProjectCategoryAdmin)
 admin.site.register(Review, ReviewAdmin)
+admin.site.register(Comment, CommentAdmin)
