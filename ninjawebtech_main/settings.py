@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'ninjawebtech_main.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-if os.getenv('PRODUCTION') == True:
+if PRODUCTION == True:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
