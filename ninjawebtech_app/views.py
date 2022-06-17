@@ -7,6 +7,7 @@ from django.db.models import Count
 from django.db.models.functions import TruncMonth
 from django.db.models import Sum
 import itertools
+from django.core.paginator import Paginator
 import datetime
 import random
 from django.utils.html import strip_tags
@@ -319,16 +320,56 @@ class ArticleMonthArchiveView(MonthArchiveView):
         })
         return context
 #---------------------------------------------------------------BLOG SEARCH VIEW
-class SearchList(ListView):
-    template_name = "ninjawebtech_app/search_list.html"
-    paginate_by = 2 # add this
-    def get_queryset(self):
-        if request.method == "GET":
-            query = self.request.GET.get("q")
-            try:
-                results = Post.objects.filter(Q(title__icontains=query) | Q(text__icontains=query) | Q(category__icontains=query))
-        return results
+# class SearchList(ListView):
+#     template_name = "ninjawebtech_app/search_list.html"
+#     paginate_by = 2 # add this
+#     def get_queryset(self):
+#         if request.method == "GET":
+#             query = self.request.GET.get("q")
+#             try:
+#                 results = Post.objects.filter(Q(title__icontains=query) | Q(text__icontains=query) | Q(category__icontains=query))
+#         return results
+def search_results(request):
+    template = 'ninjawebtech_app/search_results.html'
+    object_list = []
+    try:
+        kwrd = request.GET.get('q')
+        qr = kwrd.split(" ")
 
+        print(qr)
+        if(qr == None):
+            print(f"Query doesn't work")
+            object_list = Post.objects.all()
+        else:
+            res = Post.objects.filter(Q(title_en__icontains=qr) | Q(text_en__icontains=qr) | Q(category__icontains=qr)).order_by('-created_date')
+            # content_list = Post.objects.filter(text_en__icontains=qr).order_by('-created_date')
+            # category_list = Post.objects.filter(category__icontains=qr).order_by('-created_date')
+            print(res)
+            for i in res:
+                if i not in object_list:
+                    object_list.append(i)
+            # for i in content_list:
+            #     if i not in object_list:
+            #         object_list.append(i)
+            # for i in category_list:
+            #     if i not in object_list:
+            #         object_list.append(i)
+
+        final_list = []
+        for i in object_list:
+            final_list.append(i)
+        #     if i in locat:
+        #
+        paginator = Paginator(final_list, 2)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context = {
+            'posts': page_obj,
+            'qr': qr,
+        }
+        return render(request, template, context)
+    except Exception as e:
+        print(f"{e}")
 #---------------------------------------------------------------    CONTACT VIEW
 @csrf_protect
 def ContactView(request):

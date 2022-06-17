@@ -4,7 +4,8 @@ from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
 from django.views.generic.base import TemplateView
 from .views import homeview, reviewview, subscription_conf_view, \
-hide_review_view, PostDetailView, BlogList, ArticleMonthArchiveView
+hide_review_view, PostDetailView, BlogList, ArticleMonthArchiveView, \
+search_results
 from django.contrib.sitemaps.views import sitemap
 from .sitemaps import ProjectCategorySitemap, ServiceSitemap, SkillSitemap,  StaticSitemap, PortfolioSitemap
 from django.conf.urls.i18n import i18n_patterns
@@ -24,7 +25,7 @@ urlpatterns = [
     path('', homeview, name='home'),
     path('review/', reviewview, name='review'),
     path('hide_review/<int:pk>', hide_review_view, name='hide_review'),
-    # path('blog-list/', bloglistview, name='blog_list'),
+    path('search_results/', search_results, name='search_results'),
     path('blog-list/', BlogList.as_view(), name='blog_list'),
     path('blog/<slug:slug>/', PostDetailView.as_view(), name='blog_detail'),
     path('hitcount/', include(('hitcount.urls', 'hitcount'), namespace='hitcount')),
