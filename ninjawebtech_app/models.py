@@ -112,6 +112,8 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return '{}'.format(self.title)
+    def get_absolute_url(self): # #TODO da cambiare
+        return reverse("blog_list")
 
 class PortfolioTags(models.Model):
     name = models.CharField(max_length=30)

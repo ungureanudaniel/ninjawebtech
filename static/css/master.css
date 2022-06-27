@@ -468,7 +468,7 @@ input.search-bar-top:-moz-placeholder { color: #fff!important; }
 .parallax-bg {background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-repeat:no-repeat;background-position: 50% 50%;}
 .dark-overlay-bg {background: rgba(0,0,0,0.9);width: 100%;height: 100%;position: absolute;z-index: -1;top:0;left:0;}
 
-#newsletter_form {background-image: url('/static/images/background/news_bg5.jpg');}
+#newsletter_form {background-image: url('/static/images/background/news_bg5.WebP');}
 /* Horizontal Line */
 
 
@@ -620,7 +620,7 @@ section.review {
   background-color: #fff
 } */
 
-#blog a.btn-dark, .whoweare a.btn-dark, .newsletter-confirmation a.btn-dark, .dropdown a.btn-dark {
+#blog a.btn-dark, .whoweare a.btn-dark, .newsletter-confirmation a.btn-dark {
   color: #1d2124;
   border-color: #1d2124;
   background-color: transparent;

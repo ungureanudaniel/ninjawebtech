@@ -66,9 +66,9 @@
       <!--== Start Atribute Navigation ==-->
       <div class="attr-nav hidden-xs sm-display-none">
         <ul class="social-media-dark social-top">
-          <li><a href="#" class="icofont icofont-facebook"></a></li>
+          <li><a href="https://www.facebook.com/ninjawebtech" class="icofont icofont-facebook"></a></li>
           <li><a href="#" class="icofont icofont-twitter"></a></li>
-          <li><a href="#" class="icofont icofont-linkedin"></a></li>
+          <li><a href="https://www.linkedin.com/company/79462239" class="icofont icofont-linkedin"></a></li>
         </ul>
       </div>
       <!--== End Atribute Navigation ==-->
@@ -111,11 +111,9 @@
               </ul>
             </div>
             <ul class="social-media">
-              <li><a href="#" class="icofont icofont-facebook"></a></li>
+              <li><a href="https://www.facebook.com/ninjawebtech" class="icofont icofont-facebook"></a></li>
               <li><a href="#" class="icofont icofont-twitter"></a></li>
-              <li><a href="#" class="icofont icofont-behance"></a></li>
-              <li><a href="#" class="icofont icofont-social-dribble"></a></li>
-              <li><a href="#" class="icofont icofont-linkedin"></a></li>
+              <li><a href="https://www.linkedin.com/company/79462239" class="icofont icofont-linkedin"></a></li>
             </ul>
 
      </div>
@@ -125,7 +123,7 @@
 
   <!--== Page Title Start ==-->
   <div class="transition-none">
-      <section class="title-hero-bg parallax-effect" style="background-image: url(assets/images/background/laptop1.png);">
+      <section class="title-hero-bg parallax-effect" style="background-image: url('/static/images/background/news_bg3.WebP');">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -184,7 +182,7 @@
             <!--== Post End ==-->
             <!-- == Add new comment == -->
             <div class="dropdown mb-5 ml-2">
-              <a href="#" class="btn buttons btn-dark btn-zoom wow fadeInUp" type="button" id="CommentButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="visibility: visible; animation-name: fadeInUp;">
+              <a href="#" class="btn buttons btn-dark wow fadeInUp" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="visibility: visible; animation-name: fadeInUp;">
                 <i class="icofont icofont-briefcase-2 mr-1"></i> Add a Comment
               </a>
               <div class="comment-form hidden">
@@ -261,7 +259,7 @@
                   </div>
 
                   <div class="post-text">
-                    <h3><a href="blog.html">{{ post.title_en }}</a></h3>
+                    <h3><a href="{% url 'blog_detail' post.slug %}">{{ post.title_en }}</a></h3>
                     <p>
                       {{ post.text_en|safe|truncatechars:50 }}
                     </p>
@@ -283,13 +281,13 @@
 
         <!-- == SEARCH INPUT == -->
         <div class="col-md-3 col-sm-3 col-xs-12">
-          <div class="widget sidebar_widget">
+          <!-- <div class="widget sidebar_widget">
             <h5 class="aside-title">Search</h5>
             <form class="search-form" method="get">
               <input type="text" name="q" class="md-input" id="search" required="" placeholder="Type what it's your mind...">
               <button type="submit" class="icofont icofont-search-alt-2 search-submit"></button>
             </form>
-          </div>
+          </div> -->
           <div class="mb-50">
             <h5 class="aside-title">About Us</h5>
             <a href="index.html">
@@ -320,10 +318,9 @@
           <div class="social-icons-style-06 mb-5">
             <h5 class="aside-title text-uppercase">Follow Us</h5>
             <ul class="xs-icon">
-              <li><a class="icon facebook" href="#."><i class="icofont icofont-facebook"></i></a></li>
+              <li><a class="icon facebook" href="https://www.facebook.com/ninjawebtech"><i class="icofont icofont-facebook"></i></a></li>
               <li><a class="icon twitter" href="#."><i class="icofont icofont-twitter"></i></a></li>
-              <li><a class="icon tumblr" href="#."><i class="icofont icofont-tumblr"></i></a></li>
-              <li><a class="icon flicker" href="#."><i class="icofont icofont-flikr"></i></a></li>
+              <li><a class="icon linkedin" href="https://www.linkedin.com/company/79462239"><i class="icofont icofont-linkedin"></i></a></li>
               <li><a class="icon instagram" href="#."><i class="icofont icofont-instagram"></i></a></li>
             </ul>
           </div>

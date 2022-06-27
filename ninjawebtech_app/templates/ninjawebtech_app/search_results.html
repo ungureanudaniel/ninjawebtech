@@ -49,17 +49,7 @@
 
   <!--== Header Start ==-->
   <nav class="navbar navbar-default navbar-fixed navbar-transparent white bootsnav on no-full no-border">
-  	<!--== Start Top Search ==-->
-    <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="icofont icofont-close"></i></a>
-      <div id="fullscreen-search-wrapper">
-        <form method="get" id="fullscreen-searchform">
-          <input type="text" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class="search-bar-top">
-          <i class="fullscreen-search-icon icofont icofont-search">
-          <input value="" type="submit">
-          </i>
-        </form>
-      </div>
-    </div>
+
     <!--== End Top Search ==-->
     <div class="container">
       <!--== Start Atribute Navigation ==-->
@@ -154,10 +144,10 @@
         <div class="col-md-9 col-sm-9 col-xs-12 xs-mb-50">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 mb-50">
-              {% if posts %}
+              {% if query %}
               <ul class="single-blog-list">
 
-                {% for post in posts %}
+                {% for post in query %}
                 <li>
                   <div class="post-wrap">
                     <div class="post-img">
@@ -225,31 +215,7 @@
           </div>
           <!-- == END RECENT POSTS == -->
           <!-- == POSTS NAVIGATION == -->
-          <!-- <div class="row mt-100">
-              <div class="col-md-12">
-                  <div class="text-center">
-                    <div class="pagination text-uppercase dark-color">
-                    {% if is_paginated %}
-                          <ul>
-                              {% if page_obj.has_previous %}
-                              <li><a href="?page={{page_obj.previous_page_number}}"><i class="icofont icofont-long-arrow-left mr-5 xs-display-none"></i> Prev</a></li>
-                              {% else %}
-                              <li class="page-item disabled">
-                                <a class="page-link" href="#">&laquo;</a>
-                              </li>
-                              {% endif %} {% for i in paginator.page_range %} {% if page_obj.number == i %}
-                              <li class="active"><a href="#">{{i}}</a></li>
-                              {% else %}
-                              <li><a href="#">2</a></li>
-                              <li><a href="#">3</a></li>
-                              <li><a href="#">Next <i class="icofont icofont-long-arrow-right ml-5 xs-display-none"></i></a></li>
-                          {% endif %}
-                          </ul>
-                    {% endif %}
-                      </div>
-                  </div>
-              </div>
-          </div> -->
+
         </div>
 
     <!-- == SIDE MENU == -->
@@ -258,8 +224,8 @@
         <div class="col-md-3 col-sm-3 col-xs-12">
           <div class="widget sidebar_widget">
             <h5 class="aside-title">Search</h5>
-            <form class="search-form" method="get">
-              <input type="text" name="name" class="md-input" id="search" required="" placeholder="Type what it's your mind...">
+            <form class="search-form" method="GET" action="{% url 'search_results' %}">
+              <input type="text" name="q" class="md-input" id="search" required="" placeholder="Type what it's your mind...">
               <button type="submit" class="icofont icofont-search-alt-2 search-submit"></button>
             </form>
           </div>
@@ -298,8 +264,8 @@
           <div class="sidebar_widget widget_categories mb-5">
             <h5 class="aside-title">{% trans "Categories" %}</h5>
             <ul>
-              {% for cat in categories %}
-              <li> <a href="#">{{ cat|title }}</a></li>
+              {% for post in posts %}
+              <li> <a href="#">{{ post.category|title }}</a></li>
               {% endfor %}
             </ul>
           </div>

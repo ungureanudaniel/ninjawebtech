@@ -54,9 +54,11 @@ msgstr "Wir sind ein "
 msgid "Web Development Company"
 msgstr "Webentwicklungsfirma"
 
-msgid "We started in 2019, with a strong motivation to be succesful by putting commitment, hard work and our clients satisfaction on the table for each and every project."
-msgstr "Wir sind 2019 mit einer starken Motivation gestartet, erfolgreich zu sein, indem wir bei jedem Projekt, harte Arbeit und die Zufriedenheit unserer Kunden auf den Tisch legen."
-
+msgid "I am Daniel and I started this business in 2019, out of passion for software. I've got a motivation of steel to be successful, by putting commitment, hard work and client satisfaction on the table for each and every project. All my websites are modern, fully responsive, with unique and eye-catching design."
+msgstr "Ich bin Daniel und ich habe dieses Unternehmen 2019 aus Leidenschaft für Software gegründet. Ich habe eine Motivation aus Stahl, um erfolgreich zu sein, indem ich Engagement, harte Arbeit und Kundenzufriedenheit für jedes einzelne Projekt auf den Tisch lege. Alle meine Websites sind modern, voll responsive, mit einzigartigem und auffälligem Design."
+#-------------------TECH-------------------------------------
+msgid "Our Technologies"
+msgstr "Unseren Technologien"
 #-------------------TESTIMONIALS ----------------------------
 msgid "Leave a review"
 msgstr "Eine Bewertung hinterlassen"

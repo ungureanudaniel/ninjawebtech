@@ -10,6 +10,7 @@ import itertools
 from django.core.paginator import Paginator
 import datetime
 import random
+from django.db.models import Q
 from django.utils.html import strip_tags
 from django.contrib import messages
 from .models import About, Service, TeamMember, Skill, Review, ProjectCategory, NewsletterUser,\
@@ -21,7 +22,7 @@ from django.urls import reverse, reverse_lazy
 from .forms import CaptchaForm
 from django.views.decorators.csrf import csrf_protect
 from hitcount.views import HitCountDetailView
-from django.views.generic import ListView, MonthArchiveView
+from django.views.generic import ListView, MonthArchiveView, TemplateView
 from django.views.generic.edit import FormMixin
 # def set_language(request):
 #     if request.GET.has_key('language_id'):  # Set language in Session variable
@@ -243,11 +244,49 @@ class BlogList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(BlogList, self).get_context_data(**kwargs)
+        # if self.request.method == "GET":
+        #     kwrd = self.request.GET.get('q')
+        #     object_list = []
+        #     print(kwrd)
+        #     if(kwrd == None):
+        #         print(f"Query doesn't work")
+        #         object_list = Post.objects.all()
+        #     else:
+        #         qr = kwrd.split(" ")
+        #         res = Post.objects.filter(Q(title_en__icontains=qr) | Q(text_en__icontains=qr)).order_by('-created_date')
+        #         # content_list = Post.objects.filter(text_en__icontains=qr).order_by('-created_date')
+        #         # category_list = Post.objects.filter(category__icontains=qr).order_by('-created_date')
+        #         print(res)
+        #         for i in res:
+        #             if i not in object_list:
+        #                 object_list.append(i)
+        #         # for i in content_list:
+        #         #     if i not in object_list:
+        #         #         object_list.append(i)
+        #         # for i in category_list:
+        #         #     if i not in object_list:
+        #         #         object_list.append(i)
+        #
+        #         final_list = []
+        #         for i in object_list:
+        #             final_list.append(i)
+        #         #     if i in locat:
+        #         #
+        #         # paginator = Paginator(final_list, 2)
+        #         # page_number = self.request.GET.get('page')
+        #         # page_obj = paginator.get_page(page_number)
+        #         context.update({
+        #             # ----------- recent posts ---------------------------------------
+        #             'recent_posts': Post.objects.all().order_by("-created_date")[:2],
+        #             'posts': final_list,
+        #             'qr': qr,
+        #             })
+        #         return context
         context.update({
             # ----------- recent posts ---------------------------------------
             'recent_posts': Post.objects.all().order_by("-created_date")[:2],
             # ----------- all posts by date-----------------------------------
-            'blog_posts': Post.objects.all().order_by("-created_date"),
+            'posts': Post.objects.all().order_by("-created_date"),
         })
         return context
 #---------------------------------------------------------------BLOG DETAIL VIEW
@@ -329,47 +368,74 @@ class ArticleMonthArchiveView(MonthArchiveView):
 #             try:
 #                 results = Post.objects.filter(Q(title__icontains=query) | Q(text__icontains=query) | Q(category__icontains=query))
 #         return results
-def search_results(request):
-    template = 'ninjawebtech_app/search_results.html'
-    object_list = []
-    try:
-        kwrd = request.GET.get('q')
-        qr = kwrd.split(" ")
+class SearchView(TemplateView):
+    model = Post
+    # paginate_by = 2
+    template_name = 'ninjawebtech_app/search_results.html'
+    context_object_name = 'post'
 
-        print(qr)
-        if(qr == None):
-            print(f"Query doesn't work")
-            object_list = Post.objects.all()
-        else:
-            res = Post.objects.filter(Q(title_en__icontains=qr) | Q(text_en__icontains=qr) | Q(category__icontains=qr)).order_by('-created_date')
-            # content_list = Post.objects.filter(text_en__icontains=qr).order_by('-created_date')
-            # category_list = Post.objects.filter(category__icontains=qr).order_by('-created_date')
-            print(res)
-            for i in res:
-                if i not in object_list:
-                    object_list.append(i)
-            # for i in content_list:
-            #     if i not in object_list:
-            #         object_list.append(i)
-            # for i in category_list:
-            #     if i not in object_list:
-            #         object_list.append(i)
+    def get(self, request, *args, **kwargs):
+        qs = super().get(request, *args, **kwargs)
+        if request.method == 'GET':
+            object_list = []
+            query = request.GET.get('q')
+            if query:
+                qry = query.split(' ')
+                self.results = qs.filter(Q(title_en__icontains=qry) | Q(text_en__icontains=qry)).order_by('-created_date')
+                return qs
 
-        final_list = []
-        for i in object_list:
-            final_list.append(i)
-        #     if i in locat:
-        #
-        paginator = Paginator(final_list, 2)
-        page_number = request.GET.get('page')
-        page_obj = paginator.get_page(page_number)
-        context = {
-            'posts': page_obj,
-            'qr': qr,
-        }
-        return render(request, template, context)
-    except Exception as e:
-        print(f"{e}")
+    def get_context_data(self, **kwargs):
+        context = super(SearchView, self).get_context_data(results=results, **kwargs)
+        context.update({
+            # ----------- recent posts ---------------------------------------
+            'recent_posts': Post.objects.all().order_by("-created_date")[:2],
+            # ----------- all posts by date-----------------------------------
+            'posts': Post.objects.all().order_by("-created_date"),
+            #------------search query ----------------------------------------
+        })
+        return context
+# def search_results(request):
+#     template = 'ninjawebtech_app/search_results.html'
+#     object_list = []
+#     try:
+#         if request.method == "GET":
+#             kwrd = request.GET.get('q')
+#             qr = kwrd.split(" ")
+#
+#             print(qr)
+#             if(qr == None):
+#                 print(f"Query doesn't work")
+#                 object_list = Post.objects.all()
+#             else:
+#                 res = Post.objects.filter(Q(title_en__icontains=qr) | Q(text_en__icontains=qr) | Q(category__icontains=qr)).order_by('-created_date')
+#                 # content_list = Post.objects.filter(text_en__icontains=qr).order_by('-created_date')
+#                 # category_list = Post.objects.filter(category__icontains=qr).order_by('-created_date')
+#                 print(res)
+#                 for i in res:
+#                     if i not in object_list:
+#                         object_list.append(i)
+#                 # for i in content_list:
+#                 #     if i not in object_list:
+#                 #         object_list.append(i)
+#                 # for i in category_list:
+#                 #     if i not in object_list:
+#                 #         object_list.append(i)
+#
+#             final_list = []
+#             for i in object_list:
+#                 final_list.append(i)
+#             #     if i in locat:
+#             #
+#             paginator = Paginator(final_list, 2)
+#             page_number = request.GET.get('page')
+#             page_obj = paginator.get_page(page_number)
+#             context = {
+#                 'posts': page_obj,
+#                 'qr': qr,
+#             }
+#             return render(request, template, context)
+#     except Exception as e:
+#         print(f"{e}")
 #---------------------------------------------------------------    CONTACT VIEW
 @csrf_protect
 def ContactView(request):

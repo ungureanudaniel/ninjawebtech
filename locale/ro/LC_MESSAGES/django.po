@@ -53,9 +53,12 @@ msgstr "Prietenos cu motorul google si cu toate tipurile de ecrane"
 msgid "Web Development Company"
 msgstr "Companie de Web Development"
 
-msgid "I am Daniel and I started this business in 2019, out of passion for software. I've got a motivation of steel to be successful, by putting commitment, hard work and client satisfaction on the table for each and every project."
+msgid "I am Daniel and I started this business in 2019, out of passion for software. I've got a motivation of steel to be successful, by putting commitment, hard work and client satisfaction on the table for each and every project. All my websites are modern, fully responsive, with unique and eye-catching design."
 msgstr "Eu sunt Daniel si am creat aceasta companie in 2019, din pasiune pentru software. Fac totul cu muuult entusiasm, datorita dorintei de a ma dezvolta personal si de a-i face pe ceilalti fericiti si de succes in mediul online, iar pentru asta pun in prin plan multa responsabilitate, munca si satisfactia clientilor, in fiecare proiect in parte."
 
+#-------------------TECH-------------------------------------
+msgid "Our Technologies"
+msgstr "Tehnologiile Noastre"
 #-------------------TESTIMONIALS ----------------------------
 msgid "Leave a review"
 msgstr "Lasa un review"

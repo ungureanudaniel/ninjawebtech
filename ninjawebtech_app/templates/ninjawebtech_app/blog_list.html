@@ -52,10 +52,10 @@
   	<!--== Start Top Search ==-->
     <div class="fullscreen-search-overlay" id="search-overlay"> <a href="#" class="fullscreen-close" id="fullscreen-close-button"><i class="icofont icofont-close"></i></a>
       <div id="fullscreen-search-wrapper">
-        <form method="get" id="fullscreen-searchform">
-          <input type="text" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class="search-bar-top">
+        <form method="GET" id="fullscreen-searchform" action="{% url 'blog_list' %}">
+          <input type="text" name="q" value="" placeholder="Type and hit Enter..." id="fullscreen-search-input" class=" form-control search-bar-top">
           <i class="fullscreen-search-icon icofont icofont-search">
-          <input value="" type="submit">
+            <input value="" type="submit">
           </i>
         </form>
       </div>
@@ -65,9 +65,9 @@
       <!--== Start Atribute Navigation ==-->
       <div class="attr-nav hidden-xs sm-display-none">
         <ul class="social-media-dark social-top">
-          <li><a href="#" class="icofont icofont-facebook"></a></li>
+          <li><a href="https://www.facebook.com/ninjawebtech" class="icofont icofont-facebook"></a></li>
           <li><a href="#" class="icofont icofont-twitter"></a></li>
-          <li><a href="#" class="icofont icofont-linkedin"></a></li>
+          <li><a class="icon linkedin" href="https://www.linkedin.com/company/79462239/"><i class="icofont icofont-linkedin"></i></a></li>
         </ul>
       </div>
       <!--== End Atribute Navigation ==-->
@@ -110,11 +110,9 @@
               </ul>
             </div>
             <ul class="social-media">
-              <li><a href="#" class="icofont icofont-facebook"></a></li>
+              <li><a href="https://www.facebook.com/ninjawebtech" class="icofont icofont-facebook"></a></li>
               <li><a href="#" class="icofont icofont-twitter"></a></li>
-              <li><a href="#" class="icofont icofont-behance"></a></li>
-              <li><a href="#" class="icofont icofont-social-dribble"></a></li>
-              <li><a href="#" class="icofont icofont-linkedin"></a></li>
+              <li><a href="https://www.linkedin.com/company/79462239" class="icofont icofont-linkedin"></a></li>
             </ul>
 
      </div>
@@ -124,7 +122,7 @@
 
   <!--== Page Title Start ==-->
   <div class="transition-none">
-      <section class="title-hero-bg parallax-effect" style="background-image: url(assets/images/background/laptop1.png);">
+      <section class="title-hero-bg parallax-effect" style="background-image: url('/static/images/background/news_bg3.WebP');">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -157,7 +155,7 @@
               {% if bloglist %}
               <ul class="single-blog-list">
 
-                {% for post in bloglist %}
+                {% for post in posts %}
                 <li>
                   <div class="post-wrap">
                     <div class="post-img">
@@ -171,7 +169,7 @@
                         <div class="item"><img class="img-responsive" src="{{ post.image.url }}" alt=""></div>
                         <!-- <div class="item"><img class="img-responsive" src="assets/images/post/post-06.jpg" alt=""/></div> -->
                     </div>
-                    <div class="post-text">
+                    <div class="post-text mt-5">
                       <h3><a href="{% url 'blog_detail' post.slug %}">{{ post.title_en }}</a></h3>
                       <p>
                         {{ post.text_en|striptags|safe|truncatechars:400 }}
@@ -232,7 +230,7 @@
         <div class="col-md-3 col-sm-3 col-xs-12">
           <div class="widget sidebar_widget">
             <h5 class="aside-title">Search</h5>
-            <form class="search-form" method="GET">
+            <form class="search-form" method="GET" action="{% url 'search_results' %}">
               <input type="text" name="q" class="md-input" id="search" required="" placeholder="Type what it's your mind...">
               <button type="submit" class="icofont icofont-search-alt-2 search-submit"></button>
             </form>
@@ -266,10 +264,9 @@
           <div class="social-icons-style-06 mb-5">
             <h5 class="aside-title text-uppercase">Follow Us</h5>
             <ul class="xs-icon">
-              <li><a class="icon facebook" href="#."><i class="icofont icofont-facebook"></i></a></li>
+              <li><a class="icon facebook" href="https://www.facebook.com/ninjawebtech"><i class="icofont icofont-facebook"></i></a></li>
               <li><a class="icon twitter" href="#."><i class="icofont icofont-twitter"></i></a></li>
-              <li><a class="icon tumblr" href="#."><i class="icofont icofont-tumblr"></i></a></li>
-              <li><a class="icon flicker" href="#."><i class="icofont icofont-flikr"></i></a></li>
+              <li><a class="icon linkedin" href="https://www.linkedin.com/company/79462239/"><i class="icofont icofont-linkedin"></i></a></li>
               <li><a class="icon instagram" href="#."><i class="icofont icofont-instagram"></i></a></li>
             </ul>
           </div>
@@ -277,7 +274,7 @@
           <div class="sidebar_widget widget_categories mb-5">
             <h5 class="aside-title">{% trans "Categories" %}</h5>
             <ul>
-              {% for post in blog_posts %}
+              {% for post in posts %}
               <li> <a href="#">{{ post.category|title }}</a></li>
               {% endfor %}
             </ul>
