@@ -187,17 +187,18 @@ def homeview(request):
 @csrf_protect
 def reviewview(request):
     template = 'ninjawebtech_app/review.html'
-
+    form = CaptchaForm()
     if request.method == "POST":
         user_name = request.POST.get('name')
         user_review = request.POST.get('message')
-        if user_name and user_review:
-            #-----------------------SAVE IN DATABASE----------------
-            new_review = Review(author = user_name, content=user_review, date_posted = datetime.datetime.now())
-            new_review.save()
-            messages.success(request, "Your review has been sent!")
+        if form.is_valid():
+            if user_name and user_review:
+                #-----------------------SAVE IN DATABASE----------------
+                new_review = Review(author = user_name, content=user_review, date_posted = datetime.datetime.now())
+                new_review.save()
+                messages.success(request, "Your review has been sent!")
 
-    context = {}
+    context = {"form":form,}
     return render(request, template, context)
 
 def hide_review_view(request, pk):

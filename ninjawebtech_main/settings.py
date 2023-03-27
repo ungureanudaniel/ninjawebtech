@@ -18,7 +18,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://www.ninjaweb.tech', 'ninjaweb.tech', 'www.ninjaweb.tech']
+ALLOWED_HOSTS = []
+if os.getenv('ALLOWED_HOSTS'):
+    ALLOWED_HOSTS.extend(os.getenv('ALLOWED_HOSTS').split(','))
 PRODUCTION = False
 
 # Application definition

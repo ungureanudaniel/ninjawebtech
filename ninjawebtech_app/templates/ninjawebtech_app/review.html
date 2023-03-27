@@ -153,6 +153,14 @@
             </div>
 
             <div class="col-md-12 col-sm-12">
+              <div class="form-group">
+                <label for="message">{% trans "Type the following letters to show you are human" %} *</label>
+                {{ form.captcha }}
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
               <div class="text-left">
                 <button type="submit" name="submit" class="btn btn-primary btn-md btn-square btn-animate remove-margin btn-zoom"><span>{% trans "Send" %} <i class="ion-android-arrow-forward"></i></span></button>
               </div>
