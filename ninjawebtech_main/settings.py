@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ninjawebtech_app',
     'ckeditor',
-    'taggit',
-    'crispy_forms',
     'captcha',
     'django.contrib.sites',
     'django.contrib.sitemaps',
