@@ -165,9 +165,46 @@ EMAIL_PORT = os.environ.get("EMAIL_PORT")
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 # NEWSLETTER EMAIL SETTINGS
-FROM_EMAIL = 'contact@ninjaweb.tech'
+FROM_EMAIL = 'contact@ninjaweb.online'
 # Configure DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+#=====================LOGGING  ERORRS=========================
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'resume_main.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+        'services': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+        'payments': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+    }
+}
 # Messages framework
 try:
     from django.contrib.messages import constants as messages
